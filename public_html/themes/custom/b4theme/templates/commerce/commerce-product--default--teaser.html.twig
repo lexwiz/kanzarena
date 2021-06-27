@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article{{ attributes }}>
+  <div class="card border-success mb-3">
+    <div class="card-header"><h2 class="title-product">{{- product.title -}}</h2></div>
+    <div class="text-center">
+      {{- product.field_photo -}}
+    </div>
+    {{- product.field_tags -}}
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-4"><span class="wrapper_code py-1 px-0">Код:</span></div>
+            <div class="col-md-8"><strong class="text-success">{{- product.field_code -}}</strong></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"><span class="wrapper_code">Арт:</span></div>
+            <div class="col-md-8 text-truncate">{{- product.variation_field_vendor_code -}}</div>
+          </div>
+        </div>
+        <div class="col-md-4 text-right">
+          <div class="btn-group" role="group" aria-label="Basic example">{{- product.flag_favorite -}}{{- product.flag_compare -}}</div>
+        </div>
+
+{#          {{- product.rate_rate_product -}}#}
+
+        <div class="col-md-12 text-center">
+          <strong>{{- product.variation_field_stock -}}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      {{- product.variation_price -}}
+      <div class="row">
+        <div class="col-md-12 mb-2">{{- product.variations -}}</div>
+      </div>
+      {{- product.variation_field_code_stock -}}
+    </div>
+  </div>
+</article>

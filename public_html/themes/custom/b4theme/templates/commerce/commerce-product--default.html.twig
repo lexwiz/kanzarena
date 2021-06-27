@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article{{ attributes }}>
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      {#      <div class="row text-center">#}
+      {#        <div class="col-sm-6 col-md-6 text-uppercase"><strong>{{- product.flag_compare -}}</strong></div>#}
+      {#        <div class="col-sm-6 col-md-6 text-uppercase"><strong>{{- product.flag_favorite -}}</strong></div>#}
+      {#      </div>#}
+      <div class="text-center barder border-2 border-primary p-3 shadow">
+        {{- product.field_photo -}}
+      </div>
+      {{- product.field_tags -}}
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="">{{- product.field_code -}}</div>
+          <div class="">{{- product.variation_field_vendor_code -}}</div>
+          {{- product.variation_field_barcode -}}
+          <div class="">{{- product.field_catalog -}}</div>
+          <div class="">{{- product.field_brand -}}</div>
+          <div class="">{{- product.field_country -}}</div>
+          {{- product.rate_rate_product -}}
+          {{- product.variation_field_code_stock -}}
+        </div>
+        <div class="col-md-6 ">
+          <div class="barder border-2 border-primary p-3 shadow">
+            {{- product.variation_price -}}
+            {{- product.variations -}}
+            <strong> {{- product.variation_field_stock -}} </strong>
+            <div class="col-sm-6">{{- product.variation_qty_increments -}}</div>
+            <div class="col-sm-6">{{- product.field_package -}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      {{- product.body -}}
+    </div>
+    <div class="col-sm-12">
+      {{- product.field_property -}}
+    </div>
+  </div>
+</article>
+

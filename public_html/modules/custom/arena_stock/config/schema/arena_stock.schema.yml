@@ -1,0 +1,10 @@
+arena_stock:
+  type: config_object
+  label: 'Commerce Simple Stock settings'
+#  mapping:
+#    allow_backorder:
+#      type: boolean
+#      label: 'Allow Backorder'
+#    langcode:
+#      type: string
+#      label: 'Language Code'

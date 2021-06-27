@@ -1,0 +1,35 @@
+name: b4theme
+type: theme
+description: 'Kanzarena b4theme subtheme'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap4
+
+# Stylesheets.
+stylesheets-remove:
+  - '@bootstrap4/css/style.css'
+
+# Libraries.
+libraries:
+  - b4theme/global-styling
+
+# Regions.
+regions:
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  nav_catalog: 'Navigation catalog'
+  nav_search: Search
+  nav_cart: Cart
+  header: Header
+  breadcrumb: Breadcrumbs
+  highlighted: Highlighted
+  help: Help
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_four: 'Footer Four'
+  footer: Footer

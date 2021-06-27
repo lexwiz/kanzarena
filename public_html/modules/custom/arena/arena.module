@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Provides a demo store for Commerce.
+ */
+
+//use Drupal\Core\Url;
+
+use Drupal\views\ViewExecutable;
+
+//dpm($variables);
+function arena_views_pre_view(ViewExecutable  $view, $display_id, array &$args) {
+  if ($view -> id() == 'related_nodes' && $display_id == 'block_1') {
+    if (\Drupal::routeMatch()->getParameter('commerce_product')) {
+      $product_id = \Drupal::routeMatch()->getParameter('commerce_product')->id();
+      //$parameter = \Drupal::routeMatch()->getParameter('commerce_product');
+      $product = \Drupal\commerce_product\Entity\Product::load((int)$product_id);
+      $termreference = $product->get('field_catalog')->target_id;
+      $args[0] = $termreference;
+      $args[1] = $product_id;
+    }
+  }
+}

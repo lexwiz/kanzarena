@@ -1,0 +1,25 @@
+/**
+ * Progress bar styles.
+ */
+.progress-wrapper {
+  margin-bottom: $form-group-margin-bottom;
+
+  &:last-child .progress {
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .percentage,
+  .progress-label {
+    font-size: ceil(($font-size-base * 0.85));
+  }
+
+  .progress-bar {
+    min-width: 2em;
+  }
+
+}

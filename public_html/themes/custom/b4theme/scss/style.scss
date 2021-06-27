@@ -1,0 +1,387 @@
+@import 'bootstrap-icons/bootstrap-icons.css';
+// Include custom sub theme.
+@import 'custom/variables';
+//@import 'custom/mixins/misc';
+//@import 'custom/misc';
+
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include parent theme with all things Bootstrap for full override.
+// Relative path to this styles.scss file.
+// Example: @import "../../../../../themes/contrib/bootstrap4/scss/style";
+//@import "../../../contrib/bootstrap4/scss/style";
+// OR to go back to Bootstrap 4.5.0
+@import "../../../../themes/contrib/bootstrap4/scss/style-4-5";
+@import 'custom/bootswatch';
+
+// Base-theme overrides.
+@import 'drupal-bootstrap';
+
+
+.nav-link {
+  display: inline-block;
+}
+
+.navbar {
+  .nav-link.zero-level {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}
+
+input.fivestar-rating-input {
+  display: none !important;
+}
+
+body {
+  margin-top: 60px;
+}
+
+
+.dropdown-menu {
+  min-width: 14rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+.dropdown-menu .menu-level-2 {
+  min-width: 60rem;
+  padding: 0;
+}
+
+.dropdown-submenu {
+  //position: relative;
+}
+.dropdown-item {
+  //position: relative;
+  //padding: 0.25rem 0.5rem;
+}
+ul.menu-level-3 {
+  padding-left: 0.5rem;
+  li {
+    list-style: none;
+    a {
+      padding: 0.1rem;
+    }
+  }
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.dropdown-menu>li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu>li:last-child {
+  border-bottom: none;
+}
+
+//.dropdown-item.active,
+//.dropdown-item:active {
+//  background-color: #f70000 !important;
+//  color: #fff !important;
+//}
+//
+//.dropdown-item.dropdown-toggle:hover {
+//  color: #f70000;
+//}
+//
+//.dropdown-item:hover {
+//  color: #f70000;
+//}
+
+#views-exposed-form-taxonomy-term-product-page-1 .form-wrapper {
+  margin-top: 20px;
+}
+
+ul.sf-menu li {
+  position: static;
+}
+
+/*
+ * Sample SCSS for adding Superfish CSS to themes.
+ *
+ * Instructions:
+ *
+ * 1. Change the #YOUR-BLOCK-ID (below) to the ID of your Superfish block.
+ *
+ * 2. Add the SCSS to your theme.
+ *
+ * 3. Note that by removing the .sf-style-none, the style will be applied to the menu regardless of
+ *    the "Style" selected in the Superfish block configuration.
+ *
+ */
+
+// You can add these variables to your _base.scss
+$superfish-1-color: $success;
+$superfish-1-background-color-level-first: none;
+$superfish-1-background-color-level-second: #e0e0e0;
+$superfish-1-background-color-level-third: #d0d0d0;
+$superfish-1-background-color-level-fourth: $dark;
+
+.field--name-quantity .form-item .form-control {
+  width: 6em;
+}
+
+.field--name-field-stock .field--label, .form-inline .field--name-quantity  label {
+  display: none;
+}
+
+.cart-block--contents {
+  width: 50rem;
+  right: 0;
+  margin-top: 0.5rem;
+  border: 1px solid $dark;
+  border-top: none;
+}
+
+.cart-block--contents__items {
+  margin-bottom: 0.5rem;
+}
+
+div.flag-favorite, div.flag-compare {
+  a {
+    font-size: 1rem;
+    color: $primary;
+  }
+}
+
+.card-header, .card-body, .card-footer {
+  padding: 0.4rem 1rem;
+}
+
+.add-to-cart-form {
+  .btn {
+    padding: 0.34rem 0.75rem;
+  }
+  .form-item, .form-actions {
+    margin: 0;
+  }
+}
+
+.original-price {
+  color: $gray-600;
+  display: inline-block;
+  padding: 0 0.1rem;
+  font-size: 0.8em;
+  line-height: 1;
+}
+
+.discount-percentage, .discount-currency {
+  color: $success;
+  display: inline-block;
+  padding: 0 0.1rem;
+  font-size: 0.8em;
+  line-height: 1;
+}
+
+.final-price {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.field--name-field-stock {
+  padding-top: 0.25rem;
+  .in_stock {
+    color: $success;
+  }
+  .out_stock {
+    color: $danger;
+  }
+}
+
+h1.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2.title-product {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  max-height: 40px;
+  min-height: 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+h2.block-title, .block-facets h2 {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid $black;
+  }
+  &:not(:empty)::before, &:not(:empty)::after {
+    margin-right: .25em;
+  }
+}
+
+.views-field-price__number,
+.field--name-price {
+  margin: 5px 0;
+  font-weight: bold;
+  min-height: 45px;
+}
+
+.facets-widget-links, .facets-widget-checkbox {
+  ul {
+    margin-bottom: 0;
+    padding-left: 1em;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.facets-widget-checkbox {
+  ul {
+    li.facet-item {
+      input.facets-checkbox {
+        vertical-align: middle;
+        height: 18px;
+      }
+      label {
+        margin: 0.1rem 0;
+      }
+    }
+  }
+}
+
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $success;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  //$card-height: 100%;
+
+  // TAGS
+
+  .field--name-field-tags {
+    position: absolute;
+    top: 14%;
+    z-index: 3;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    .field--label {
+      display: none;
+    }
+    .field__item {
+      margin-bottom: 0.1rem;
+      a {
+        padding: 0.25rem 0.5rem;
+        display: inline-block;
+        color: $white;
+      }
+    }
+  }
+
+  a.tid-1636,
+  a.tid-item {
+    background-color: #34af31;
+  }
+  a.tid-500 {
+    background-color: #4865ff;
+  }
+  a.tid-501 {
+    background-color: #ff6400;
+  }
+  a.tid-502 {
+    background-color: #ffd100;
+  }
+  a.tid-1697 {
+    background-color: #f00;
+  }
+
+  h2.taxonomy-term-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  #views-exposed-form-product-search-page-1 {
+    .form-item,
+    .form-actions {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+#views-exposed-form-taxonomy-term-product-index-page-1 {
+  .form-wrapper {
+    margin-top: 1.3rem;
+    margin-bottom: 0;
+  }
+  label {
+    justify-content: left;
+    font-weight: 600;
+  }
+  input.form-submit {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+}
+
+.header-contact {
+  line-height: 1.2em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.bi.bi-telephone {
+  fill: $success;
+}
+.bi.bi-envelope {
+  fill: $primary;
+}

@@ -1,0 +1,9 @@
+name: Arena Stock
+description: 'Adds the commerce stock management feature.'
+package: Commerce
+type: module
+core_version_requirement: ^8.8.0 || ^9.0
+
+dependencies:
+  - commerce:commerce_order
+  - commerce:commerce_product
