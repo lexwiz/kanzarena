@@ -1,0 +1,190 @@
+uuid: b555d047-ee4a-4725-88bf-53643fc87403
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - search_api
+  config:
+    - field.storage.commerce_product_variation.field_barcode
+    - field.storage.commerce_product.field_brand
+    - field.storage.commerce_product.field_catalog
+    - field.storage.commerce_product.field_code
+    - field.storage.commerce_product_variation.field_code_stock
+    - field.storage.commerce_product.field_country
+    - field.storage.commerce_product_variation.field_stock
+    - field.storage.commerce_product_variation.field_vendor_code
+    - search_api.server.default_server
+id: default_product_index
+name: 'Default product index'
+description: ''
+read_only: false
+field_settings:
+  created:
+    label: Создано
+    datasource_id: 'entity:commerce_product'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - commerce_product
+  field_barcode:
+    label: 'Вариации » Product variation » Штрихкод'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_barcode'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_barcode
+      module:
+        - commerce_product
+  field_brand:
+    label: Бренд
+    datasource_id: 'entity:commerce_product'
+    property_path: field_brand
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_brand
+  field_catalog:
+    label: Catalog
+    datasource_id: 'entity:commerce_product'
+    property_path: field_catalog
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_catalog
+  field_code:
+    label: Код
+    datasource_id: 'entity:commerce_product'
+    property_path: field_code
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_code
+  field_code_stock:
+    label: 'Вариации » Product variation » Код на складе'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_code_stock'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_code_stock
+      module:
+        - commerce_product
+  field_country:
+    label: Страна
+    datasource_id: 'entity:commerce_product'
+    property_path: field_country
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_country
+  field_stock:
+    label: 'Вариации » Product variation » Stock'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_stock'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_stock
+      module:
+        - commerce_product
+  field_vendor_code:
+    label: 'Вариации » Product variation » Артикул'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_vendor_code'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product_variation.field_vendor_code
+      module:
+        - commerce_product
+  number:
+    label: 'Вариации » Product variation » Price » Число'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    boost: !!float 8
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  hierarchy:
+    fields:
+      field_catalog: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    all_fields: false
+    fields:
+      - field_barcode
+      - field_code
+      - field_code_stock
+      - field_vendor_code
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_vendor_code
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - field_vendor_code
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server

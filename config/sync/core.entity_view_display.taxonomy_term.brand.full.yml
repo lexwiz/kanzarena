@@ -1,0 +1,29 @@
+uuid: 6f327b58-0349-454c-ae40-6c4d67f76019
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.brand.field_image_term
+    - image.style.medium
+    - taxonomy.vocabulary.brand
+  module:
+    - image
+id: taxonomy_term.brand.full
+targetEntityType: taxonomy_term
+bundle: brand
+mode: full
+content:
+  field_image_term:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

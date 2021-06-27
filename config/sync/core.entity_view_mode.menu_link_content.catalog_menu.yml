@@ -1,0 +1,10 @@
+uuid: d23b3be6-d85f-4acb-bc64-819529b3ea28
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.catalog_menu
+label: 'Catalog Menu'
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,38 @@
+uuid: 31425bfe-4da7-4942-a7ac-a4abd433858e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image_term
+    - taxonomy.vocabulary.brand
+  module:
+    - image
+id: taxonomy_term.brand.field_image_term
+field_name: field_image_term
+entity_type: taxonomy_term
+bundle: brand
+label: 'Image Term'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: image/taxonomy/brand
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

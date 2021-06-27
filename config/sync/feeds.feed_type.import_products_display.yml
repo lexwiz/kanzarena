@@ -1,0 +1,189 @@
+uuid: d1c03fe9-0961-4e10-9744-9436ab47e75a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.feeds_item
+    - field.field.commerce_product.default.field_brand
+    - field.field.commerce_product.default.field_catalog
+    - field.field.commerce_product.default.field_code
+    - field.field.commerce_product.default.field_country
+    - field.field.commerce_product.default.field_package
+    - field.field.commerce_product.default.field_photo
+    - field.field.commerce_product.default.field_property
+  module:
+    - commerce_product
+    - feeds_tamper
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      e595688e-d11b-432f-b270-d7e494b4db80:
+        separator: /
+        limit: null
+        plugin: explode
+        source: category
+        weight: 0
+        label: Explode
+        uuid: e595688e-d11b-432f-b270-d7e494b4db80
+id: import_products_display
+label: 'Import Products Display'
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ;
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product'
+processor_configuration:
+  langcode: ru
+  update_existing: 2
+  update_non_existent: _delete
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: default
+custom_sources:
+  sku:
+    label: SKU
+    value: SKU
+    machine_name: sku
+  store:
+    label: Store
+    value: Store
+    machine_name: store
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  category:
+    label: Category
+    value: Category
+    machine_name: category
+  manufacturers:
+    label: Manufacturers
+    value: Manufacturers
+    machine_name: manufacturers
+  country:
+    label: Country
+    value: Country
+    machine_name: country
+  body:
+    label: Body
+    value: Body
+    machine_name: body
+  shema:
+    label: Shema
+    value: Shema
+    machine_name: shema
+  attributes:
+    label: Attributes
+    value: Attributes
+    machine_name: attributes
+mappings:
+  -
+    target: field_code
+    map:
+      value: sku
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: stores
+    map:
+      target_id: store
+    settings:
+      reference_by: name
+      autocreate: false
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: sku
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: variations
+    map:
+      target_id: sku
+    settings:
+      reference_by: sku
+      autocreate: 0
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_catalog
+    map:
+      target_id: category
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: '1'
+  -
+    target: field_brand
+    map:
+      target_id: manufacturers
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: '1'
+  -
+    target: field_country
+    map:
+      target_id: country
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: '1'
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_package
+    map:
+      value: shema
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_photo
+    map:
+      target_id: sku
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_property
+    map:
+      value: attributes
+    settings:
+      language: ''
+      format: full_html

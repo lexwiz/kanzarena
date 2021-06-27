@@ -1,0 +1,25 @@
+uuid: 9cefccce-86a4-44e9-8b2a-b8ae71e9034c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-second
+  module:
+    - system
+  theme:
+    - b4theme
+id: footermenusecond_2
+theme: b4theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-second'
+settings:
+  id: 'system_menu_block:footer-menu-second'
+  label: 'Footer menu second'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

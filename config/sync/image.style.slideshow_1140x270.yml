@@ -1,0 +1,15 @@
+uuid: 50dd07a0-6ae0-4c0c-a99a-a54f97303ca3
+langcode: ru
+status: true
+dependencies: {  }
+name: slideshow_1140x270
+label: 'Slideshow (1140x270)'
+effects:
+  177ff4eb-5f75-4d9f-87d6-c1d40cd8bd79:
+    uuid: 177ff4eb-5f75-4d9f-87d6-c1d40cd8bd79
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1300
+      height: 270
+      anchor: center-center

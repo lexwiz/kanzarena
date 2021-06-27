@@ -1,0 +1,8 @@
+uuid: 94472e85-882d-4cfa-8938-2cd51dec6634
+langcode: ru
+status: true
+dependencies: {  }
+id: footer-menu-second
+label: 'Footer menu second'
+description: ''
+locked: false

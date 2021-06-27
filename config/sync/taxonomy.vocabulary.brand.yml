@@ -1,0 +1,15 @@
+uuid: 4b13ab7c-cf81-480c-aec8-285e708e188d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Бренд
+vid: brand
+description: 'Бренды товаров'
+weight: 0

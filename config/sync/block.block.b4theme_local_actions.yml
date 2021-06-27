@@ -1,0 +1,20 @@
+uuid: 62ae4232-3276-4afc-80e7-d0cf1a20cb89
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - b4theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: b4theme_local_actions
+theme: b4theme
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  provider: core
+  label_display: '0'
+visibility: {  }

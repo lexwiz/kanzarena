@@ -1,0 +1,20 @@
+uuid: dc7b61fb-76c7-4338-b50a-c42f9345c184
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - b4theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: b4theme_page_title
+theme: b4theme
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  provider: core
+  label_display: '0'
+visibility: {  }

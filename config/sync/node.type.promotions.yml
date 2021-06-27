@@ -1,0 +1,18 @@
+uuid: 3cebd5a7-1844-466c-9c53-039a14e46cce
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Promotions
+type: promotions
+description: 'Акции на сайте'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

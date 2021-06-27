@@ -1,0 +1,15 @@
+uuid: 99c23dab-128e-466a-896e-325860adbd64
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Страна
+vid: country
+description: ''
+weight: 0

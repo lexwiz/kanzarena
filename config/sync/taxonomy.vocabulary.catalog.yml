@@ -1,0 +1,15 @@
+uuid: b316748a-d42f-4126-8335-21e0de30df12
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - catalog-menu
+    parent: 'catalog-menu:'
+name: Каталог
+vid: catalog
+description: 'Разделы каталога'
+weight: 0

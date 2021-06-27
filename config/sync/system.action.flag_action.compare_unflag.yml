@@ -1,0 +1,15 @@
+uuid: af16266b-1071-4001-9a84-720207ad3282
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.compare
+  module:
+    - flag
+id: flag_action.compare_unflag
+label: 'Снять флаг'
+type: commerce_product
+plugin: 'flag_action:compare_unflag'
+configuration:
+  flag_id: compare
+  flag_action: unflag

@@ -1,0 +1,22 @@
+uuid: fbdf09b1-b6e9-4a24-8931-f7da905e6c22
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - b4theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: b4theme_local_tasks
+theme: b4theme
+region: content
+weight: -10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

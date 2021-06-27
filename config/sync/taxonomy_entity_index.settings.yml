@@ -1,0 +1,8 @@
+types:
+  search_api_task: search_api_task
+  commerce_product: commerce_product
+_core:
+  default_config_hash: ybFcPjZje3mJVpuKZAJmoX9OXSZmM0NWrppkk8gaToo
+langcode: ru
+index_revisions: false
+index_per_field: false

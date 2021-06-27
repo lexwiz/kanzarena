@@ -1,0 +1,25 @@
+uuid: 526b034c-a047-47af-bd91-e4a579a99055
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c55b3b8d-6b86-4e6f-b6b5-eabb566c0d01'
+  module:
+    - block_content
+  theme:
+    - b4theme
+id: b4theme_copyright
+theme: b4theme
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:c55b3b8d-6b86-4e6f-b6b5-eabb566c0d01'
+settings:
+  id: 'block_content:c55b3b8d-6b86-4e6f-b6b5-eabb566c0d01'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

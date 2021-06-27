@@ -1,0 +1,374 @@
+uuid: 8af035cc-bba8-4265-8bba-4df73f00d79c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - search_api.index.default_product_index
+    - taxonomy.vocabulary.brand
+    - taxonomy.vocabulary.catalog
+    - views.view.child_categories
+  module:
+    - better_exposed_filters
+    - search_api
+    - views_bootstrap
+id: taxonomy_term_product_index
+label: 'Taxonomy term product index'
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_default_product_index
+base_field: search_api_id
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать:'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: basic_html
+          bef: {  }
+      pager:
+        type: full
+        options:
+          items_per_page: 15
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Показать по:'
+            items_per_page_options: '15, 30, 60'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:commerce_product':
+              default: teaser
+      fields:
+        created:
+          table: search_api_index_default_product_index
+          field: created
+          id: created
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_date
+          fallback_options:
+            date_format: small
+            custom_date_format: ''
+            timezone: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+      filters:
+        field_stock:
+          id: field_stock
+          table: search_api_index_default_product_index
+          field: field_stock
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_stock_op
+            label: 'Вариации » Product variation » Stock'
+            description: null
+            use_operator: false
+            operator: field_stock_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_stock
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'В наличии'
+            description: ''
+            identifier: field_stock
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Да
+                operator: '>'
+                value:
+                  value: '0'
+                  min: ''
+                  max: ''
+              2:
+                title: Нет
+                operator: '<='
+                value:
+                  value: '0'
+                  min: ''
+                  max: ''
+              3:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+          plugin_id: search_api_numeric
+      sorts:
+        number:
+          id: number
+          table: search_api_index_default_product_index
+          field: number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Цена
+          plugin_id: search_api
+        created:
+          id: created
+          table: search_api_index_default_product_index
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: Создано
+          plugin_id: search_api
+        title:
+          id: title
+          table: search_api_index_default_product_index
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Title
+          plugin_id: search_api
+      title: 'Taxonomy term product index'
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'child_categories:block_1'
+          inherit_arguments: true
+          plugin_id: view
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Отображается с @start по @end из @total'
+          plugin_id: result
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments:
+        search_api_all_terms:
+          id: search_api_all_terms
+          table: search_api_index_default_product_index
+          field: search_api_all_terms
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: '{{ arguments.search_api_all_terms }}'
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            term_page: '1'
+            node: true
+            limit: true
+            vids:
+              brand: brand
+              catalog: catalog
+            anyall: +
+          default_argument_skip_url: false
+          summary_options: {  }
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: 'entity:taxonomy_term'
+            fail: 'not found'
+          validate_options:
+            bundles:
+              brand: brand
+              catalog: catalog
+            access: true
+            operation: view
+            multiple: 0
+          break_phrase: false
+          not: 0
+          plugin_id: search_api_all_terms
+      display_extenders: {  }
+      use_ajax: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+      tags:
+        - 'config:search_api.index.default_product_index'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: taxonomy/term/%
+      cache:
+        type: none
+      defaults:
+        cache: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+      tags:
+        - 'config:search_api.index.default_product_index'

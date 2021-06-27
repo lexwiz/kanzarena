@@ -1,0 +1,21 @@
+uuid: 0e923f10-8f15-4ba7-9d16-ddecf1609858
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - b4theme
+id: b4theme_cart
+theme: b4theme
+region: nav_cart
+weight: -11
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility: {  }

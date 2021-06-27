@@ -1,0 +1,22 @@
+uuid: c7dd2c9f-2b95-4cba-bc5a-72f63e6158fc
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - b4theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: b4theme_help
+theme: b4theme
+region: help
+weight: -11
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  provider: help
+  label_display: '0'
+visibility: {  }

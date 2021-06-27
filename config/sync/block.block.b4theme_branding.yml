@@ -1,0 +1,25 @@
+uuid: acb4058e-fbb5-4c74-ac75-88e04bcc5851
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - b4theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: b4theme_branding
+theme: b4theme
+region: nav_branding
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

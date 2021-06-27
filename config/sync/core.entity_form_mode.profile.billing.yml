@@ -1,0 +1,15 @@
+uuid: 58b88de5-e677-4e6e-b20b-62d7282ca32e
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - profile
+_core:
+  default_config_hash: yeGwCxbA5dBAS_3eBkfaVrbxkASEM357dkjPZShKiR4
+id: profile.billing
+label: Billing
+targetEntityType: profile
+cache: true

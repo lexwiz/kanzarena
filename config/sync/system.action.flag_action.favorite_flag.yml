@@ -1,0 +1,15 @@
+uuid: 5898d4c6-4d9b-40e2-8ae2-22d3d77269e7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_flag
+label: 'Отметить флагом Избранное'
+type: commerce_product
+plugin: 'flag_action:favorite_flag'
+configuration:
+  flag_id: favorite
+  flag_action: flag

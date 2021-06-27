@@ -1,0 +1,68 @@
+uuid: 4aa5c643-5809-41b6-8a74-85b4a6423440
+langcode: ru
+status: true
+dependencies:
+  config:
+    - search_api.index.default_product_index
+    - views.view.taxonomy_term_product_index
+  module:
+    - search_api
+id: catalog
+name: Catalog
+url_alias: catalog
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: field_catalog
+facet_source_id: 'search_api:views_page__taxonomy_term_product_index__page_1'
+widget:
+  type: links
+  config:
+    show_numbers: false
+    soft_limit: 10
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+    show_reset_link: false
+    reset_text: 'Показать все'
+    hide_reset_when_no_selection: false
+query_operator: or
+use_hierarchy: true
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 40
+exclude: false
+only_visible_when_facet_source_is_visible: true
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
+    settings: {  }
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

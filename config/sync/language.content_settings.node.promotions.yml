@@ -1,0 +1,11 @@
+uuid: 757a4066-a4ba-4ceb-bff2-8481e9c43f12
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.promotions
+id: node.promotions
+target_entity_type_id: node
+target_bundle: promotions
+default_langcode: site_default
+language_alterable: false

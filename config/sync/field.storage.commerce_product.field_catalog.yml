@@ -1,0 +1,24 @@
+uuid: c31fd1a6-e16c-4dc2-853f-534792840575
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product.field_catalog
+field_name: field_catalog
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,36 @@
+uuid: f2e43a66-c5af-4ee6-833f-68f4ec3a3cdb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - facets.facet.catalog
+  module:
+    - ctools
+    - facets
+    - system
+  theme:
+    - b4theme
+id: catalog
+theme: b4theme
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'facet_block:catalog'
+settings:
+  id: 'facet_block:catalog'
+  label: Каталог
+  provider: facets
+  label_display: visible
+  block_id: catalog
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      brand: brand
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'

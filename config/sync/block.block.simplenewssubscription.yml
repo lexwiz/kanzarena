@@ -1,0 +1,24 @@
+uuid: 076c024e-8b5a-4586-b508-f9df425a69ad
+langcode: ru
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - b4theme
+id: simplenewssubscription
+theme: b4theme
+region: footer_four
+weight: 0
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  provider: simplenews
+  label_display: '0'
+  newsletters:
+    default: default
+  message: 'Будьте в курсе - подпишитесь на нашу рассылку.'
+  unique_id: d8594691-dd0f-433b-8223-399ef4fcc890
+visibility: {  }

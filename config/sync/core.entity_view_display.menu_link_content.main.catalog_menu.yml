@@ -1,0 +1,20 @@
+uuid: cafe34b3-e065-47df-86ee-d55b99698a4c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.catalog_menu
+  module:
+    - menu_link_content
+id: menu_link_content.main.catalog_menu
+targetEntityType: menu_link_content
+bundle: main
+mode: catalog_menu
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

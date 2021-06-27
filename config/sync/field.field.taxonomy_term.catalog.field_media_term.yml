@@ -1,0 +1,29 @@
+uuid: 49c7eaab-18ee-4a5e-a8e5-de2505de3c37
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_media_term
+    - media.type.image
+    - taxonomy.vocabulary.catalog
+id: taxonomy_term.catalog.field_media_term
+field_name: field_media_term
+entity_type: taxonomy_term
+bundle: catalog
+label: 'Media Term'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

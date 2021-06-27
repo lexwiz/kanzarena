@@ -1,0 +1,25 @@
+uuid: 5b48f3d9-97c2-4f7a-91f5-ddf03dc560b1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.catalog-menu
+  module:
+    - system
+  theme:
+    - b4theme
+id: b4theme_catalogmenu_2
+theme: b4theme
+region: nav_catalog
+weight: -11
+provider: null
+plugin: 'system_menu_block:catalog-menu'
+settings:
+  id: 'system_menu_block:catalog-menu'
+  label: 'Catalog Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 5
+  expand_all_items: true
+visibility: {  }

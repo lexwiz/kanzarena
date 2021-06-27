@@ -1,0 +1,23 @@
+uuid: 1ec00287-3993-42f7-92c4-df715d2850fe
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.product_search
+  module:
+    - views
+  theme:
+    - b4theme
+id: b4theme_raskrytayaformaproduct_searchpage_1
+theme: b4theme
+region: nav_search
+weight: -11
+provider: null
+plugin: 'views_exposed_filter_block:product_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:product_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

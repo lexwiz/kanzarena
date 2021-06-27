@@ -1,0 +1,29 @@
+uuid: 3d61ddbc-254b-49c0-83f6-6bed7611fc75
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - system
+    - views
+  theme:
+    - b4theme
+id: views_block__slideshow_block_1
+theme: b4theme
+region: highlighted
+weight: -10
+provider: null
+plugin: 'views_block:slideshow-block_1'
+settings:
+  id: 'views_block:slideshow-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

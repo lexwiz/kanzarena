@@ -1,0 +1,31 @@
+hash_expiration: 86400
+newsletter:
+  format: plain
+  priority: 0
+  receipt: true
+  from_address: lexsaenko@yandex.ru
+  from_name: КанцАрена
+subscriber:
+  sync_fields: true
+subscription:
+  skip_verification: false
+  tidy_unconfirmed: 7
+  confirm_combined_subject: 'Подтверждение для сайта [site:name]'
+  confirm_combined_body: "Мы получили запрос на следующие изменения в подписке на рассылку [simplenews-subscriber:mail] с сайта [site:url]:\r\n\r\n[changes-list]\r\n\r\nДля подтверждения запроса нажмите ссылку ниже.\r\n\r\n[simplenews-subscriber:combined-url]"
+  confirm_combined_body_unchanged: "Мы получили запрос на следующие изменения в подписке на рассылку [simplenews-subscriber:mail] с сайта [site:url]:\r\n\r\n[changes-list]\r\n\r\nНикакого подтверждения не требуется, поскольку запрошенные изменения ничего не меняют в настройках подписки."
+  confirm_combined_line_subscribe_unsubscribed: 'Подписка на рассылку [simplenews-newsletter:name]'
+  confirm_combined_line_subscribe_subscribed: 'Вы уже подписаны на рассылку [simplenews-newsletter:name]'
+  confirm_combined_line_unsubscribe_subscribed: 'Отписаться от рассылки [simplenews-newsletter:name]'
+  confirm_combined_line_unsubscribe_unsubscribed: 'Вы уже отписаны от рассылки [simplenews-newsletter:name]'
+  confirm_subscribe_page: ''
+  confirm_unsubscribe_page: ''
+mail:
+  use_cron: true
+  textalt: false
+  throttle: 20
+  spool_progress_expiration: 3600
+  spool_expire: 0
+  debug: false
+_core:
+  default_config_hash: rnNxnXMi72RPRPGLvuGLUXirl-f-OJtK4sv1xY84Xd0
+langcode: ru

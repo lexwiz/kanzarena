@@ -1,0 +1,21 @@
+uuid: 4b79c3c2-ca39-40a1-8b33-52c44d4a4597
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_barcode
+field_name: field_barcode
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 15
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

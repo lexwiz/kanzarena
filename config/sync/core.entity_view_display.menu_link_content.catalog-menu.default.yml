@@ -1,0 +1,19 @@
+uuid: ab21dc27-d4d8-4117-86f1-8121914559c8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.catalog-menu
+id: menu_link_content.catalog-menu.default
+targetEntityType: menu_link_content
+bundle: catalog-menu
+mode: default
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,25 @@
+uuid: 45893e5f-3be7-498c-99a6-da2504192d6a
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cc6fe08d-7bc7-483c-b4b0-37e96ee935e5'
+  module:
+    - block_content
+  theme:
+    - b4theme
+id: emailandtelefon
+theme: b4theme
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:cc6fe08d-7bc7-483c-b4b0-37e96ee935e5'
+settings:
+  id: 'block_content:cc6fe08d-7bc7-483c-b4b0-37e96ee935e5'
+  label: 'E-mail and Telefon'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

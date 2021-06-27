@@ -1,0 +1,36 @@
+uuid: 634b3865-4626-46ec-817f-dd5b98848258
+langcode: ru
+status: true
+dependencies:
+  module:
+    - link
+    - menu_link_content
+id: menu_link_content.catalog-menu.default
+targetEntityType: menu_link_content
+bundle: catalog-menu
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

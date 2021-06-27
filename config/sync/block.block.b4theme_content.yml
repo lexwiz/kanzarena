@@ -1,0 +1,22 @@
+uuid: d2b51a34-8dc7-4765-a0b7-79e8f88248ec
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - b4theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: b4theme_content
+theme: b4theme
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  provider: system
+  label_display: '0'
+visibility: {  }

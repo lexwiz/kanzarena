@@ -1,0 +1,30 @@
+uuid: b644d890-b5ab-46e1-bfae-153841e2a827
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.related_nodes
+  module:
+    - system
+    - views
+  theme:
+    - b4theme
+id: b4theme_views_block__related_nodes_block_1
+theme: b4theme
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:related_nodes-block_1'
+settings:
+  id: 'views_block:related_nodes-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/product/*'
+    negate: false

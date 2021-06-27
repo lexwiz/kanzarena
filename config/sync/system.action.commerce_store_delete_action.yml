@@ -1,0 +1,17 @@
+uuid: c7c44555-4aa7-422e-858d-c704794856d0
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_store
+  module:
+    - commerce_store
+    - entity
+_core:
+  default_config_hash: _4Uh3mQA18aGlat_JmyPTEDWXiuiexldraA0zgTTbGY
+id: commerce_store_delete_action
+label: 'Удалить магазин'
+type: commerce_store
+plugin: 'entity_delete_action:commerce_store'
+configuration: {  }

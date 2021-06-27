@@ -1,0 +1,23 @@
+uuid: 58eba08e-7f23-4c71-8b20-80ac3b63c6fd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.field_stock
+id: commerce_product_variation.default.field_stock
+field_name: field_stock
+entity_type: commerce_product_variation
+bundle: default
+label: Stock
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

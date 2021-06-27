@@ -1,0 +1,12 @@
+uuid: a5431ed5-d99f-4283-a577-6a3bdfc22c5e
+langcode: ru
+status: true
+dependencies: {  }
+id: search_api__views_page__taxonomy_term_product_index__page_1
+name: 'search_api:views_page__taxonomy_term_product_index__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: false
+  group: false

@@ -1,0 +1,461 @@
+uuid: c06c7808-61bf-4366-bf76-7010cd156548
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - system.menu.main
+    - taxonomy.vocabulary.brand
+  content:
+    - 'taxonomy_term:brand:04b488c7-2b4e-4cff-9a89-a17e5ab6500b'
+    - 'taxonomy_term:brand:13d6e4bf-0836-413e-9d45-ee971c460451'
+    - 'taxonomy_term:brand:15b05b67-10ea-4d21-953f-2509726968ec'
+    - 'taxonomy_term:brand:16000149-6399-471c-8047-309813d2845c'
+    - 'taxonomy_term:brand:177173e3-73d1-4ec1-9d46-3486ed52e4fc'
+    - 'taxonomy_term:brand:1923e5eb-1823-4bd2-a427-aab83dbed23f'
+    - 'taxonomy_term:brand:19ab0c42-ee7f-4012-b81f-fc65f1e7e1d5'
+    - 'taxonomy_term:brand:1bb20fc0-0781-41d9-8b7a-cbc54372c964'
+    - 'taxonomy_term:brand:1f3f8079-707a-4884-ae89-e2eeb2e8bbe0'
+    - 'taxonomy_term:brand:20ab313b-d70d-427b-a2b1-88a3f66ed651'
+    - 'taxonomy_term:brand:261a1875-8c50-4514-9021-a085b49da37e'
+    - 'taxonomy_term:brand:2e78a40e-27f5-48e1-b9e3-db24ba4cd44e'
+    - 'taxonomy_term:brand:2ebf7dbc-7681-4832-bc86-acf249635e57'
+    - 'taxonomy_term:brand:30509030-2f5f-4d62-8aff-fb97ddedf6b5'
+    - 'taxonomy_term:brand:32fab382-dba5-4b7b-b313-1d5d52630e27'
+    - 'taxonomy_term:brand:3553ed71-3039-4131-9662-50899b236699'
+    - 'taxonomy_term:brand:368d5f06-53e6-4e46-be1f-f0fc5f7e1dcb'
+    - 'taxonomy_term:brand:4c2ad5b0-70fa-4bcf-806f-0bbaf3459227'
+    - 'taxonomy_term:brand:4ed08872-04a9-4b4e-b07c-47b7cb606206'
+    - 'taxonomy_term:brand:5c56ba90-b2b3-4a30-98e4-ff156a963144'
+    - 'taxonomy_term:brand:66368e1c-0109-4a51-8384-9d2bfd2715fc'
+    - 'taxonomy_term:brand:7568ebb7-1e5d-45b4-a350-80abb9441272'
+    - 'taxonomy_term:brand:782a1a8a-d179-4968-aa22-7cf3342b0c44'
+    - 'taxonomy_term:brand:796b1a68-9363-45bc-ac8a-3462b4e9418a'
+    - 'taxonomy_term:brand:7cd98082-3ee4-4270-92f1-a1b7bf2bca4c'
+    - 'taxonomy_term:brand:7f346c21-9b8f-4496-b0a9-a0b66c8baee4'
+    - 'taxonomy_term:brand:805f1fbf-b222-41b6-bf81-250e701dd6e5'
+    - 'taxonomy_term:brand:8628ad19-6d9e-49ca-ade1-f7ed0e29f8d4'
+    - 'taxonomy_term:brand:8be9e7be-faaa-4daf-850d-c749f30fda12'
+    - 'taxonomy_term:brand:8c6414f8-0e2f-4831-ba92-524425cd5638'
+    - 'taxonomy_term:brand:8f9624b6-75af-4679-a86e-1d3bbf081032'
+    - 'taxonomy_term:brand:936c2244-caf2-4dfd-9d93-3c8c78144356'
+    - 'taxonomy_term:brand:93f228a2-c1ff-477f-82b7-6ac564203e79'
+    - 'taxonomy_term:brand:96070979-9c86-473e-967a-a133cfffdc01'
+    - 'taxonomy_term:brand:9a82f20b-afda-429c-99f6-f9ccc8021f1b'
+    - 'taxonomy_term:brand:a8e7024b-7ca8-4258-ab4e-a532c3f02d8e'
+    - 'taxonomy_term:brand:ad3a76d5-6b0d-4cf3-9d47-bdc0ef46af15'
+    - 'taxonomy_term:brand:bc9ff646-531b-4339-99e0-1953d862743f'
+    - 'taxonomy_term:brand:c07131e5-6ee6-490e-add7-39ab0ab450d1'
+    - 'taxonomy_term:brand:da50cbe3-6084-4f2b-b184-2b5bb167f3b3'
+    - 'taxonomy_term:brand:dd6cf9c5-a96f-4ff3-838c-5d8ecadfb818'
+    - 'taxonomy_term:brand:e08ee96d-43a6-4cae-97d2-0d5a65d8cf7c'
+    - 'taxonomy_term:brand:e0cda08c-7803-4bbc-9ca2-a44eedeeb0bc'
+    - 'taxonomy_term:brand:e14b4d1d-d653-4aac-8063-beb9cba2b261'
+    - 'taxonomy_term:brand:e2562f83-c30a-4984-b739-442ccff55306'
+    - 'taxonomy_term:brand:f224e3a0-6374-4a92-8b31-3a04f7c2910a'
+    - 'taxonomy_term:brand:f2e8fb01-2dbe-44bc-925d-74486dd17cf1'
+    - 'taxonomy_term:brand:fecdcc2c-e751-40c3-8957-b5128087f34a'
+  module:
+    - taxonomy
+    - user
+    - views_bootstrap
+id: brand
+label: Brand
+module: views
+description: ''
+tag: ''
+base_table: taxonomy_term_field_data
+base_field: tid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: some
+        options:
+          items_per_page: 60
+          offset: 0
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-6
+          col_sm: col-sm-6
+          col_md: col-md-3
+          col_lg: col-lg-2
+          col_xl: col-xl-2
+      row:
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: full
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          entity_type: taxonomy_term
+          entity_field: name
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          type: string
+          settings:
+            link_to_entity: true
+          plugin_id: term_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+      filters:
+        status:
+          value: '1'
+          table: taxonomy_term_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            brand: brand
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            615: 615
+            645: 645
+            523: 523
+            512: 512
+            701: 701
+            570: 570
+            650: 650
+            511: 511
+            532: 532
+            597: 597
+            548: 548
+            545: 545
+            507: 507
+            633: 633
+            563: 563
+            514: 514
+            707: 707
+            542: 542
+            565: 565
+            520: 520
+            495: 495
+            534: 534
+            543: 543
+            634: 634
+            508: 508
+            540: 540
+            577: 577
+            504: 504
+            530: 530
+            640: 640
+            631: 631
+            643: 643
+            608: 608
+            544: 544
+            626: 626
+            606: 606
+            536: 536
+            607: 607
+            580: 580
+            522: 522
+            552: 552
+            617: 617
+            519: 519
+            509: 509
+            646: 646
+            493: 493
+            513: 513
+            571: 571
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: brand
+          hierarchy: false
+          error_message: true
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+      sorts: {  }
+      title: Brand
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - user.permissions
+      tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 2
+    display_options:
+      display_extenders: {  }
+      pager:
+        type: some
+        options:
+          items_per_page: 12
+          offset: 0
+      defaults:
+        pager: false
+        filters: false
+        filter_groups: false
+        style: false
+        row: false
+      filters:
+        status:
+          value: '1'
+          table: taxonomy_term_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: taxonomy_term
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            brand: brand
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            512: 512
+            511: 511
+            532: 532
+            548: 548
+            507: 507
+            534: 534
+            543: 543
+            508: 508
+            540: 540
+            504: 504
+            530: 530
+            608: 608
+            580: 580
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: brand
+          hierarchy: false
+          error_message: true
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-6
+          col_sm: col-sm-6
+          col_md: col-md-3
+          col_lg: col-lg-2
+          col_xl: col-xl-2
+      row:
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: default
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: brand
+      menu:
+        type: normal
+        title: Brand
+        menu_name: main
+        weight: -49
+        parent: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - user.permissions
+      tags: {  }

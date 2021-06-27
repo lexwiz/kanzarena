@@ -1,0 +1,15 @@
+uuid: 07e25eb9-7afb-483c-8cb9-3ec7f88cd443
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_unflag
+label: 'Снять флаг Избранное'
+type: commerce_product
+plugin: 'flag_action:favorite_unflag'
+configuration:
+  flag_id: favorite
+  flag_action: unflag

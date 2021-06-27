@@ -1,0 +1,12 @@
+uuid: 4ab2720a-d924-4b3e-9969-e62756f70ad4
+langcode: ru
+status: true
+dependencies: {  }
+id: search_api__views_page__taxonomy_term_brand_product_index__page_1
+name: 'search_api:views_page__taxonomy_term_brand_product_index__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: true
+  before: true
+  group: false

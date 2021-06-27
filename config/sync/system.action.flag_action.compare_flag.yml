@@ -1,0 +1,15 @@
+uuid: cc97ee2d-2cac-4cff-be72-ea25af3b11df
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.compare
+  module:
+    - flag
+id: flag_action.compare_flag
+label: 'Отметить флагом'
+type: commerce_product
+plugin: 'flag_action:compare_flag'
+configuration:
+  flag_id: compare
+  flag_action: flag

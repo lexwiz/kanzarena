@@ -1,0 +1,6 @@
+delete_config: count
+_core:
+  default_config_hash: QGZMbVFYzE4vHTIUT8PGbAVfRsqZeasx9fV5h_QBO8M
+langcode: ru
+delete_time: '-1 hours'
+count: '10'

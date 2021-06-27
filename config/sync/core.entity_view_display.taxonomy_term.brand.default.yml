@@ -1,0 +1,28 @@
+uuid: 279000a2-93bc-40b5-a99b-876734a1c482
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.brand.field_image_term
+    - image.style.medium
+    - taxonomy.vocabulary.brand
+  module:
+    - image
+id: taxonomy_term.brand.default
+targetEntityType: taxonomy_term
+bundle: brand
+mode: default
+content:
+  field_image_term:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

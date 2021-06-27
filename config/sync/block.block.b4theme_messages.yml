@@ -1,0 +1,22 @@
+uuid: 48e580c3-7957-49a9-a1bf-ae7092ab62b8
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - b4theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: b4theme_messages
+theme: b4theme
+region: highlighted
+weight: -11
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Системные сообщения'
+  provider: system
+  label_display: '0'
+visibility: {  }

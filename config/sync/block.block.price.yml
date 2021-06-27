@@ -1,0 +1,28 @@
+uuid: 4d8e41a4-2d2c-4534-8993-912ff0d4e19d
+langcode: ru
+status: false
+dependencies:
+  config:
+    - facets.facet.price
+  module:
+    - facets
+    - system
+  theme:
+    - b4theme
+id: price
+theme: b4theme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'facet_block:price'
+settings:
+  id: 'facet_block:price'
+  label: Price
+  provider: facets
+  label_display: visible
+  block_id: price
+visibility:
+  request_path:
+    id: request_path
+    pages: '/taxonomy/term/*'
+    negate: false

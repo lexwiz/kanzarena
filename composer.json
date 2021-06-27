@@ -62,7 +62,8 @@
         "drupal/views_bootstrap": "^4.3",
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
-        "drupal/votingapi": "3.x-dev@dev"
+        "drupal/votingapi": "3.x-dev@dev",
+        "drush/drush": "^10.5"
     },
     "conflict": {
         "drupal/drupal": "*"

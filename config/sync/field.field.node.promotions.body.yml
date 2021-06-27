@@ -1,0 +1,23 @@
+uuid: 1e199319-9462-4a2b-a80f-6908c7703e79
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.promotions
+  module:
+    - text
+id: node.promotions.body
+field_name: body
+entity_type: node
+bundle: promotions
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,18 @@
+uuid: 5927e0a4-51d3-4bc7-9feb-2e8eb23ac316
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

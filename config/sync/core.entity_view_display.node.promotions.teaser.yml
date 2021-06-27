@@ -1,0 +1,34 @@
+uuid: ab1783c2-3da6-4c25-ab8c-94ecb949e143
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promotions.body
+    - field.field.node.promotions.field_image
+    - node.type.promotions
+  module:
+    - text
+    - user
+id: node.promotions.teaser
+targetEntityType: node
+bundle: promotions
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image: true
+  langcode: true
+  search_api_excerpt: true

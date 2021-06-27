@@ -1,0 +1,22 @@
+uuid: 33900bd4-f669-496d-9c9a-c359191abe0e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - b4theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: b4theme_breadcrumbs
+theme: b4theme
+region: breadcrumb
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  provider: system
+  label_display: '0'
+visibility: {  }
