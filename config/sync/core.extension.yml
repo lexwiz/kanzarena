@@ -74,7 +74,6 @@ module:
   path_alias: 0
   price_difference_formatter: 0
   profile: 0
-  rate: 0
   rdf: 0
   recently_read: 0
   search_api: 0
@@ -103,7 +102,6 @@ module:
   views_flipped_table: 0
   views_ui: 0
   vocabulary_condition: 0
-  votingapi: 0
   pathauto: 1
   views: 10
   standard: 1000

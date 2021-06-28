@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02be6ec0fe531349b70efdbb1f009742",
+    "content-hash": "866ef4a18148e148dbe08fe279d70934",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5181,69 +5181,6 @@
             }
         },
         {
-            "name": "drupal/rate",
-            "version": "dev-2.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/rate.git",
-                "reference": "de9a8b3f9f41d0250c1689b83952a325842baaf4"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/votingapi": "^3.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-alpha1+1-dev",
-                    "datestamp": "1613735755",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "JordiK",
-                    "homepage": "https://www.drupal.org/user/3472907"
-                },
-                {
-                    "name": "Krzysztof Domański",
-                    "homepage": "https://www.drupal.org/user/3572982"
-                },
-                {
-                    "name": "brenk28",
-                    "homepage": "https://www.drupal.org/user/65985"
-                },
-                {
-                    "name": "kevin.dutra",
-                    "homepage": "https://www.drupal.org/user/1312744"
-                },
-                {
-                    "name": "mauritsl",
-                    "homepage": "https://www.drupal.org/user/243897"
-                },
-                {
-                    "name": "michaelmol",
-                    "homepage": "https://www.drupal.org/user/919186"
-                }
-            ],
-            "description": "Flexible voting options for entity types.",
-            "homepage": "https://www.drupal.org/project/rate",
-            "support": {
-                "source": "https://git.drupalcode.org/project/rate",
-                "issues": "https://www.drupal.org/project/issues/rate"
-            }
-        },
-        {
             "name": "drupal/recently_read",
             "version": "dev-1.x",
             "source": {
@@ -6327,75 +6264,6 @@
             "homepage": "https://www.drupal.org/project/vocabulary_condition",
             "support": {
                 "source": "https://git.drupalcode.org/project/vocabulary_condition"
-            }
-        },
-        {
-            "name": "drupal/votingapi",
-            "version": "dev-3.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/votingapi.git",
-                "reference": "61e2296a210abed8a20475ffd79eceaab34a1c8c"
-            },
-            "require": {
-                "drupal/core": "^8.8.2 || ^9"
-            },
-            "require-dev": {
-                "drupal/token": "^1.5"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-beta2+12-dev",
-                    "datestamp": "1609978071",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TR",
-                    "homepage": "https://www.drupal.org/user/202830"
-                },
-                {
-                    "name": "eaton",
-                    "homepage": "https://www.drupal.org/user/16496"
-                },
-                {
-                    "name": "pedrorocha",
-                    "homepage": "https://www.drupal.org/user/218937"
-                },
-                {
-                    "name": "pifagor",
-                    "homepage": "https://www.drupal.org/user/2375692"
-                },
-                {
-                    "name": "torotil",
-                    "homepage": "https://www.drupal.org/user/865256"
-                }
-            ],
-            "description": "Voting API",
-            "homepage": "http://www.drupal.org/project/votingapi",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/votingapi",
-                "issues": "http://drupal.org/project/issues/votingapi"
             }
         },
         {
@@ -11343,13 +11211,11 @@
         "drupal/feeds": 15,
         "drupal/feeds_tamper": 10,
         "drupal/flag": 10,
-        "drupal/rate": 20,
         "drupal/recently_read": 20,
         "drupal/simplenews": 15,
         "drupal/taxonomy_menu": 20,
         "drupal/twig_tweak": 5,
-        "drupal/viewfield": 10,
-        "drupal/votingapi": 20
+        "drupal/viewfield": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
