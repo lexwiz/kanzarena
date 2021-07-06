@@ -49,7 +49,6 @@
         "drupal/simplenews": "^3.0@alpha",
         "drupal/swiftmailer": "^2.0",
         "drupal/taxonomy_entity_index": "^1.7",
-        "drupal/taxonomy_menu": "3.x-dev@dev",
         "drupal/taxonomy_menu_ui": "^1.4",
         "drupal/term_condition": "^2.0",
         "drupal/twig_field_value": "^2.0",
