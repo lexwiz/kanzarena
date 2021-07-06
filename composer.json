@@ -57,7 +57,6 @@
         "drupal/views_bootstrap": "^4.3",
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
-        "drush/drush": "^10.5",
         "roave/better-reflection": "^4.12"
     },
     "conflict": {
