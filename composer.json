@@ -49,7 +49,6 @@
         "drupal/simplenews": "^3.0@alpha",
         "drupal/swiftmailer": "^2.0",
         "drupal/taxonomy_entity_index": "^1.7",
-        "drupal/taxonomy_menu": "3.x-dev@dev",
         "drupal/taxonomy_menu_ui": "^1.4",
         "drupal/term_condition": "^2.0",
         "drupal/twig_field_value": "^2.0",
@@ -58,6 +57,7 @@
         "drupal/views_bootstrap": "^4.3",
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
+        "drush/drush": "^10.5",
         "roave/better-reflection": "^4.12"
     },
     "conflict": {
