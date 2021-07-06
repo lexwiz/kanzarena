@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c71baead775c243805e923d105c34717",
+    "content-hash": "29c57298bd920d9c55385d2ced6ec18e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5609,6 +5609,75 @@
             }
         },
         {
+            "name": "drupal/taxonomy_menu",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/taxonomy_menu.git",
+                "reference": "7320f41749556027a4b9f968cee9464b0f275def"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.4+21-dev",
+                    "datestamp": "1596791490",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "NickDickinsonWilde",
+                    "homepage": "https://www.drupal.org/user/3094661"
+                },
+                {
+                    "name": "andrey.troeglazov",
+                    "homepage": "https://www.drupal.org/user/3145389"
+                },
+                {
+                    "name": "ashrafabed",
+                    "homepage": "https://www.drupal.org/user/1875528"
+                },
+                {
+                    "name": "bmack",
+                    "homepage": "https://www.drupal.org/user/3594520"
+                },
+                {
+                    "name": "dstol",
+                    "homepage": "https://www.drupal.org/user/329570"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "rwanth",
+                    "homepage": "https://www.drupal.org/user/3564319"
+                }
+            ],
+            "description": "Creates menu items based on associations to taxonomy vocabularies",
+            "homepage": "http://drupal.org/project/taxonomy_menu",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_menu",
+                "issues": "http://drupal.org/project/taxonomy_menu"
+            }
+        },
+        {
             "name": "drupal/taxonomy_menu_ui",
             "version": "1.4.0",
             "source": {
@@ -10981,6 +11050,7 @@
         "drupal/flag": 10,
         "drupal/recently_read": 20,
         "drupal/simplenews": 15,
+        "drupal/taxonomy_menu": 20,
         "drupal/twig_tweak": 5,
         "drupal/viewfield": 10
     },
