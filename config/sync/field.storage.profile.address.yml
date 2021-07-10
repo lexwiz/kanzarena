@@ -7,7 +7,11 @@ dependencies:
       - commerce_order
   module:
     - address
+    - field_permissions
     - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
 _core:
   default_config_hash: 7bB4yBo--Mezm_PhFRPPxFA7NRyFY7a2p8FxJTMbfQY
 id: profile.address

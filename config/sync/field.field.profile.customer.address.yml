@@ -17,22 +17,31 @@ label: Address
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    langcode: ''
+    country_code: RU
+    administrative_area: 'Respublika Krym'
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: null
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
 default_value_callback: ''
 settings:
   available_countries: {  }
-  fields:
-    administrativeArea: administrativeArea
-    locality: locality
-    dependentLocality: dependentLocality
-    postalCode: postalCode
-    sortingCode: sortingCode
-    addressLine1: addressLine1
-    addressLine2: addressLine2
-    organization: organization
-    givenName: givenName
-    additionalName: additionalName
-    familyName: familyName
   langcode_override: ''
-  field_overrides: {  }
+  field_overrides:
+    additionalName:
+      override: optional
+    organization:
+      override: hidden
+    addressLine2:
+      override: hidden
+  fields: {  }
 field_type: address
