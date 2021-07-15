@@ -1,0 +1,25 @@
+uuid: cbcfb225-1996-4f44-9609-a724ae6360f3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-catalog
+  module:
+    - system
+  theme:
+    - b4theme
+id: footermenucatalog
+theme: b4theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-catalog'
+settings:
+  id: 'system_menu_block:footer-menu-catalog'
+  label: 'Footer menu catalog'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

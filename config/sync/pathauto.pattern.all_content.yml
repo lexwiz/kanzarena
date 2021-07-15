@@ -1,0 +1,14 @@
+uuid: 494614dd-27ba-4520-b258-aca778698907
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: all_content
+label: 'All content'
+type: 'canonical_entities:node'
+pattern: 'content/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

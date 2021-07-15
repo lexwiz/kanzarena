@@ -11,6 +11,7 @@ dependencies:
     - media
     - taxonomy
     - user
+    - views_bootstrap
 id: catalog
 label: Catalog
 module: views
@@ -55,11 +56,16 @@ display:
         options:
           offset: 0
       style:
-        type: default
+        type: views_bootstrap_grid
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'barder border-2 border-primary p-3'
           default_row_class: true
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
       row:
         type: fields
         options:
@@ -170,7 +176,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: strong
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -275,7 +281,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% set termid = tid|render|striptags %}\r\n{{ drupal_view('child_categories', 'block_1', termid) }}"
+            text: "{% set termid = tid|render|striptags %}\r\n{{ drupal_view('child_categories', 'block_2', termid) }}"
             make_link: false
             path: ''
             absolute: false
@@ -407,7 +413,8 @@ display:
     display_title: Block
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -422,7 +429,8 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: catalog
       menu:
         type: normal

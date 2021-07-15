@@ -82,17 +82,17 @@ display:
             unit_price__number:
               sortable: 0
               default_sort_order: asc
-              align: ''
+              align: views-align-center
               separator: ''
               empty_column: 0
-              responsive: ''
+              responsive: priority-medium
             edit_quantity:
-              align: ''
+              align: views-align-center
               separator: ''
               empty_column: 0
               responsive: ''
             remove_button:
-              align: ''
+              align: views-align-center
               separator: ''
               empty_column: 0
               responsive: ''
@@ -102,7 +102,7 @@ display:
               align: ''
               separator: ''
               empty_column: 0
-              responsive: ''
+              responsive: priority-medium
           default: '-1'
           empty_table: 0
           responsive: 1
@@ -495,7 +495,8 @@ display:
           entity_type: commerce_order
           entity_field: order_id
           plugin_id: numeric
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       use_ajax: true
     cache_metadata:
       max-age: -1

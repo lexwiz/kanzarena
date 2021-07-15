@@ -19,4 +19,8 @@ settings:
   label: 'Строка навигации'
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/brand\r\n/sales\r\n/catalog\r\n/favorite\r\n/compare\r\n/node/*\r\n/user/*"
+    negate: true

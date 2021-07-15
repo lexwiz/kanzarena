@@ -175,13 +175,26 @@ div.flag-favorite, div.flag-compare {
   color: $success;
   display: inline-block;
   padding: 0 0.1rem;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1;
 }
 
 .final-price {
-  font-size: 1.2em;
-  font-weight: 700;
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.full-product-price {
+  .original-price {
+    font-size: 1em;
+  }
+  .discount-percentage, .discount-currency {
+    font-size: 1.2em;
+  }
+  .final-price {
+    font-size: 2em;
+    font-weight: 800;
+  }
 }
 
 .field--name-field-stock {

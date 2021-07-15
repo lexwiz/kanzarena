@@ -5,9 +5,11 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://KanzArena Logo.png'
+  path: 'public://KanzArena Logo 2021.png'
 favicon:
-  use_default: 1
+  use_default: 0
+  path: 'public://KanzArena Icon 2021.png'
+  mimetype: image/png
 b4_top_container: container
 b4_body_schema: none
 b4_body_bg_schema: none

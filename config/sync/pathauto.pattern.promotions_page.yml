@@ -1,0 +1,22 @@
+uuid: 9ec15055-2cfc-4a0f-ab1a-acc1a3a06ead
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: promotions_page
+label: 'Promotions page'
+type: 'canonical_entities:node'
+pattern: 'promotions/[node:title]'
+selection_criteria:
+  ebc08869-edee-492c-ad22-99d858f14e2c:
+    id: node_type
+    bundles:
+      promotions: promotions
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ebc08869-edee-492c-ad22-99d858f14e2c
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -43,11 +43,11 @@
  */
 #}
 {%
-  set nav_classes_fixed = 'navbar navbar-expand-lg fixed-top bg-primary'
+  set nav_classes_fixed = 'navbar navbar-expand-lg fixed-top navbar-light bg-light border-bottom border-dark'
 %}
 
 {%
-set nav_classes = 'navbar navbar-expand-lg mb-2 border-bottom border-primary' ~
+  set nav_classes = 'navbar navbar-expand-lg mb-2' ~
   (b4_navbar_schema != 'none' ? " navbar-#{b4_navbar_schema}" : ' ') ~
   (b4_navbar_schema != 'none' ? (b4_navbar_schema == 'dark' ? ' text-light' : ' text-dark' ) : ' ') ~
   (b4_navbar_bg_schema != 'none' ? " bg-#{b4_navbar_bg_schema}" : ' ')

@@ -8744,7 +8744,7 @@ code {
   color: #dfd7ca; }
 
 .breadcrumb {
-  border: 1px solid #dfd7ca; }
+  border: 1px solid #3e3f3a; }
 
 .pagination a:hover {
   text-decoration: none; }
@@ -9231,8 +9231,8 @@ ol, ul {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #325d88;
-  border-bottom: 1px solid #325d88; }
+  border-top: 1px solid #3e3f3a;
+  border-bottom: 1px solid #3e3f3a; }
 
 p:last-child,
 .form-group:last-child,
@@ -9356,12 +9356,20 @@ div.flag-favorite a, div.flag-compare a {
   color: #93c54b;
   display: inline-block;
   padding: 0 0.1rem;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1; }
 
 .final-price {
-  font-size: 1.2em;
-  font-weight: 700; }
+  font-size: 1.4em;
+  font-weight: 800; }
+
+.full-product-price .original-price {
+  font-size: 1em; }
+.full-product-price .discount-percentage, .full-product-price .discount-currency {
+  font-size: 1.2em; }
+.full-product-price .final-price {
+  font-size: 2em;
+  font-weight: 800; }
 
 .field--name-field-stock {
   padding-top: 0.25rem; }

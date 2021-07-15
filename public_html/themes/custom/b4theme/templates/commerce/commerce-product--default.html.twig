@@ -25,7 +25,7 @@
 
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5">
       {#      <div class="row text-center">#}
       {#        <div class="col-sm-6 col-md-6 text-uppercase"><strong>{{- product.flag_compare -}}</strong></div>#}
       {#        <div class="col-sm-6 col-md-6 text-uppercase"><strong>{{- product.flag_favorite -}}</strong></div>#}
@@ -35,7 +35,7 @@
       </div>
       {{- product.field_tags -}}
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <div class="">{{- product.field_code -}}</div>
@@ -44,27 +44,42 @@
           <div class="">{{- product.field_catalog -}}</div>
           <div class="">{{- product.field_brand -}}</div>
           <div class="">{{- product.field_country -}}</div>
-          {{- product.rate_rate_product -}}
+          {{- product.field_rating -}}
           {{- product.variation_field_code_stock -}}
         </div>
-        <div class="col-md-6 ">
+        <div class="col-md-6">
           <div class="barder border-2 border-primary p-3 shadow">
-            {{- product.variation_price -}}
+            <div class="full-product-price">{{- product.variation_price -}}</div>
             {{- product.variations -}}
             <strong> {{- product.variation_field_stock -}} </strong>
-            <div class="col-sm-6">{{- product.variation_qty_increments -}}</div>
-            <div class="col-sm-6">{{- product.field_package -}}</div>
+            <div class="">{{- product.variation_qty_increments -}}</div>
+            <div class="">{{- product.field_package -}}</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="mt-3 mb-3">
+
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Главная</a>
+        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</a>
+        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane col-sm-12 fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">{{- product.body -}}</div>
+      <div class="tab-pane col-sm-12 fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">{{- product.field_property -}}</div>
+      <div class="tab-pane col-sm-12 fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    </div>
+
+
     <div class="col-sm-12">
-      {{- product.body -}}
+
     </div>
     <div class="col-sm-12">
-      {{- product.field_property -}}
+
     </div>
   </div>
 </article>
