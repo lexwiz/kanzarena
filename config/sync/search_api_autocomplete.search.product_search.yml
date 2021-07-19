@@ -27,7 +27,7 @@ search_settings:
       selected: {  }
 options:
   limit: 10
-  min_length: 2
+  min_length: 3
   show_count: true
   autosubmit: false
   submit_button_selector: ':submit'

@@ -15,5 +15,5 @@ backend_config:
   min_chars: 3
   matching: words
   autocomplete:
-    suggest_suffix: true
-    suggest_words: true
+    suggest_suffix: false
+    suggest_words: false

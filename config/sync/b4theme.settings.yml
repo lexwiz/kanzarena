@@ -8,7 +8,7 @@ logo:
   path: 'public://KanzArena Logo 2021.png'
 favicon:
   use_default: 0
-  path: 'public://KanzArena Icon 2021.png'
+  path: 'public://Icon 2021.png'
   mimetype: image/png
 b4_top_container: container
 b4_body_schema: none

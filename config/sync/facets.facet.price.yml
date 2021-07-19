@@ -16,18 +16,19 @@ show_only_one_result: true
 field_identifier: number
 facet_source_id: 'search_api:views_page__taxonomy_term_product_index__page_1'
 widget:
-  type: range_slider
+  type: slider
   config:
     show_numbers: true
     prefix: ''
     suffix: ''
-    min_type: fixed
+    min_type: search_result
     min_value: !!float 0
-    max_type: fixed
+    max_type: search_result
     max_value: !!float 100
     step: !!float 10
 query_operator: or
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
@@ -52,12 +53,10 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
-  range_slider:
-    processor_id: range_slider
+  slider:
+    processor_id: slider
     weights:
-      pre_query: 60
       post_query: 60
-      build: 20
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler

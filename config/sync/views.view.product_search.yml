@@ -46,12 +46,17 @@ display:
           text_input_required: 'Введите не менее 3х символов в строку Поиска и нажмите Найти для просмотра результата'
           text_input_required_format: basic_html
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -60,13 +65,24 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-12
+          col_sm: col-sm-2
+          col_md: col-md-3
+          col_lg: col-lg-3
+          col_xl: col-xl-3
       row:
         type: search_api
+        options:
+          view_modes:
+            'entity:commerce_product':
+              default: teaser
       fields:
         created:
           table: search_api_index_default_product_index
@@ -233,7 +249,8 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: search
       exposed_block: true
     cache_metadata:
