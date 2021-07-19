@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: hI6zHs0P9XxjpjIYYZxrfjMIf2F5sOACOkwiyD6zRp0
 id: commerce_order.checkout
-label: Checkout
+label: 'Оформить заказ'
 targetEntityType: commerce_order
 cache: true
