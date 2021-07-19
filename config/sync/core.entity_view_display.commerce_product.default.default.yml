@@ -83,7 +83,7 @@ content:
     region: content
   field_property:
     weight: 9
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default

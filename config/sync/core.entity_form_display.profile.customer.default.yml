@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.profile.customer.address
+    - field.field.profile.customer.field_partner
+    - field.field.profile.customer.field_requisites
+    - field.field.profile.customer.field_telefon
     - profile.type.customer
   enforced:
     module:
       - commerce_order
   module:
     - address
+    - telephone
 _core:
   default_config_hash: 3LyHGK7R4HxqejbxONet1S9j9ekqLJuFpwT-MNJygvo
 id: profile.customer.default
@@ -22,6 +26,27 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_partner:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_requisites:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_telefon:
+    weight: 1
+    settings:
+      placeholder: '+7 (978) 123 45 67'
+    third_party_settings: {  }
+    type: telephone_default
     region: content
 hidden:
   is_default: true

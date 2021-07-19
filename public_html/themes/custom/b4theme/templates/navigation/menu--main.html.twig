@@ -29,7 +29,6 @@ We call a macro which calls itself to render the full tree.
 {% macro build_menu(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('navbar-nav mr-auto') }}>
     {% else %}

@@ -1,0 +1,23 @@
+uuid: ce4639e4-3170-4d2e-8237-248f4f5a8069
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_partner
+    - profile.type.customer
+  module:
+    - options
+id: profile.customer.field_partner
+field_name: field_partner
+entity_type: profile
+bundle: customer
+label: Покупатель
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Физическое лицо'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

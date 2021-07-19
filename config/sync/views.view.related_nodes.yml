@@ -146,7 +146,7 @@ display:
             operator_list: {  }
           group: 1
       sorts: {  }
-      title: 'Related nodes'
+      title: 'Похожие товары'
       header: {  }
       footer: {  }
       empty:
@@ -254,7 +254,8 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:

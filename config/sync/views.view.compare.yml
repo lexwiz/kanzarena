@@ -73,8 +73,62 @@ display:
           description: ''
           columns:
             title: title
+            field_photo: field_photo
+            field_code: field_code
+            variations_target_id: variations_target_id
+            field_brand: field_brand
+            field_country: field_country
+            field_property: field_property
+            link_flag: link_flag
           info:
             title:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_photo:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_code:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            variations_target_id:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_brand:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_country:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_property:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            link_flag:
               sortable: 0
               default_sort_order: asc
               align: ''
@@ -539,7 +593,7 @@ display:
           relationship: flag_relationship
           group_type: group
           admin_label: ''
-          label: ''
+          label: Удалить
           exclude: false
           alter:
             alter_text: false
@@ -597,7 +651,7 @@ display:
             operator_list: {  }
           group: 1
       sorts: {  }
-      title: Compare
+      title: 'Сравнение товаров'
       header: {  }
       footer: {  }
       empty:
@@ -644,17 +698,18 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: compare
       menu:
         type: normal
-        title: Compare
-        menu_name: account
+        title: Сравнить
         description: ''
+        expanded: false
         parent: ''
         weight: -50
-        expanded: false
-        enabled: true
+        context: '0'
+        menu_name: account
     cache_metadata:
       max-age: -1
       contexts:

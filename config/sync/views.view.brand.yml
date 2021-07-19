@@ -290,7 +290,7 @@ display:
           entity_field: tid
           plugin_id: taxonomy_index_tid
       sorts: {  }
-      title: Brand
+      title: Бренды
       header: {  }
       footer: {  }
       empty: {  }
@@ -443,14 +443,18 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: brand
       menu:
         type: normal
-        title: Brand
-        menu_name: main
-        weight: -49
+        title: Бренды
+        description: ''
+        expanded: false
         parent: ''
+        weight: -49
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

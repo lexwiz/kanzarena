@@ -10,9 +10,9 @@ _core:
 id: order_default
 label: Default
 targetEntityType: commerce_order
-plugin: yearly
+plugin: infinite
 configuration:
-  pattern: '[pattern:year]-[pattern:number]'
+  pattern: '[pattern:number]'
   initial_number: 1
-  padding: 0
+  padding: 6
   per_store_sequence: true

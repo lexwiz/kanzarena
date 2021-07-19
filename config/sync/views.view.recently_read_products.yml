@@ -162,7 +162,7 @@ display:
           entity_type: recently_read
           entity_field: created
           plugin_id: date
-      title: 'Recently Read Products'
+      title: 'Вы недавно смотрели'
       header: {  }
       footer: {  }
       empty: {  }
@@ -192,7 +192,8 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:

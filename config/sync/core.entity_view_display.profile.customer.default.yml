@@ -4,12 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.profile.customer.address
+    - field.field.profile.customer.field_partner
+    - field.field.profile.customer.field_requisites
+    - field.field.profile.customer.field_telefon
     - profile.type.customer
   enforced:
     module:
       - commerce_order
   module:
     - address_display
+    - options
+    - telephone
 _core:
   default_config_hash: zA0MBGUGdWqnBBoC762uDcH92qRZHC8KllbkpOjNUcs
 id: profile.customer.default
@@ -20,7 +25,7 @@ content:
   address:
     type: address_display_formatter
     weight: 0
-    label: hidden
+    label: above
     settings:
       address_display:
         organization:
@@ -72,6 +77,28 @@ content:
           glue: ','
           weight: 100
     third_party_settings: {  }
+    region: content
+  field_partner:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_requisites:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telefon:
+    weight: 1
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
     region: content
 hidden:
   search_api_excerpt: true

@@ -67,8 +67,8 @@ display:
           tags:
             previous: '‹ Previous'
             next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            first: '«« '
+            last: »»
           quantity: 9
       style:
         type: table
