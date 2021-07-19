@@ -1,0 +1,11 @@
+uuid: 64938a4c-6635-46c7-bb52-9d1fc7022ef2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+id: user.user
+target_entity_type_id: user
+target_bundle: user
+default_langcode: site_default
+language_alterable: false

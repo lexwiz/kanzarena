@@ -1,0 +1,11 @@
+uuid: 91488cb7-a20a-482b-a242-e99a6f51c148
+langcode: ru
+status: true
+dependencies:
+  config:
+    - recently_read.recently_read_type.node
+id: recently_read.node
+target_entity_type_id: recently_read
+target_bundle: node
+default_langcode: site_default
+language_alterable: false

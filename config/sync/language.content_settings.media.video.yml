@@ -1,0 +1,11 @@
+uuid: 1ab4f957-c689-4740-b962-a0cd5d2cb86a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video
+target_entity_type_id: media
+target_bundle: video
+default_langcode: site_default
+language_alterable: false

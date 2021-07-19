@@ -1,0 +1,11 @@
+uuid: 4d299181-d06c-4309-a6eb-e6a092d78fe6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+id: commerce_store.online
+target_entity_type_id: commerce_store
+target_bundle: online
+default_langcode: site_default
+language_alterable: false

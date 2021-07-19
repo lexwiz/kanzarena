@@ -1,0 +1,11 @@
+uuid: 8cd8d683-a753-4599-a5f3-48133fc4b1eb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - recently_read.recently_read_type.commerce_product
+id: recently_read.commerce_product
+target_entity_type_id: recently_read
+target_bundle: commerce_product
+default_langcode: site_default
+language_alterable: false
