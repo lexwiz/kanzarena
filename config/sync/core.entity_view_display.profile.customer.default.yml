@@ -12,7 +12,7 @@ dependencies:
     module:
       - commerce_order
   module:
-    - address_display
+    - address
     - options
     - telephone
 _core:
@@ -23,59 +23,10 @@ bundle: customer
 mode: default
 content:
   address:
-    type: address_display_formatter
+    type: address_default
     weight: 0
     label: above
-    settings:
-      address_display:
-        organization:
-          display: true
-          glue: ''
-          weight: -1
-        address_line1:
-          display: true
-          glue: ''
-          weight: 0
-        address_line2:
-          display: true
-          glue: ','
-          weight: 1
-        locality:
-          display: true
-          glue: ','
-          weight: 2
-        postal_code:
-          display: true
-          glue: ''
-          weight: 3
-        country_code:
-          display: true
-          glue: ''
-          weight: 4
-        langcode:
-          display: false
-          glue: ','
-          weight: 100
-        administrative_area:
-          display: false
-          glue: ','
-          weight: 100
-        dependent_locality:
-          display: false
-          glue: ','
-          weight: 100
-        sorting_code:
-          display: false
-          glue: ','
-          weight: 100
-        given_name:
-          display: true
-          glue: ''
-          weight: 100
-        family_name:
-          display: true
-          glue: ','
-          weight: 100
+    settings: {  }
     third_party_settings: {  }
     region: content
   field_partner:

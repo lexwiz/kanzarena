@@ -3,6 +3,7 @@ langcode: ru
 status: true
 dependencies:
   module:
+    - commerce_checkout_order_fields
     - commerce_payment
     - commerce_promotion
 _core:
@@ -19,34 +20,39 @@ configuration:
       allow_registration: true
       step: login
       weight: 0
+    order_summary:
+      view: commerce_checkout_order_summary
+      step: order_information
+      weight: 1
     contact_information:
       double_entry: true
       step: order_information
-      weight: 1
-    review:
-      step: review
-      weight: 3
-    completion_message:
-      message:
-        value: "Your order number is [commerce_order:order_number].\r\nYou can view your order on your account page when logged in."
-        format: plain_text
-      step: complete
-      weight: 4
-    order_summary:
-      view: null
-      step: _sidebar
-      weight: 5
-    completion_register:
-      step: complete
-      weight: 10
+      weight: 2
     payment_information:
       step: order_information
-      weight: 10
+      weight: 3
+    coupon_redemption:
+      allow_multiple: false
+      step: _disabled
+      weight: 8
+    review:
+      step: review
+      weight: 4
     payment_process:
       capture: true
       step: payment
-      weight: 10
-    coupon_redemption:
-      allow_multiple: false
-      step: _sidebar
-      weight: 10
+      weight: 5
+    completion_message:
+      message:
+        value: "Номер вашего заказа [commerce_order:order_number].\r\nВы можете просмотреть свой заказ на странице своей учетной записи при входе в систему."
+        format: plain_text
+      step: complete
+      weight: 6
+    completion_register:
+      step: complete
+      weight: 7
+    'order_fields:checkout':
+      wrapper_element: container
+      display_label: 'Поля заказа'
+      step: _disabled
+      weight: 9
