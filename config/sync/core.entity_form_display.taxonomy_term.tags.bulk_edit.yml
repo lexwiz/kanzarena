@@ -1,0 +1,57 @@
+uuid: 0ddd1786-906e-4826-9929-9cf0b5ace408
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.bulk_edit
+    - taxonomy.vocabulary.tags
+  module:
+    - path
+    - text
+id: taxonomy_term.tags.bulk_edit
+targetEntityType: taxonomy_term
+bundle: tags
+mode: bulk_edit
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  menu:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

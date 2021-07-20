@@ -59,6 +59,8 @@
         "drupal/twig_tweak": "^3.0@RC",
         "drupal/viewfield": "^3.0@beta",
         "drupal/views_bootstrap": "^4.3",
+        "drupal/views_bulk_edit": "^2.6",
+        "drupal/views_bulk_operations": "^4.0",
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
         "drush/drush": "^10.5"

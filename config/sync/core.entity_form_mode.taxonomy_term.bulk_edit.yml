@@ -1,0 +1,10 @@
+uuid: baad30d5-f473-4a0c-96e5-63dcf8281f72
+langcode: ru
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.bulk_edit
+label: 'Bulk Edit'
+targetEntityType: taxonomy_term
+cache: true

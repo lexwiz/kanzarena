@@ -1,0 +1,10 @@
+uuid: ea4ae8c5-2477-4785-8974-7b56acba051b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.bulk_edit
+label: 'Bulk Edit'
+targetEntityType: commerce_product
+cache: true
