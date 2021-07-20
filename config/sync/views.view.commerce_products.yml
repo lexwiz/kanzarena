@@ -12,11 +12,15 @@ dependencies:
     - field.storage.commerce_product_variation.field_stock
     - field.storage.commerce_product_variation.field_vendor_code
     - image.style.thumbnail
+    - taxonomy.vocabulary.brand
+    - taxonomy.vocabulary.catalog
+    - taxonomy.vocabulary.tags
   module:
     - commerce
     - commerce_price
     - commerce_product
     - media
+    - taxonomy
     - user
     - views_bulk_operations
 _core:
@@ -1103,6 +1107,48 @@ display:
           entity_type: commerce_product
           plugin_id: entity_operations
       filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Published
+            description: ''
+            use_operator: false
+            operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: status
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
         type:
           id: type
           table: commerce_product_field_data
@@ -1189,6 +1235,381 @@ display:
           entity_type: commerce_product
           entity_field: title
           plugin_id: string
+        field_catalog_target_id:
+          id: field_catalog_target_id
+          table: commerce_product__field_catalog
+          field: field_catalog_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_catalog_target_id_op
+            label: Catalog
+            description: ''
+            use_operator: false
+            operator: field_catalog_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_catalog_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: catalog
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_brand_target_id:
+          id: field_brand_target_id
+          table: commerce_product__field_brand
+          field: field_brand_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_brand_target_id_op
+            label: Бренд
+            description: ''
+            use_operator: false
+            operator: field_brand_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_brand_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: brand
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_tags_target_id:
+          id: field_tags_target_id
+          table: commerce_product__field_tags
+          field: field_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tags_target_id_op
+            label: Tags
+            description: ''
+            use_operator: false
+            operator: field_tags_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_tags_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_code_value:
+          id: field_code_value
+          table: commerce_product__field_code
+          field: field_code_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_code_value_op
+            label: Код
+            description: ''
+            use_operator: false
+            operator: field_code_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_code_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+        field_vendor_code_value:
+          id: field_vendor_code_value
+          table: commerce_product_variation__field_vendor_code
+          field: field_vendor_code_value
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_vendor_code_value_op
+            label: Артикул
+            description: ''
+            use_operator: false
+            operator: field_vendor_code_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_vendor_code_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_code_stock_value:
+          id: field_code_stock_value
+          table: commerce_product_variation__field_code_stock
+          field: field_code_stock_value
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_code_stock_value_op
+            label: 'Код на складе'
+            description: ''
+            use_operator: false
+            operator: field_code_stock_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_code_stock_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_barcode_value:
+          id: field_barcode_value
+          table: commerce_product_variation__field_barcode
+          field: field_barcode_value
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_barcode_value_op
+            label: Штрихкод
+            description: ''
+            use_operator: false
+            operator: field_barcode_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_barcode_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_stock_value:
+          id: field_stock_value
+          table: commerce_product_variation__field_stock
+          field: field_stock_value
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_stock_value_op
+            label: 'Stock (field_stock)'
+            description: null
+            use_operator: false
+            operator: field_stock_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_stock_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: Stock
+            description: ''
+            identifier: field_stock_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Да
+                operator: '>'
+                value:
+                  value: '0'
+                  min: ''
+                  max: ''
+              2:
+                title: Нет
+                operator: '<='
+                value:
+                  value: '0'
+                  min: ''
+                  max: ''
+              3:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+          plugin_id: numeric
       sorts: {  }
       title: Products
       header: {  }
@@ -1219,12 +1640,17 @@ display:
           plugin_id: standard
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       cacheable: false
       max-age: 0
@@ -1251,6 +1677,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       cacheable: false
       max-age: 0
