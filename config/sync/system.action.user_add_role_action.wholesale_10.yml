@@ -1,0 +1,14 @@
+uuid: 79db3eb9-851d-4508-87b9-8c0b04a6d7b1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.wholesale_10
+  module:
+    - user
+id: user_add_role_action.wholesale_10
+label: 'Добавьте роль Discount 10% выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: wholesale_10

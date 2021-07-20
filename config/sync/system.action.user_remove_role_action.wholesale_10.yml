@@ -1,0 +1,14 @@
+uuid: abdf83b0-5253-4a04-89e1-9b4bf83e2e2b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.wholesale_10
+  module:
+    - user
+id: user_remove_role_action.wholesale_10
+label: 'Удалить роль Discount 10% из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: wholesale_10
