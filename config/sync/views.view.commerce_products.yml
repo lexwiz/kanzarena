@@ -195,7 +195,7 @@ display:
           batch_size: 10
           form_step: true
           buttons: false
-          clear_on_exposed: false
+          clear_on_exposed: true
           action_title: Action
           selected_actions:
             6:
@@ -1610,9 +1610,34 @@ display:
                   min: ''
                   max: ''
           plugin_id: numeric
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: commerce_product_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: commerce_product
+          entity_field: created
+          plugin_id: date
       title: Products
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Отображается с @start по @end из @total'
+          plugin_id: result
       footer: {  }
       empty:
         area_text_custom:
