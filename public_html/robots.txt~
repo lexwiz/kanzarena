@@ -59,15 +59,3 @@ Disallow: /index.php/user/password
 Disallow: /index.php/user/register
 Disallow: /index.php/user/login
 Disallow: /index.php/user/logout
-
-Disallow: /*&
-Disallow: /*?page=0
-Allow: /*?page=
-Disallow: /*?
-Allow: /*?itok
-
-
-Sitemap: https://www.kanzarena.ru/sitemap.xml
-
-
-Host:  https://www.kanzarena.ru

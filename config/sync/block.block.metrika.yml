@@ -1,0 +1,25 @@
+uuid: 006e0d64-9285-47e3-8fba-c64a4edc1da3
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f050f802-0163-4e94-ad13-00e488051a79'
+  module:
+    - block_content
+  theme:
+    - b4theme
+id: metrika
+theme: b4theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:f050f802-0163-4e94-ad13-00e488051a79'
+settings:
+  id: 'block_content:f050f802-0163-4e94-ad13-00e488051a79'
+  label: Metrika
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
