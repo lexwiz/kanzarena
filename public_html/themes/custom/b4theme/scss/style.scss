@@ -18,6 +18,43 @@
 // Base-theme overrides.
 @import 'drupal-bootstrap';
 
+
+// Navbar ======================================================================
+
+.bg-primary {
+  background-color: $dark !important;
+}
+
+.bg-dark {
+  background-color: $secondary !important;
+}
+
+.bg-light {
+  background-color: $gray-200 !important;
+}
+
+.sandstone {
+  font-size: 11px;
+  line-height: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navbar {
+  .nav-link {
+    @extend .sandstone;
+  }
+
+  &-form input,
+  &-form .form-control {
+    border: none;
+  }
+}
+
+
+
+
+
 .nav-link {
   display: inline-block;
 }
