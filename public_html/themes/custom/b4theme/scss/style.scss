@@ -19,15 +19,16 @@
 @import 'drupal-bootstrap';
 
 
-// Sandstone 4.5.3
+// Sandstone 4.6.0
 // Bootswatch
 
 
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" !default;
-@import url($web-font-path);
-
+@if $web-font-path {
+  @import url($web-font-path);
+}
 // Navbar ======================================================================
 
 .bg-primary {
@@ -43,7 +44,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;70
 }
 
 .sandstone {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 22px;
   font-weight: 500;
   text-transform: uppercase;
@@ -143,7 +144,7 @@ input,
 
 .breadcrumb {
   @extend .sandstone;
-  border: 1px solid $dark;
+  border: 1px solid $gray-300;
 }
 
 .pagination {
@@ -261,7 +262,6 @@ input,
     color: darken($gray-300, 20%);
   }
 }
-
 
 
 

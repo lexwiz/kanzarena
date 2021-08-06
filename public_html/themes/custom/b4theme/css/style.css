@@ -9176,7 +9176,7 @@ p:last-child,
   background-color: #f8f5f0 !important; }
 
 .sandstone, .navbar .nav-link, .btn, a.button, .nav-tabs .nav-link, .nav-pills .nav-link, .breadcrumb, .pagination, .dropdown-menu .dropdown-item, .tooltip {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 22px;
   font-weight: 500;
   text-transform: uppercase; }
@@ -9221,7 +9221,7 @@ p:last-child,
   color: #dfd7ca; }
 
 .breadcrumb {
-  border: 1px solid #3e3f3a; }
+  border: 1px solid #dfd7ca; }
 
 .pagination a:hover {
   text-decoration: none; }
