@@ -117,3 +117,11 @@ function b4theme_preprocess_breadcrumb(array &$vars) {
     }
   }
 }
+
+function b4theme_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attributes']['class'][] = 'alert alert-dismissible alert-light';
+
+}
+function b4theme_form_user_pass_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attributes']['class'][] = 'alert alert-dismissible alert-light';
+}

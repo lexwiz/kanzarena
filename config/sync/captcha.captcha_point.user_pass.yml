@@ -1,0 +1,9 @@
+uuid: ccc7853b-06b6-4202-857a-83031f211d11
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KV2eyuDk4Ux0da6fu6QsTUf_49rPDXilNurV5nRZqJE
+formId: user_pass
+captchaType: default
+label: null

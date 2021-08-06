@@ -55,8 +55,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
+            first: '«« '
+            last: »»
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -204,7 +204,7 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }
-      title: 'Product search'
+      title: Поиск
       header:
         result:
           id: result

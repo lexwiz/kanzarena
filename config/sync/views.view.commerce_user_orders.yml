@@ -332,7 +332,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Total
+          label: Сумма
           exclude: false
           alter:
             alter_text: false

@@ -1,0 +1,9 @@
+uuid: 4d04d217-ad6d-4e68-b99e-6a6d818e24c4
+langcode: ru
+status: true
+dependencies: {  }
+id: commerce_product
+label: Товар
+tags:
+  title: '[commerce_product:title] | [site:name]'
+  description: '[commerce_product:body]'
