@@ -1,4 +1,4 @@
-//@import 'bootstrap-icons/bootstrap-icons.css';
+@import 'bootstrap-icons/bootstrap-icons.css';
 // Include custom sub theme.
 @import 'custom/variables';
 //@import 'custom/mixins/misc';
@@ -13,7 +13,7 @@
 //@import "../../../contrib/bootstrap4/scss/style";
 // OR to go back to Bootstrap 4.5.0
 @import "../../../../themes/contrib/bootstrap4/scss/style";
-//@import 'custom/bootswatch';
+@import 'custom/bootswatch';
 
 // Base-theme overrides.
 @import 'drupal-bootstrap';
