@@ -14,7 +14,7 @@ popup_agreed:
   format: restricted_html
 popup_agree_button_message: Принять
 popup_agreed_enabled: false
-popup_bg_hex: d94a00
+popup_bg_hex: ''
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000
@@ -37,9 +37,9 @@ popup_link: /privacy-policy
 popup_link_new_window: true
 popup_position: false
 fixed_top_position: true
-popup_text_hex: ffffff
-popup_width: 100%
-use_bare_css: false
+popup_text_hex: ''
+popup_width: ''
+use_bare_css: true
 disagree_do_not_show_popup: false
 reload_page: false
 cookie_name: ''
