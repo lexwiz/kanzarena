@@ -13,7 +13,7 @@
 //@import "../../../contrib/bootstrap4/scss/style";
 // OR to go back to Bootstrap 4.5.0
 @import "../../../../themes/contrib/bootstrap4/scss/style";
-@import 'custom/bootswatch';
+//@import 'custom/bootswatch';
 
 // Base-theme overrides.
 @import 'drupal-bootstrap';
@@ -496,6 +496,6 @@ fieldset.checkout-pane {
 /* Forms */
 #user-login-form,
 #user-pass {
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
 }
