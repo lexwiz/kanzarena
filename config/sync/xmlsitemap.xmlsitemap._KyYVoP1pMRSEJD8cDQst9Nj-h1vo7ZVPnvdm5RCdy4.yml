@@ -3,6 +3,6 @@ langcode: ru
 status: true
 dependencies: {  }
 id: _KyYVoP1pMRSEJD8cDQst9Nj-h1vo7ZVPnvdm5RCdy4
-label: 'http://kanzarena.2020.localhost'
+label: 'https://www.kanzarena.ru'
 context:
   language: ru
