@@ -1,0 +1,10 @@
+uuid: 24a69b74-d807-4a00-817f-d053614bb281
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.search_autocomplete
+label: 'Search autocomplete'
+targetEntityType: commerce_product
+cache: true

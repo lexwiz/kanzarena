@@ -211,7 +211,7 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts: {  }
-      title: Sales
+      title: Распродажа
       header:
         result:
           id: result
@@ -270,7 +270,8 @@ display:
     display_title: 'Block Top product'
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       pager:
         type: some
         options:
@@ -284,6 +285,7 @@ display:
         use_more_text: false
         filters: false
         filter_groups: false
+        title: false
       header: {  }
       display_description: ''
       use_more: false
@@ -353,6 +355,7 @@ display:
         operator: AND
         groups:
           1: AND
+      title: 'Хиты продаж'
     cache_metadata:
       max-age: -1
       contexts:

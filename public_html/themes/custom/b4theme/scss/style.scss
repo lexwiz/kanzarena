@@ -1,11 +1,12 @@
 @import 'bootstrap-icons/bootstrap-icons.css';
-// Include custom sub theme.
-@import 'custom/variables';
-//@import 'custom/mixins/misc';
-//@import 'custom/misc';
 
-// Include bootstrap variables definitions overrides.
-@import 'overrides/variables';
+// Sub theme styling.
+@import 'variables_theme';
+
+// Bootstrap overriden variables.
+// @see https://getbootstrap.com/docs/4.6/getting-started/theming/#variable-defaults.
+@import 'variables_bootstrap';
+
 
 // Include parent theme with all things Bootstrap for full override.
 // Relative path to this styles.scss file.
@@ -13,7 +14,6 @@
 //@import "../../../contrib/bootstrap4/scss/style";
 // OR to go back to Bootstrap 4.5.0
 @import "../../../../themes/contrib/bootstrap4/scss/style";
-//@import 'custom/bootswatch';
 
 // Base-theme overrides.
 @import 'drupal-bootstrap';
@@ -21,13 +21,6 @@
 // Sandstone 4.6.0
 // Bootswatch
 
-
-//// Variables ===================================================================
-//
-//$web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" !default;
-//@if $web-font-path {
-//  @import url($web-font-path);
-//}
 // Navbar ======================================================================
 
 .bg-primary {
@@ -43,9 +36,9 @@
 }
 
 .sandstone {
-  font-size: 11px;
+  font-size: 0.8rem;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -271,8 +264,7 @@ input,
 
 .navbar {
   .nav-link.zero-level {
-    font-size: 12px;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 2px;
   }
 }
@@ -387,6 +379,10 @@ $superfish-1-background-color-level-fourth: $dark;
 
 .cart-block--contents__items {
   margin-bottom: 0.5rem;
+}
+
+.cart-block--summary__count {
+  @extend .sandstone;
 }
 
 div.flag-favorite, div.flag-compare {
@@ -566,63 +562,63 @@ div.facets-widget-checkbox {
 }
 
 
-  //$card-height: 100%;
+//$card-height: 100%;
 
-  // TAGS
+// TAGS
 
-  .field--name-field-tags {
-    position: absolute;
-    top: 14%;
-    z-index: 3;
-    text-transform: uppercase;
-    color: $white;
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1.5;
-    text-align: left;
-    .field--label {
-      display: none;
+.field--name-field-tags {
+  position: absolute;
+  top: 14%;
+  z-index: 3;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  .field--label {
+    display: none;
+  }
+  .field__item {
+    margin-bottom: 0.1rem;
+    a {
+      padding: 0.25rem 0.5rem;
+      display: inline-block;
+      color: $white;
     }
-    .field__item {
-      margin-bottom: 0.1rem;
-      a {
-        padding: 0.25rem 0.5rem;
-        display: inline-block;
-        color: $white;
-      }
-    }
   }
+}
 
-  a.tid-1636,
-  a.tid-item {
-    background-color: #34af31;
-  }
-  a.tid-500 {
-    background-color: #4865ff;
-  }
-  a.tid-501 {
-    background-color: #ff6400;
-  }
-  a.tid-502 {
-    background-color: #ffd100;
-  }
-  a.tid-1697 {
-    background-color: #f00;
-  }
+a.tid-1636,
+a.tid-item {
+  background-color: #34af31;
+}
+a.tid-500 {
+  background-color: #4865ff;
+}
+a.tid-501 {
+  background-color: #ff6400;
+}
+a.tid-502 {
+  background-color: #ffd100;
+}
+a.tid-1697 {
+  background-color: #f00;
+}
 
-  h2.taxonomy-term-title {
-    font-size: 1rem;
-    font-weight: bold;
+h2.taxonomy-term-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#views-exposed-form-product-search-page-1 {
+  .form-item,
+  .form-actions {
+    margin-top: 0;
     margin-bottom: 0;
   }
-
-  #views-exposed-form-product-search-page-1 {
-    .form-item,
-    .form-actions {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
+}
 #views-exposed-form-taxonomy-term-product-index-page-1 {
   .form-wrapper {
     margin-top: 1.3rem;
@@ -744,4 +740,8 @@ fieldset.checkout-pane {
 #user-pass {
   max-width: 60%;
   margin: 0 auto;
+}
+
+.address-book-edit-button {
+  margin-left: 0;
 }

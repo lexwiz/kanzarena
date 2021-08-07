@@ -1,5 +1,13 @@
+// Override bootstrap framework variables.
+// Full list of variables in [path to themes/contrib]/bootstrap4/dist/bootstrap/4.4.1/scss/_variables.scss
+// or [path to themes/contrib]/bootstrap4/scss/_theme_variables.scss.
+
+// Bootstrap variables
+
+// override default bootstrap colors for accessibility
+
 // Define new variables.
-// Sandstone 4.5.3
+// Sandstone 4.6.0
 // Bootswatch
 
 //
@@ -50,10 +58,13 @@ $link-color:                $success !default;
 
 // Fonts
 
-// stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif:           Georgia, Cambria, "Times New Roman", Times, serif !default;
+// stylelint-enable
+
 $font-size-base:              .875rem !default;
-$headings-font-weight:        400 !default;
+$headings-font-weight:        700 !default;
 
 // Dropdowns
 
@@ -75,7 +86,7 @@ $nav-pills-link-active-bg:          $gray-200 !default;
 
 // Navbar
 
-$navbar-height:                     50px !default;
+
 $navbar-dark-hover-color:           $white !default;
 $navbar-light-hover-color:          $black !default;
 $navbar-light-active-color:         $black !default;
@@ -129,3 +140,32 @@ $list-group-action-active-bg:       $gray-300 !default;
 // Close
 
 $close-text-shadow:                 none !default;
+
+$breadcrumb-divider-color: $gray-700 !default;
+$breadcrumb-active-color: $gray-700 !default;
+
+$navbar-light-color: rgba($black, .6) !default;
+$navbar-dark-color: rgba($white, .6) !default;
+
+$form-text-margin-top: 0 !default;
+
+
+
+$enable-rounded:                              false !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;

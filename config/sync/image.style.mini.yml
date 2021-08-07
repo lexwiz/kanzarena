@@ -1,0 +1,15 @@
+uuid: c2fbfdf8-ba1b-4a0b-b19f-6022cc8b139b
+langcode: ru
+status: true
+dependencies: {  }
+name: mini
+label: Mini
+effects:
+  f172cfcb-0ff5-4391-87e4-82e64ffc3f2e:
+    uuid: f172cfcb-0ff5-4391-87e4-82e64ffc3f2e
+    id: image_scale
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      upscale: false

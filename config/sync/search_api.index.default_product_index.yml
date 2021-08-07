@@ -134,14 +134,14 @@ processor_settings:
     fields:
       field_catalog: taxonomy_term-parent
     weights:
-      preprocess_index: -45
+      preprocess_index: -50
   highlight:
     highlight: always
     highlight_partial: false
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
-    prefix: '<strong>'
+    prefix: '<strong class = "text-danger">'
     suffix: '</strong>'
     weights:
       postprocess_query: 0
@@ -162,8 +162,19 @@ processor_settings:
       h3: 2
       strong: 2
     weights:
-      preprocess_index: -15
-      preprocess_query: -15
+      preprocess_index: -46
+      preprocess_query: -46
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_barcode
+      - field_code
+      - field_code_stock
+      - field_vendor_code
+      - title
+    weights:
+      preprocess_index: -48
+      preprocess_query: -48
   language_with_fallback: {  }
   rendered_item: {  }
   tokenizer:
@@ -179,8 +190,8 @@ processor_settings:
     overlap_cjk: 1
     minimum_word_size: '3'
     weights:
-      preprocess_index: -6
-      preprocess_query: -6
+      preprocess_index: -49
+      preprocess_query: -49
 tracker_settings:
   default:
     indexing_order: fifo

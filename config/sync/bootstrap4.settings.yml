@@ -1,13 +1,23 @@
-b4_body_schema: ''
-b4_body_bg_schema: ''
+b4_body_schema: none
+b4_body_bg_schema: none
 b4_navbar_schema: dark
 b4_navbar_bg_schema: dark
 b4_footer_schema: dark
 b4_footer_bg_schema: secondary
 b4_top_container: container
 subtheme_folder: themes/custom
-subtheme_name: ''
-subtheme_machine_name: ''
+subtheme_name: 'B4 subtheme'
+subtheme_machine_name: b4subtheme
 _core:
   default_config_hash: KSNPviNI7ZQYoUp7GU-1xLaUDIGxJk-LTrhGAE0QJ8A
 langcode: ru
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+b4_top_container_config: ''
