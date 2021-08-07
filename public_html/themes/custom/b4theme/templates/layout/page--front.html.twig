@@ -70,18 +70,19 @@
     <nav class="{{ nav_classes_fixed }}">
       <div class="{{ b4_top_container }} d-flex border-">
 
+        <div class="col-8 d-md-block d-lg-none">{{ page.nav_branding }}</div>
 
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedTopContent" aria-controls="navbarSupportedTopContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedTopContent" aria-controls="navbarSupportedTopContent"
                 aria-expanded="false" aria-label="Toggle Top navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse row" id="navbarSupportedTopContent">
-            <div class="col-md-2">{{ page.nav_catalog }}</div>
-            <div class="col-md-5">{{ page.nav_search }}</div>
-            <div class="col-md-3">{{ page.nav_additional }}</div>
-            <div class="col-md-2">{{ page.nav_cart }}</div>
+            <div class="col-md-12 col-lg-2">{{ page.nav_catalog }}</div>
+            <div class="col-lg-8 col-xl-5 d-none d-lg-block">{{ page.nav_search }}</div>
+            <div class="col-md-12 col-lg-8 col-xl-3 d-lg-none">{{ page.nav_additional }}</div>
+            <div class="col-md-12 col-lg-2">{{ page.nav_cart }}</div>
         </div>
     </nav>
   {% endif %}
@@ -90,16 +91,12 @@
     <nav class="{{ nav_classes }}">
       <div class="{{ b4_top_container }} d-flex">
 
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-          <div class="col-md-3">{{ page.nav_branding }}</div>
-          <div class="col-md-5">{{ page.nav_main }}</div>
-          <div class="col-md-4">{{ page.header }}</div>
+        <div class="navbar row" id="navbarSupportedContent">
+          <div class="col-lg-4 col-xl-3 col-xxl-3 d-none d-lg-block">{{ page.nav_branding }}</div>
+          <div class="col-12 col-xl-8 d-lg-none">{{ page.nav_search }}</div>
+          <div class="col-lg-8 col-xl-6 col-xxl-auto d-none d-lg-block">{{ page.nav_main }}</div>
+          <div class="col-md-12 col-lg-6 col-xl-3 col-xxl-auto">{{ page.header }}</div>
+          <div class="col-lg-6 d-none d-lg-block d-xl-none">{{ page.nav_additional }}</div>
         </div>
       </div>
     </nav>

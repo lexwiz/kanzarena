@@ -7,43 +7,43 @@
 //$wide:            "screen and (min-width: #{$screen-lg-min})";
 //$grid-breakpoint: "screen and (min-width: #{$grid-float-breakpoint})";
 
-body {
-  // Fix horizontal scrolling on iOS devices.
-  // https://www.drupal.org/node/1870076
-  position: relative;
-
-  &.navbar-is-static-top {
-    margin-top: 0;
-  }
-  &.navbar-is-fixed-top {
-    margin-top: ($navbar-height + ($grid-gutter-width / 2));
-  }
-  &.navbar-is-fixed-bottom {
-    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
-  }
-
-  @include media-breakpoint-only(sm) {
-    margin-top: ($grid-gutter-width / 2);
-  }
-  @include media-breakpoint-only(xs) {
-    &.toolbar-vertical {
-      &.navbar-is-fixed-top,
-      &.navbar-is-fixed-bottom {
-        .toolbar-bar {
-          position: fixed;
-        }
-        header {
-          z-index: 500;
-        }
-      }
-      // Default toolbar fixed height value.
-      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
-      &.navbar-is-fixed-top header {
-        top: 39px;
-      }
-    }
-  }
-}
+//body {
+//  // Fix horizontal scrolling on iOS devices.
+//  // https://www.drupal.org/node/1870076
+//  position: relative;
+//
+//  &.navbar-is-static-top {
+//    margin-top: 0;
+//  }
+//  &.navbar-is-fixed-top {
+//    margin-top: ($navbar-height + ($grid-gutter-width / 2));
+//  }
+//  &.navbar-is-fixed-bottom {
+//    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+//  }
+//
+//  @include media-breakpoint-only(sm) {
+//    margin-top: ($grid-gutter-width / 2);
+//  }
+//  @include media-breakpoint-only(xs) {
+//    &.toolbar-vertical {
+//      &.navbar-is-fixed-top,
+//      &.navbar-is-fixed-bottom {
+//        .toolbar-bar {
+//          position: fixed;
+//        }
+//        header {
+//          z-index: 500;
+//        }
+//      }
+//      // Default toolbar fixed height value.
+//      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+//      &.navbar-is-fixed-top header {
+//        top: 39px;
+//      }
+//    }
+//  }
+//}
 //.navbar.container {
 //  @include media-breakpoint-only(sm) {
 //    max-width: (($container-sm - $grid-gutter-width));
@@ -67,3 +67,82 @@ body {
   //}
 }
 
+
+
+.navbar {
+  .block-search {
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      @include media-breakpoint-up(sm) {
+        flex-direction: row;
+      }
+
+      .form-actions {
+        margin-top: $spacer / 2;
+        @include media-breakpoint-up(md) {
+          margin-left: $spacer / 2;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    padding-left: $navbar-nav-link-padding-x;
+    padding-right: $navbar-nav-link-padding-x;
+  }
+
+  .dropdown-toggle {
+    &::after {
+      float: none;
+      @include media-breakpoint-up(lg) {
+        clear: both;
+        float: none;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  .site-slogan {
+    display: none;
+    font-size: $font-size-sm;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  @include b4-make-link($dark, none, $dark, none, '.site-title');
+
+  .site-title {
+    font-size: $navbar-brand-site-title-font-size;
+    font-weight: $navbar-brand-site-title-font-weight;
+    letter-spacing: $navbar-brand-site-title-letter-spacing;
+    text-transform: $navbar-brand-site-title-text-transform;
+  }
+
+  img {
+    height: $navbar-brand-image-height;
+    margin: $navbar-brand-image-margin;
+    width: $navbar-brand-image-width;
+    @include media-breakpoint-up(lg) {
+      height: $navbar-brand-image-height-lg;
+    }
+  }
+}
+
+.navbar-dark,
+.footer-dark {
+  .navbar-brand {
+    @include b4-make-link($light, none, $light, none, '.site-title');
+
+    img {
+      filter: invert(1);
+    }
+  }
+}

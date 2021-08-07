@@ -8945,29 +8945,71 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 /**
  * Navbar styling.
  */
-body {
-  position: relative; }
-  body.navbar-is-static-top {
-    margin-top: 0; }
-  body.navbar-is-fixed-top {
-    margin-top: 65px; }
-  body.navbar-is-fixed-bottom {
-    padding-bottom: 65px; }
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    body {
-      margin-top: 15px; } }
-  @media (max-width: 575.98px) {
-    body.toolbar-vertical.navbar-is-fixed-top .toolbar-bar, body.toolbar-vertical.navbar-is-fixed-bottom .toolbar-bar {
-      position: fixed; }
-    body.toolbar-vertical.navbar-is-fixed-top header, body.toolbar-vertical.navbar-is-fixed-bottom header {
-      z-index: 500; }
-    body.toolbar-vertical.navbar-is-fixed-top header {
-      top: 39px; } }
-
 .navbar .logo {
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px; }
+
+.navbar .block-search form {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  @media (min-width: 576px) {
+    .navbar .block-search form {
+      flex-direction: row; } }
+  .navbar .block-search form .form-actions {
+    margin-top: 0.5rem; }
+    @media (min-width: 768px) {
+      .navbar .block-search form .form-actions {
+        margin-left: 0.5rem;
+        margin-top: 0; } }
+
+.navbar-nav .nav-link {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+.navbar-nav .dropdown-toggle::after {
+  float: none; }
+  @media (min-width: 992px) {
+    .navbar-nav .dropdown-toggle::after {
+      clear: both;
+      float: none; } }
+
+.navbar-brand .site-slogan {
+  display: none;
+  font-size: 0.765625rem; }
+  @media (min-width: 992px) {
+    .navbar-brand .site-slogan {
+      display: block; } }
+.navbar-brand a.site-title {
+  color: #3e3f3a;
+  text-decoration: none; }
+  .navbar-brand a.site-title:hover {
+    color: #3e3f3a;
+    text-decoration: none; }
+.navbar-brand .site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+.navbar-brand img {
+  height: 36px;
+  margin: 0 1rem 0 0;
+  width: auto; }
+  @media (min-width: 992px) {
+    .navbar-brand img {
+      height: 60px; } }
+
+.navbar-dark .navbar-brand a.site-title,
+.footer-dark .navbar-brand a.site-title {
+  color: #f8f5f0;
+  text-decoration: none; }
+  .navbar-dark .navbar-brand a.site-title:hover,
+  .footer-dark .navbar-brand a.site-title:hover {
+    color: #f8f5f0;
+    text-decoration: none; }
+.navbar-dark .navbar-brand img,
+.footer-dark .navbar-brand img {
+  filter: invert(1); }
 
 /**
  * Node styling.
@@ -9077,6 +9119,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
     padding-bottom: 40px; }
     body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray, body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray > .toolbar-lining:before {
       width: 230px; }
+
+body.toolbar-vertical .toolbar-oriented .toolbar-bar {
+  z-index: 1032; }
+body.toolbar-vertical .fixed-top {
+  top: 39px; }
 
 body.toolbar-loading {
   margin-top: 0; }
@@ -9290,14 +9337,27 @@ input.fivestar-rating-input {
 body {
   margin-top: 60px; }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    overflow-y: auto;
+    max-height: 340px; } }
+
 .dropdown-menu {
   min-width: 14rem;
   margin-top: 0.5rem;
   padding: 0; }
 
 .dropdown-menu .menu-level-2 {
-  min-width: 60rem;
   padding: 0; }
+  @media (min-width: 768px) {
+    .dropdown-menu .menu-level-2 {
+      min-width: 40rem; } }
+  @media (min-width: 1200px) {
+    .dropdown-menu .menu-level-2 {
+      min-width: 50rem; } }
+  @media (min-width: 1400px) {
+    .dropdown-menu .menu-level-2 {
+      min-width: 60rem; } }
 
 ul.menu-level-3 {
   padding-left: 0.5rem; }
@@ -9309,7 +9369,8 @@ ul.menu-level-3 {
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
-  margin-top: -1px; }
+  margin-top: -1px;
+  overflow: hidden; }
 
 .dropdown-menu > li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -9527,6 +9588,10 @@ h2.taxonomy-term-title {
 #views-exposed-form-product-search-page-1 .form-actions {
   margin-top: 0;
   margin-bottom: 0; }
+  @media (max-width: 767.98px) {
+    #views-exposed-form-product-search-page-1 .form-item,
+    #views-exposed-form-product-search-page-1 .form-actions {
+      max-width: 60%; } }
 
 #views-exposed-form-taxonomy-term-product-index-page-1 .form-wrapper {
   margin-top: 1.3rem;

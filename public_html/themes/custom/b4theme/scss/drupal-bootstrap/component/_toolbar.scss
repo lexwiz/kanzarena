@@ -43,6 +43,19 @@ body.toolbar-fixed {
 
 }
 
+body.toolbar-vertical {
+
+  // Fix z-index.
+  .toolbar-oriented .toolbar-bar {
+    z-index: ($zindex-fixed + 2);
+  }
+
+  .fixed-top {
+    top: 39px;
+  }
+
+}
+
 // Remove flicking.
 body.toolbar-loading {
 

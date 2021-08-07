@@ -277,14 +277,30 @@ body {
   margin-top: 60px;
 }
 
+.navbar-collapse{
+  @include media-breakpoint-down(md) {
+    overflow-y: auto;
+    max-height: 340px;
+  }
+}
 
 .dropdown-menu {
   min-width: 14rem;
   margin-top: 0.5rem;
   padding: 0;
 }
+
+
 .dropdown-menu .menu-level-2 {
-  min-width: 60rem;
+  @include media-breakpoint-up(md) {
+    min-width: 40rem;
+  }
+  @include media-breakpoint-up(xl) {
+    min-width: 50rem;
+  }
+  @include media-breakpoint-up(xxl) {
+    min-width: 60rem;
+  }
   padding: 0;
 }
 
@@ -308,6 +324,7 @@ ul.menu-level-3 {
   top: 0;
   left: 100%;
   margin-top: -1px;
+  overflow: hidden;
 }
 
 .dropdown-menu>li {
@@ -617,6 +634,9 @@ h2.taxonomy-term-title {
   .form-actions {
     margin-top: 0;
     margin-bottom: 0;
+    @include media-breakpoint-down(sm) {
+      max-width: 60%;
+    }
   }
 }
 #views-exposed-form-taxonomy-term-product-index-page-1 {
