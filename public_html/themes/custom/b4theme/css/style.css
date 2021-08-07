@@ -9096,7 +9096,7 @@ body.toolbar-loading {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875rem;
   list-style: none;
-  min-width: 160px;
+  min-width: 35%;
   padding: 5px 0;
   text-align: left;
   z-index: 1040; }
