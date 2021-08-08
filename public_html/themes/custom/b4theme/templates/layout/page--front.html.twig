@@ -80,8 +80,8 @@
 
         <div class="collapse navbar-collapse row" id="navbarSupportedTopContent">
             <div class="col-md-12 col-lg-2">{{ page.nav_catalog }}</div>
-            <div class="col-lg-8 col-xl-5 d-none d-lg-block">{{ page.nav_search }}</div>
-            <div class="col-md-12 col-lg-8 col-xl-3 d-lg-none">{{ page.nav_additional }}</div>
+            <div class="col-lg-8 col-xl-5 d-none d-lg-flex justify-content-center">{{ page.nav_search }}</div>
+            <div class="col-md-12 col-lg-8 col-xl-3 d-lg-none d-xl-block">{{ page.nav_additional }}</div>
             <div class="col-md-12 col-lg-2">{{ page.nav_cart }}</div>
         </div>
     </nav>
@@ -92,11 +92,11 @@
       <div class="{{ b4_top_container }} d-flex">
 
         <div class="navbar row" id="navbarSupportedContent">
-          <div class="col-lg-4 col-xl-3 col-xxl-3 d-none d-lg-block">{{ page.nav_branding }}</div>
-          <div class="col-12 col-xl-8 d-lg-none">{{ page.nav_search }}</div>
-          <div class="col-lg-8 col-xl-6 col-xxl-auto d-none d-lg-block">{{ page.nav_main }}</div>
-          <div class="col-md-12 col-lg-6 col-xl-3 col-xxl-auto">{{ page.header }}</div>
-          <div class="col-lg-6 d-none d-lg-block d-xl-none">{{ page.nav_additional }}</div>
+          <div class="col-lg-4 col-xl-4 col-xxl-3 d-none d-xl-block">{{ page.nav_branding }}</div>
+          <div class="col-12 col-xl-8 d-flex d-lg-none justify-content-center">{{ page.nav_search }}</div>
+          <div class="col-lg-8 col-xl-8 col-xxl-auto d-none d-lg-flex justify-content-lg-start justify-content-xl-center">{{ page.nav_main }}</div>
+          <div class="col-lg-4 d-none d-lg-block d-xl-none">{{ page.nav_additional }}</div>
+          <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-auto d-flex justify-content-sm-center justify-content-md-center">{{ page.header }}</div>
         </div>
       </div>
     </nav>

@@ -9359,6 +9359,9 @@ body {
     .dropdown-menu .menu-level-2 {
       min-width: 60rem; } }
 
+ul.menu-level-2 li {
+  padding-left: 0.2rem; }
+
 ul.menu-level-3 {
   padding-left: 0.5rem; }
   ul.menu-level-3 li {
@@ -9588,10 +9591,6 @@ h2.taxonomy-term-title {
 #views-exposed-form-product-search-page-1 .form-actions {
   margin-top: 0;
   margin-bottom: 0; }
-  @media (max-width: 767.98px) {
-    #views-exposed-form-product-search-page-1 .form-item,
-    #views-exposed-form-product-search-page-1 .form-actions {
-      max-width: 60%; } }
 
 #views-exposed-form-taxonomy-term-product-index-page-1 .form-wrapper {
   margin-top: 1.3rem;
@@ -9606,7 +9605,8 @@ h2.taxonomy-term-title {
 .header-contact {
   line-height: 1.2em;
   font-size: 1rem;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-top: 0.5rem; }
 
 .bi.bi-telephone {
   fill: #93c54b; }

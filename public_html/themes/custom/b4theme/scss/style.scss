@@ -311,6 +311,10 @@ body {
   //position: relative;
   //padding: 0.25rem 0.5rem;
 }
+ul.menu-level-2 li {
+  padding-left: 0.2rem;
+}
+
 ul.menu-level-3 {
   padding-left: 0.5rem;
   li {
@@ -634,9 +638,9 @@ h2.taxonomy-term-title {
   .form-actions {
     margin-top: 0;
     margin-bottom: 0;
-    @include media-breakpoint-down(sm) {
-      max-width: 60%;
-    }
+    //@include media-breakpoint-only (md) {
+    //  max-width: 60%;
+    //}
   }
 }
 #views-exposed-form-taxonomy-term-product-index-page-1 {
@@ -658,6 +662,7 @@ h2.taxonomy-term-title {
   line-height: 1.2em;
   font-size: 1rem;
   font-weight: bold;
+  padding-top: 0.5rem;
 }
 
 .bi.bi-telephone {
