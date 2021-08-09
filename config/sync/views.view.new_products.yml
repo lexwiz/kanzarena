@@ -69,11 +69,11 @@ display:
           row_class: ''
           default_row_class: true
           uses_fields: false
-          col_xs: none
-          col_sm: none
-          col_md: none
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-6
           col_lg: col-lg-3
-          col_xl: none
+          col_xl: col-xl-3
       row:
         type: 'entity:commerce_product'
         options:
@@ -220,7 +220,8 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: new-products
     cache_metadata:
       max-age: -1

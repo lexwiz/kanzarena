@@ -9605,8 +9605,10 @@ h2.taxonomy-term-title {
 .header-contact {
   line-height: 1.2em;
   font-size: 1rem;
-  font-weight: bold;
-  padding-top: 0.5rem; }
+  font-weight: bold; }
+  @media (max-width: 991.98px) {
+    .header-contact {
+      padding-top: 0.5rem; } }
 
 .bi.bi-telephone {
   fill: #93c54b; }

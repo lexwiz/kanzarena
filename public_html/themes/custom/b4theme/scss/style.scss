@@ -662,7 +662,9 @@ h2.taxonomy-term-title {
   line-height: 1.2em;
   font-size: 1rem;
   font-weight: bold;
-  padding-top: 0.5rem;
+  @include media-breakpoint-down (md) {
+    padding-top: 0.5rem;
+  }
 }
 
 .bi.bi-telephone {
