@@ -369,7 +369,7 @@ display:
           not: 0
           plugin_id: search_api_all_terms
       display_extenders: {  }
-      use_ajax: true
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
