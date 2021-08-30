@@ -9661,18 +9661,15 @@ fieldset.checkout-pane {
 .eu-cookie-compliance-buttons {
   float: right;
   /* LTR */
-  vertical-align: middle;
-  max-width: 20%; }
+  vertical-align: middle; }
 
 .eu-cookie-compliance-categories-buttons {
   margin: 0 0 1em 0;
-  max-width: 80%;
   float: left; }
 
 .eu-cookie-compliance-message {
   float: left;
-  /* LTR */
-  max-width: 80%; }
+  /* LTR */ }
 
 #capslockdiv {
   height: 1em; }

@@ -458,16 +458,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "b620b92b7cc2705fa829620f1fba7d182a6397c2"
+                "reference": "386d2c9253675bbb4b7f04c6bc52f8e74c0d4cc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/b620b92b7cc2705fa829620f1fba7d182a6397c2",
-                "reference": "b620b92b7cc2705fa829620f1fba7d182a6397c2",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/386d2c9253675bbb4b7f04c6bc52f8e74c0d4cc6",
+                "reference": "386d2c9253675bbb4b7f04c6bc52f8e74c0d4cc6",
                 "shasum": ""
             },
             "require": {
@@ -507,9 +507,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.3.0"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.3.1"
             },
-            "time": "2021-08-28T01:13:18+00:00"
+            "time": "2021-08-30T03:50:47+00:00"
         },
         {
             "name": "consolidation/config",

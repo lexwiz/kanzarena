@@ -44,16 +44,11 @@
 ] %}
 <div role="alertdialog" aria-labelledby="popup-text" {{ attributes.addClass(classes) }}>
   <div class="popup-content info eu-cookie-compliance-content">
-    <div id="popup-text" class="eu-cookie-compliance-message row">
-      <div class="col-md-10">
+    <div id="popup-text" class="eu-cookie-compliance-message">
+      <div class="">
         {{ message }}
       </div>
 
-      {% if more_info_button %}
-        <div class="col-md-2">
-          <button type="button" class="btn btn-info find-more-button eu-cookie-compliance-more-button">{{ more_info_button }}</button>
-        </div>
-      {% endif %}
     </div>
 
     {% if cookie_categories %}
@@ -82,6 +77,10 @@
     {% endif %}
 
     <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %}">
+
+      {% if more_info_button %}
+        <button type="button" class="btn btn-info find-more-button eu-cookie-compliance-more-button">{{ more_info_button }}</button>
+      {% endif %}
       <button type="button" class="btn btn-success {{ primary_button_class }}">{{ agree_button }}</button>
       {% if secondary_button_label %}
         <button type="button" class="btn btn-warning {{ secondary_button_class }}">{{ secondary_button_label }}</button>
