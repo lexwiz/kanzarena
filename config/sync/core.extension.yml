@@ -3,6 +3,7 @@ module:
   address_display: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  antibot: 0
   arena: 0
   arena_stock: 0
   automated_cron: 0

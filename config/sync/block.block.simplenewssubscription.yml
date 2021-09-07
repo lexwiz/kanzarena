@@ -1,6 +1,6 @@
 uuid: 076c024e-8b5a-4586-b508-f9df425a69ad
 langcode: ru
-status: true
+status: false
 dependencies:
   module:
     - simplenews
