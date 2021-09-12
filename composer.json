@@ -57,7 +57,7 @@
         "drupal/simplenews": "^3.0@alpha",
         "drupal/spamspan": "^2.0@beta",
         "drupal/super_login": "^1.6",
-        "drupal/swiftmailer": "^2.0",
+        "drupal/swiftmailer": "2.x-dev@dev",
         "drupal/taxonomy_entity_index": "^1.7",
         "drupal/taxonomy_menu_ui": "^1.4",
         "drupal/term_condition": "^2.0",
