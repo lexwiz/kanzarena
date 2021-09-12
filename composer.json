@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "~1.0",
         "drupal/address_display": "1.x-dev@dev",
         "drupal/admin_toolbar": "^3.0",
         "drupal/antibot": "^1.4",
@@ -81,6 +82,11 @@
         "sort-packages": true
     },
     "extra": {
+        "patches": {
+          "drupal/swiftmailer": {
+              "#3219705 - Fix getAddresses issues": "https://www.drupal.org/files/issues/2021-09-04/success-fix-qEncoding-3219705-23.patch"
+          }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "public_html/"
