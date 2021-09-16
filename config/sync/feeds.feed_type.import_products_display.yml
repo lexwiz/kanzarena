@@ -14,6 +14,7 @@ dependencies:
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
   module:
+    - commerce_feeds
     - commerce_product
     - feeds_tamper
 third_party_settings:
@@ -47,7 +48,7 @@ processor: 'entity:commerce_product'
 processor_configuration:
   langcode: ru
   update_existing: 2
-  update_non_existent: _delete
+  update_non_existent: 'entity:unpublish_action:commerce_product'
   expire: -1
   owner_feed_author: false
   owner_id: 1

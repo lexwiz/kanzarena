@@ -43,7 +43,7 @@ display:
         type: basic
         options:
           submit_button: Filter
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -850,7 +850,17 @@ display:
             label: ''
           granularity: second
       title: Media
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Отображается с @start по @end из @total'
+          plugin_id: result
       footer: {  }
       empty:
         area_text_custom:
@@ -883,7 +893,8 @@ display:
     display_title: Media
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: admin/content/media
       menu:
         type: tab
