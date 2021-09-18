@@ -6210,7 +6210,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/swiftmailer.git",
-                "reference": "a4e6c414dbd153ce12a6a5f901e93c95f7705723"
+                "reference": "0fcfeef94b2b5dd37e31305d2c22c5d73232dfaf"
             },
             "require": {
                 "drupal/core": "^8.9.11 || ^9.0.10",
@@ -6227,8 +6227,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta1+5-dev",
-                    "datestamp": "1609578937",
+                    "version": "8.x-2.0+1-dev",
+                    "datestamp": "1628154387",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

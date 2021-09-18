@@ -84,9 +84,6 @@
     },
     "extra": {
         "patches": {
-          "drupal/swiftmailer": {
-              "#3219705 - Fix getAddresses issues": "https://www.drupal.org/files/issues/2021-09-04/success-fix-qEncoding-3219705-23.patch"
-          }
         },
         "drupal-scaffold": {
             "locations": {
