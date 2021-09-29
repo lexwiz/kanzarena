@@ -1,0 +1,19 @@
+#yml_export.yml_products:
+#  path: '/yml_products'
+#  defaults:
+#    _controller: '\Drupal\yml_export\Controller\YmlExportController::page'
+#    _title: 'yml_products'
+#  requirements:
+#    _permission: 'view content'
+art_yandex_market.export:
+  path: '/admin/config/art_yandex_market_export'
+  defaults:
+    _form: '\Drupal\art_yandex_market\Form\ArtYandexMarketForm'
+  requirements:
+    _permission: 'administer site configuration'
+art_yandex_market.admin_settings:
+  path: '/admin/config/art_yandex_market'
+  defaults:
+    _form: '\Drupal\art_yandex_market\Form\ArtYandexMarketSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

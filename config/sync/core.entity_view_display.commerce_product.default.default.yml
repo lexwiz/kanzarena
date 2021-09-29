@@ -14,6 +14,7 @@ dependencies:
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
     - field.field.commerce_product.default.field_tags
+    - field.field.commerce_product.default.field_yml
   module:
     - commerce_product
     - text
@@ -95,6 +96,16 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_yml:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   flag_compare:
     weight: 10

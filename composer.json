@@ -72,6 +72,7 @@
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
         "drupal/xmlsitemap": "^1.0",
+        "drupal/yandex_yml": "^1.1",
         "drush/drush": "^10.5"
     },
     "conflict": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "500925cfc276b3ec39a12a289ccd8d2c",
+    "content-hash": "34b3b541fade0eddcf9a26d2675c9290",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -451,16 +451,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.3.2",
+            "version": "4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "101c7dd0388259cfbba41b705b9255d2b1976bbf"
+                "reference": "bf1503225f1cfb372884c71b83763b60a40c875a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/101c7dd0388259cfbba41b705b9255d2b1976bbf",
-                "reference": "101c7dd0388259cfbba41b705b9255d2b1976bbf",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/bf1503225f1cfb372884c71b83763b60a40c875a",
+                "reference": "bf1503225f1cfb372884c71b83763b60a40c875a",
                 "shasum": ""
             },
             "require": {
@@ -500,9 +500,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.3.2"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.3.3"
             },
-            "time": "2021-09-19T14:35:36+00:00"
+            "time": "2021-09-27T00:56:55+00:00"
         },
         {
             "name": "consolidation/config",
@@ -3889,7 +3889,7 @@
             "extra": {
                 "drupal": {
                     "version": "4.1.1",
-                    "datestamp": "1609419527",
+                    "datestamp": "1631968537",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4127,17 +4127,17 @@
         },
         {
             "name": "drupal/eu_cookie_compliance",
-            "version": "1.16.0",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
-                "reference": "8.x-1.16"
+                "reference": "8.x-1.18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "13f8056534b82242cc0f8a7200e0c11b6da5c99f"
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.18.zip",
+                "reference": "8.x-1.18",
+                "shasum": "dfcbd4de713313b75feeefa0878379743479204b"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9"
@@ -4145,8 +4145,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1632461967",
+                    "version": "8.x-1.18",
+                    "datestamp": "1632895785",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7234,6 +7234,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/xmlsitemap",
                 "issues": "http://drupal.org/project/issues/xmlsitemap"
+            }
+        },
+        {
+            "name": "drupal/yandex_yml",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/yandex_yml.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/yandex_yml-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "89606686422e1ca9ed01ed46ae827f1cedd70e84"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "php": ">=5.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1589964881",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Niklan",
+                    "homepage": "https://www.drupal.org/user/1450656"
+                }
+            ],
+            "description": "Yandex YML (Yandex Market Language) generator.",
+            "homepage": "https://www.drupal.org/project/yandex_yml",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/yandex_yml",
+                "issues": "https://www.drupal.org/project/issues/yandex_yml"
             }
         },
         {

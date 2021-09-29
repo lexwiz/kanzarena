@@ -15,6 +15,7 @@ dependencies:
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
     - field.field.commerce_product.default.field_tags
+    - field.field.commerce_product.default.field_yml
 _core:
   default_config_hash: bVqhDE0CBvUi4RPHqKu4sBhUOUwOTgcHVhn5PkfngLU
 id: commerce_product.default.bulk_edit
@@ -70,6 +71,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_yml:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 0

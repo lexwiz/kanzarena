@@ -1,0 +1,7 @@
+name: Art Yandex Market
+type: module
+description: 'Create YML file for Yandex Market'
+package: Custom
+core_version_requirement: ^8.8.0 || ^9.0
+dependencies:
+  - yandex_yml

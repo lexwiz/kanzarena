@@ -1,0 +1,10 @@
+art_yandex_market.export:
+  title: Create Yml export for Yandex.market
+  description: 'Yml export generate page.'
+  route_name: art_yandex_market.export
+  parent: system.admin_config_services
+art_yandex_market.admin_settings:
+  title: Yml export for Yandex.market settings
+  description: 'Yml export config page.'
+  route_name: art_yandex_market.admin_settings
+  parent: system.admin_config_services

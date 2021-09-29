@@ -1,0 +1,10 @@
+<?php
+
+//use Drupal\yandex_yml\YandexYml\Shop;
+//
+///** @var \Drupal\yandex_yml\YandexYmlGeneratorInterface $yml_generator */
+//$yml_generator = \Drupal::service('yandex_yml.generator');
+//$shop_info = new Shop("Art", "IP Saenko" );
+//$yml_generator->setShop($shop_info);
+//$yml_generator->generateFile();
+

@@ -1,0 +1,23 @@
+uuid: 09b2fcbe-0204-4339-adf2-090f952fdcc3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_yml
+id: commerce_product.default.field_yml
+field_name: field_yml
+entity_type: commerce_product
+bundle: default
+label: 'Yandex Market'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean
