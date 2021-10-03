@@ -25,16 +25,16 @@
 #}
 {%
   set classes = [
-    'card border-primary mb-3',
+    'card border-light shadow rounded mb-3',
     'taxonomy-term',
     'vocabulary-' ~ term.bundle|clean_class,
   ]
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  <div class="content text-center">
+  <div class="content text-center p-2">
     {{ content }}
   </div>
-  <div class="card-footer text-center">
+  <div class="card-footer text-center border-0">
     {{ title_prefix }}
     {% if name and not page %}
       <h2 class="taxonomy-term-title"><a href="{{ url }}">{{ name }}</a></h2>

@@ -138,7 +138,7 @@ a {
   background-color: transparent; }
   a:hover {
     color: #6b9430;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 a:not([href]):not([class]) {
   color: inherit;
@@ -2448,9 +2448,9 @@ fieldset:disabled a.button {
   text-decoration: none; }
   .btn-link:hover {
     color: #6b9430;
-    text-decoration: underline; }
+    text-decoration: none; }
   .btn-link:focus, .btn-link.focus {
-    text-decoration: underline; }
+    text-decoration: none; }
   .btn-link:disabled, .btn-link.disabled {
     color: #8e8c84;
     pointer-events: none; }
@@ -9691,5 +9691,9 @@ fieldset.checkout-pane {
 
 .address-book-edit-button {
   margin-left: 0; }
+
+.view-catalog h3 {
+  font-size: 1rem;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

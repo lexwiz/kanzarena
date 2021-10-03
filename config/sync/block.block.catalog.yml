@@ -13,7 +13,7 @@ dependencies:
 id: catalog
 theme: b4theme
 region: sidebar_first
-weight: -9
+weight: -12
 provider: null
 plugin: 'facet_block:catalog'
 settings:

@@ -13,7 +13,7 @@ dependencies:
 id: brend
 theme: b4theme
 region: sidebar_first
-weight: -8
+weight: -11
 provider: null
 plugin: 'facet_block:brand'
 settings:

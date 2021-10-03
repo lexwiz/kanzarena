@@ -12,7 +12,7 @@ dependencies:
 id: strana
 theme: b4theme
 region: sidebar_first
-weight: 0
+weight: -10
 provider: null
 plugin: 'facet_block:country'
 settings:

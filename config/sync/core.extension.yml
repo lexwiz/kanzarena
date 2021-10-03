@@ -103,6 +103,7 @@ module:
   taxonomy_entity_index: 0
   taxonomy_menu: 0
   taxonomy_menu_ui: 0
+  taxonomy_term_depth: 0
   telephone: 0
   text: 0
   token: 0

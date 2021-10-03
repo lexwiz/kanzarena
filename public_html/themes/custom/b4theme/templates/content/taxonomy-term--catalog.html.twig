@@ -31,14 +31,20 @@
   ]
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+  <div class="row no-gutters">
+    <div class="col-md-4">
   <div class="content text-center">
     {{ content }}
   </div>
-  <div class="card-footer text-center">
+    </div>
+    <div class="col-md-8">
+  <div class="card-body">
     {{ title_prefix }}
     {% if name and not page %}
       <h2 class="taxonomy-term-title"><a href="{{ url }}">{{ name }}</a></h2>
     {% endif %}
     {{ title_suffix }}
+  </div>
+    </div>
   </div>
 </div>
