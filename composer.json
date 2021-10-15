@@ -61,7 +61,7 @@
         "drupal/swiftmailer": "2.x-dev@dev",
         "drupal/taxonomy_entity_index": "^1.7",
         "drupal/taxonomy_menu": "^3.5",
-        "drupal/taxonomy_menu_ui": "^1.4",
+        "drupal/taxonomy_menu_ui": "^2.0",
         "drupal/taxonomy_term_depth": "^2.5",
         "drupal/term_condition": "^2.0",
         "drupal/twig_field_value": "^2.0",
