@@ -18,7 +18,7 @@ bundle: default
 mode: default
 content:
   field_barcode:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -26,7 +26,7 @@ content:
     type: string
     region: content
   field_code_stock:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
@@ -36,11 +36,9 @@ content:
   field_stock:
     weight: 3
     label: hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
+    settings: {  }
     third_party_settings: {  }
-    type: number_integer
+    type: number_unformatted
     region: content
   field_vendor_code:
     weight: 2
@@ -71,11 +69,13 @@ content:
         promotion: promotion
         tax: tax
       strip_trailing_zeroes: 0
+      display_elements:
+        discount_percentage: discount_percentage
     third_party_settings: {  }
   qty_increments:
     type: number_unformatted
     region: content
-    weight: 6
+    weight: 7
     label: inline
     settings: {  }
     third_party_settings: {  }

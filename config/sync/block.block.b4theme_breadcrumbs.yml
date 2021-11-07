@@ -22,5 +22,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/brand\r\n/sales\r\n/catalog\r\n/favorite\r\n/compare\r\n/node/*\r\n/search*\r\n/user/*\r\n/cart\r\n/checkout*"
+    pages: "<front>\r\n/brand\r\n/sales\r\n/catalog\r\n/favorite\r\n/compare\r\n/node/*\r\n/search*\r\n/user/*\r\n/cart\r\n/checkout*"
     negate: true

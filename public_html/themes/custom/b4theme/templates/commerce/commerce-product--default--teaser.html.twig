@@ -46,7 +46,56 @@
 {#          {{- product.rate_rate_product -}}#}
 
         <div class="col-12 text-center">
-          <strong>{{- product.variation_field_stock -}}</strong>
+          <strong>
+
+            {% set stock_level = product.variation_field_stock|render|striptags %}
+            {% set nowDate = "now"|date('H:i:s') %}
+            {% set endDate = "now"|date('13:00:00') %}
+            {% set weekDay = "now"|date('w') %}
+
+
+            {% if weekDay == 0 %}
+              {% set inst = 1 %}
+              {% set pzk = 2 %}
+            {% elseif weekDay == 4 %}
+              {% set inst = 0 %}
+              {% set pzk = 3 %}
+            {% elseif weekDay == 5 %}
+              {% set inst = 2 %}
+              {% set pzk = 3 %}
+            {% elseif weekDay == 6 %}
+              {% set inst = 1 %}
+              {% set pzk = 2 %}
+            {% else %}
+              {% set inst = 0 %}
+              {% set pzk = 1 %}
+            {% endif %}
+
+            {% if stock_level > 0 %}
+              <div class = "text-success">В наличии
+                  {% if logged_in %}
+                    ({{ stock_level }})
+                  {% endif %}
+                </div>
+              {% if nowDate > endDate %}
+                <div class="">Доставим {{ "now"|date_modify("+#{inst+1} day")|date("d.m.Y") }}</div>
+              {% else %}
+                <div class="">Доставим {{ "now"|date_modify("+#{inst} day")|date("d.m.Y") }}</div>
+              {% endif %}
+            {% else %}
+              <div class = 'text-warning'>Под заказ
+                  {% if logged_in %}
+                    ({{ stock_level }})
+                  {% endif %}
+                </div>
+              {% if nowDate > endDate %}
+                <div>Доставим {{ "now"|date_modify("+#{pzk+2} day")|date("d.m.Y") }}</div>
+              {% else %}
+                <div>Доставим {{ "now"|date_modify("+#{pzk+1} day")|date("d.m.Y") }}</div>
+              {% endif %}
+            {% endif %}
+
+          </strong>
         </div>
       </div>
     </div>

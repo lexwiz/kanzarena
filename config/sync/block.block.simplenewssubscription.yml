@@ -17,8 +17,10 @@ settings:
   label: 'Simplenews subscription'
   provider: simplenews
   label_display: '0'
-  newsletters:
-    default: default
+  newsletters: {  }
   message: 'Будьте в курсе - подпишитесь на нашу рассылку.'
   unique_id: d8594691-dd0f-433b-8223-399ef4fcc890
+  default_newsletters:
+    default: default
+  show_manage: true
 visibility: {  }

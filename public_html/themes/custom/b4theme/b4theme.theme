@@ -8,6 +8,7 @@
 
 function b4theme_preprocess_field(&$variables, $hook) {
   //dpm($variables); field-link-flag
+//  dpm($variables['element']);
   $element = $variables['element'];
   if (isset($element['#field_name'])) {
     //dpm($variables['element']['#field_name']);
@@ -21,41 +22,45 @@ function b4theme_preprocess_field(&$variables, $hook) {
         // you can generate tid from ['#options']['entity']
       }
     }
-    if ($element['#field_name'] == 'field_stock') {
-      //dpm($variables['items'][0]);
-      //echo $variables['items'][0]['content']['#options']['entity']->id();
-      //foreach ($variables['items'] as $index => $item) {
-      //echo $index . "<br>";
-      //echo $item;
-      $stock = $variables['items'][0]['content']['#markup'];
-      if (\Drupal::currentUser()->isAnonymous()) {
-        // Anonymous user...
-        if ($stock > 0) {
-          $variables['items'][0]['content']['#markup'] = "<span class = 'in_stock'>В наличии</span>";
-        }
-        else {
-          $variables['items'][0]['content']['#markup'] = "<span class = 'out_stock'>Нет в наличии</span>";
-          //$variables['items'][0]['attributes'] -> addClass("red");
-        }
-      }
-      else {
-        if ($stock > 0) {
-          $variables['items'][0]['content']['#markup'] = "<span class = 'in_stock'>В наличии " . $stock . " шт.</span>";
-          //$variables['items'][0]['attributes']->setAttribute('class', 'some_class');
-        }
-        else {
-          $variables['items'][0]['content']['#markup'] = "<span class = 'out_stock'>Нет в наличии (" . $stock . ")</span>";
-          //$variables['items'][0]['attributes']->setAttribute('class', 'some_class');
-        }
-      }
-
-      //$stock = $variables['items'][0]['content']['#markup'];
-
-      //$variables['items'][0]['content']['#markup'] = "Test";
-      //$variables['items'][$index]['content']['#options']['attributes']['class'][] = 'tid-item tid-' . $item['content']['#options']['entity']->id();
-      // you can generate tid from ['#options']['entity']
-      // }
-    }
+//    if ($element['#field_name'] == 'field_vendor_opt') {
+//      dpm($variables['items'][0]);
+//      $vendor_opt = $variables['items'][0]['content']['#markup'];
+//    }
+//    if ($element['#field_name'] == 'field_stock') {
+////      dpm($variables['items'][0]);
+//      //echo $variables['items'][0]['content']['#options']['entity']->id();
+//      //foreach ($variables['items'] as $index => $item) {
+//      //echo $index . "<br>";
+//      //echo $item;
+//      $stock = $variables['items'][0]['content']['#markup'];
+//      if (\Drupal::currentUser()->isAnonymous()) {
+//        // Anonymous user...
+//        if ($stock > 0) {
+//          $variables['items'][0]['content']['#markup'] = "<span class = 'in_stock'>В наличии</span>";
+//        }
+//        else {
+//          $variables['items'][0]['content']['#markup'] = "<span class = 'out_stock'>Нет в наличии</span>";
+//          //$variables['items'][0]['attributes'] -> addClass("red");
+//        }
+//      }
+//      else {
+//        if ($stock > 0) {
+//          $variables['items'][0]['content']['#markup'] = "<span class = 'in_stock'>В наличии " . $stock . " шт.</span>";
+//          //$variables['items'][0]['attributes']->setAttribute('class', 'some_class');
+//        }
+//        else {
+//          $variables['items'][0]['content']['#markup'] = "<span class = 'out_stock'>Нет в наличии (" . $stock . ")</span>";
+//          //$variables['items'][0]['attributes']->setAttribute('class', 'some_class');
+//        }
+//      }
+//
+//      //$stock = $variables['items'][0]['content']['#markup'];
+//
+//      //$variables['items'][0]['content']['#markup'] = "Test";
+//      //$variables['items'][$index]['content']['#options']['attributes']['class'][] = 'tid-item tid-' . $item['content']['#options']['entity']->id();
+//      // you can generate tid from ['#options']['entity']
+//      // }
+//    }
   }
 }
 
