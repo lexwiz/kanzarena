@@ -8,7 +8,6 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
-    - inline_entity_form
     - path
     - user
 _core:
@@ -26,18 +25,10 @@ content:
   contact:
     weight: 5
     region: content
-  customer_profiles:
-    type: inline_entity_form_simple
+  google_analytics:
     weight: 3
     region: content
-    settings:
-      form_mode: default
-      revision: false
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
+    settings: {  }
     third_party_settings: {  }
   language:
     weight: 2
@@ -70,4 +61,5 @@ content:
     region: content
 hidden:
   commerce_remote_id: true
+  customer_profiles: true
   langcode: true

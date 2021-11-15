@@ -42,6 +42,7 @@
         "drupal/filter_twig": "^2.1",
         "drupal/fivestar": "^1.0@alpha",
         "drupal/flag": "^4.0@beta",
+        "drupal/flood_control": "^2.2",
         "drupal/fz152": "^1.8",
         "drupal/google_analytics": "^2.5",
         "drupal/menu_block": "^1.6",

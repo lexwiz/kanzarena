@@ -54,6 +54,7 @@ module:
   filter: 0
   filter_twig: 0
   flag: 0
+  flood_control: 0
   fz152: 0
   google_analytics: 0
   help: 0
