@@ -198,7 +198,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Username
+          label: 'Имя пользователя'
           exclude: false
           alter:
             alter_text: false

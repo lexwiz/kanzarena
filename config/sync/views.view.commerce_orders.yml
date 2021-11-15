@@ -13,7 +13,7 @@ dependencies:
 _core:
   default_config_hash: dRRMNojl8xToRlJsicf6zKM8sCx0KbtzgIniFFRA-t8
 id: commerce_orders
-label: Orders
+label: Заказы
 module: views
 description: ''
 tag: Commerce
@@ -920,7 +920,7 @@ display:
           entity_field: state
           plugin_id: state_machine_state
       sorts: {  }
-      title: Orders
+      title: Заказы
       header: {  }
       footer: {  }
       empty:
@@ -963,7 +963,7 @@ display:
       path: admin/commerce/orders/list
       menu:
         type: 'default tab'
-        title: Orders
+        title: Заказы
         description: ''
         expanded: false
         parent: ''
@@ -972,7 +972,7 @@ display:
         menu_name: main
       tab_options:
         type: normal
-        title: Orders
+        title: Заказы
         description: 'Manage your orders.'
         weight: 0
     cache_metadata:

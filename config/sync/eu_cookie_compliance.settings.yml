@@ -19,9 +19,9 @@ popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000
 show_more_info: true
-popup_more_info_button_message: 'More info'
+popup_more_info_button_message: Подробнее
 popup_enabled: true
-popup_find_more_button_message: 'More info'
+popup_find_more_button_message: Подробнее
 popup_height: null
 popup_hide_agreed: false
 popup_hide_button_message: Hide
@@ -47,7 +47,7 @@ exclude_uid_1: false
 better_support_for_screen_readers: false
 use_mobile_message: false
 method: opt_in
-disagree_button_label: 'No, thanks'
+disagree_button_label: 'Нет, спасибо'
 disabled_javascripts: ''
 automatic_cookies_removal: true
 allowed_cookies: ''

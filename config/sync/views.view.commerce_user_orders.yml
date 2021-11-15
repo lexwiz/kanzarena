@@ -499,7 +499,7 @@ display:
           entity_field: state
           plugin_id: state_machine_state
       sorts: {  }
-      title: Orders
+      title: Заказы
       header: {  }
       footer: {  }
       empty:
@@ -513,7 +513,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'You have not placed any orders with us yet.'
+            value: 'Вы еще не оформляли у нас заказов.'
             format: basic_html
           plugin_id: text
       relationships: {  }
@@ -577,7 +577,7 @@ display:
       path: user/%user/orders
       menu:
         type: tab
-        title: Orders
+        title: Заказы
         description: ''
         expanded: false
         parent: ''
