@@ -1,7 +1,7 @@
 applies_admin_routes: false
 include_home_segment: false
 alternative_title_field: field_breadcrumb_title
-home_segment_title: Home
+home_segment_title: Главная
 home_segment_keep: false
 include_title_segment: true
 language_path_prefix_as_segment: false

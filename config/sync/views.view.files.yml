@@ -47,7 +47,7 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 50
           offset: 0
@@ -56,6 +56,8 @@ display:
           tags:
             previous: '‹ Previous'
             next: 'Next ›'
+            first: '«« '
+            last: »»
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -64,6 +66,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       style:
         type: table
         options:
@@ -701,7 +704,17 @@ display:
           entity_field: status
       sorts: {  }
       title: Файлы
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Отображается с @start по @end из @total'
+          plugin_id: result
       footer: {  }
       empty:
         area_text_custom:
@@ -760,7 +773,8 @@ display:
           group_type: group
           admin_label: 'File usage'
           required: false
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       contexts:
         - 'languages:language_content'
