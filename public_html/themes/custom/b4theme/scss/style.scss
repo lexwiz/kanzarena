@@ -514,10 +514,10 @@ h2.block-title, .block-facets h2 {
   min-height: 45px;
 }
 
-.facets-widget-links, .facets-widget-checkbox {
+.facets-widget-links, .facets-widget-checkbox, .facets-widget-range_slider {
   ul {
     margin-bottom: 0;
-    padding-left: 1em;
+    padding: 0 1em;
     li {
       list-style: none;
     }

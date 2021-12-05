@@ -1,4 +1,4 @@
-uuid: 4d8e41a4-2d2c-4534-8993-912ff0d4e19d
+uuid: 122e8bdf-94e8-40ec-aa90-fd78dac6036c
 langcode: ru
 status: false
 dependencies:
@@ -12,12 +12,12 @@ dependencies:
 id: price
 theme: b4theme
 region: sidebar_first
-weight: -9
+weight: -13
 provider: null
 plugin: 'facet_block:price'
 settings:
   id: 'facet_block:price'
-  label: Price
+  label: Цена
   provider: facets
   label_display: visible
   block_id: price

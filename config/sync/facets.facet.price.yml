@@ -1,4 +1,4 @@
-uuid: 337b773f-c2b8-46e3-89b9-e2daab1bc3bf
+uuid: 1cada026-bad9-49e1-acc8-99f4cd3df91a
 langcode: ru
 status: true
 dependencies:
@@ -16,16 +16,16 @@ show_only_one_result: true
 field_identifier: number
 facet_source_id: 'search_api:views_page__taxonomy_term_product_index__page_1'
 widget:
-  type: slider
+  type: range_slider
   config:
-    show_numbers: true
+    show_numbers: false
     prefix: ''
-    suffix: ''
+    suffix: ' р.'
     min_type: search_result
     min_value: !!float 0
     max_type: search_result
-    max_value: !!float 100
-    step: !!float 10
+    max_value: !!float 10
+    step: !!float 1
 query_operator: or
 use_hierarchy: false
 keep_hierarchy_parents_active: false
@@ -53,16 +53,18 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
-  slider:
-    processor_id: slider
+  range_slider:
+    processor_id: range_slider
     weights:
+      pre_query: 60
       post_query: 60
+      build: 20
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
-      pre_query: 5
-      build: -10
+      pre_query: 50
+      build: 15
     settings: {  }
 empty_behavior:
   behavior: none

@@ -9500,10 +9500,10 @@ h2.block-title, .block-facets h2 {
   font-weight: bold;
   min-height: 45px; }
 
-.facets-widget-links ul, .facets-widget-checkbox ul {
+.facets-widget-links ul, .facets-widget-checkbox ul, .facets-widget-range_slider ul {
   margin-bottom: 0;
-  padding-left: 1em; }
-  .facets-widget-links ul li, .facets-widget-checkbox ul li {
+  padding: 0 1em; }
+  .facets-widget-links ul li, .facets-widget-checkbox ul li, .facets-widget-range_slider ul li {
     list-style: none; }
 
 .facets-widget-checkbox ul li.facet-item input.facets-checkbox {

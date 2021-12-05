@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -35,7 +39,7 @@
         "drupal/devel": "^4.0",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/eu_cookie_compliance": "^1.14",
-        "drupal/facets": "^1.7",
+        "drupal/facets": "^2.0@RC",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/field_permissions": "^1.1",
@@ -75,7 +79,8 @@
         "drupal/vocabulary_condition": "^1.0",
         "drupal/xmlsitemap": "^1.0",
         "drupal/yandex_yml": "^1.1",
-        "drush/drush": "^10.5"
+        "drush/drush": "^10.5",
+        "npm-asset/nouislider": "^14"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -87,6 +92,9 @@
     },
     "extra": {
         "patches": {
+            "drupal/facets": {
+                "3153622: JQuery UI plugins removed from Drupal 9 but required by Facets Range Widget": "https://www.drupal.org/files/issues/2021-11-12/issue-3153622-nouislider_25.patch"
+            }
         },
         "drupal-scaffold": {
             "locations": {
@@ -99,12 +107,15 @@
                 "[web-root]/.htaccess": false
             }
         },
+        "installer-types": ["npm-asset", "bower-asset"],
         "installer-paths": {
             "public_html/core": [
                 "type:drupal-core"
             ],
             "public_html/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "public_html/modules/contrib/{$name}": [
                 "type:drupal-module"
