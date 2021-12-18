@@ -1,7 +1,7 @@
 applies_admin_routes: false
 include_home_segment: false
 alternative_title_field: field_breadcrumb_title
-home_segment_title: Главная
+home_segment_title: Home
 home_segment_keep: false
 include_title_segment: true
 language_path_prefix_as_segment: false
@@ -12,7 +12,7 @@ term_hierarchy: true
 absolute_paths: false
 hide_single_home_item: false
 title_from_page_when_available: true
-capitalizator_mode: ucall
+capitalizator_mode: ucwords
 capitalizator_ignored_words:
   - of
   - and
@@ -25,7 +25,7 @@ capitalizator_ignored_words:
 capitalizator_forced_words: {  }
 capitalizator_forced_words_first_letter: false
 capitalizator_forced_words_case_sensitivity: true
-add_structured_data_json_ld: false
+add_structured_data_json_ld: true
 use_site_title: false
 include_invalid_paths: false
 excluded_paths: ''
@@ -34,10 +34,10 @@ custom_paths: ''
 title_segment_as_link: false
 follow_redirects: true
 limit_segment_display: false
-truncator_mode: false
+segment_display_limit: ''
+truncator_mode: true
 truncator_length: 100
 truncator_dots: true
 _core:
-  default_config_hash: 8EmQa_u-FWYuP_YcNy-Tp3PuLk583dbhIB8xbNQ58TE
+  default_config_hash: azWBxQFowXKyqUvvROIrMBXpwGaxz4JxhL6xz420P3Q
 langcode: ru
-segment_display_limit: ''

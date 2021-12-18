@@ -12,7 +12,7 @@
 
       // Custom code here
 
-      $('.dropdown-menu a.dropdown-toggle',context).on('click', function(e) {
+      $('.dropdown-menu a.dropdown-item',context).on('click', function(e) {
         if (!$(this).next().hasClass('show')) {
           $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }

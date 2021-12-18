@@ -34,6 +34,7 @@ We call a macro which calls itself to render the full tree.
 
   {% if menu_level == 0 %}
   <ul{{ attributes.addClass('navbar-nav mr-auto') }}>
+
   {% elseif menu_level > 2 %}
   <ul class="menu-level-{{ menu_level }}">
   {% else %}
@@ -60,7 +61,7 @@ We call a macro which calls itself to render the full tree.
     {%
       set list_item_classes = [
       'nav-item',
-      menu_level == 0 and item.is_expanded ? 'dropdown',
+      menu_level == 0 and item.is_expanded ? 'pl-2 dropdown',
       menu_level == 1 and item.is_expanded ? 'dropdown-submenu',
     ]
     %}
@@ -71,7 +72,7 @@ We call a macro which calls itself to render the full tree.
       menu_level == 0 ? 'zero-level',
       item.in_active_trail ? 'active',
       menu_level > 0 and item.below ? 'dropdown-item',
-      menu_level < 2 and (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle',
+
     ]
     %}
     {%
@@ -84,6 +85,11 @@ We call a macro which calls itself to render the full tree.
     <li{{ item.attributes.addClass(list_item_classes) }}>
       {% if item.below %}
       {% if menu_level < 2 %}
+        {% if menu_level == 0 %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-grid-3x2-gap-fill" viewBox="0 0 16 16">
+            <path d="M1 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4zM1 9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V9zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V9z"/>
+          </svg>
+        {% endif %}
         {{ link(item.title, item.url, { 'class': link_class, 'data-toggle' : 'dropdown', 'title': ('Expand menu' | t) ~ ' ' ~ item.title }) }}
         {% else %}
           {{ link(item.title, item.url, { 'class': link_class }) }}

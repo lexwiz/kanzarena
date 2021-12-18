@@ -110,11 +110,19 @@ function b4theme_preprocess_breadcrumb(array &$vars) {
       if (!empty($parents)) {
         foreach ($parents as $index => $parent) {
           array_push($breadcrumb, $parent->toLink());
+          $parents_next = $storage->loadParents($parent->id());
+          if (!empty($parents_next)) {
+            foreach ($parents_next as $index_next => $parent_next) {
+              array_push($breadcrumb, $parent_next->toLink());
+            }
+          }
         }
       }
       array_push($breadcrumb, $term->toLink());
 
       array_push($breadcrumb, $node_url);
+
+      unset($breadcrumb[1]);
 
       // Implementing Cache.
       $vars['#cache']['contexts'][] = "url.path";
