@@ -23,13 +23,13 @@ third_party_settings:
       e595688e-d11b-432f-b270-d7e494b4db80:
         separator: /
         limit: null
+        uuid: e595688e-d11b-432f-b270-d7e494b4db80
         plugin: explode
         source: category
         weight: 0
         label: Explode
-        uuid: e595688e-d11b-432f-b270-d7e494b4db80
-id: import_products_display
 label: 'Import Products Display'
+id: import_products_display
 description: ''
 help: ''
 import_period: -1
@@ -46,61 +46,61 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:commerce_product'
 processor_configuration:
+  values:
+    type: default
   langcode: ru
   update_existing: 2
   update_non_existent: 'entity:unpublish_action:commerce_product'
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: default
 custom_sources:
   sku:
-    label: SKU
     value: SKU
+    label: SKU
     machine_name: sku
   store:
-    label: Store
     value: Store
+    label: Store
     machine_name: store
   title:
-    label: Title
     value: Title
+    label: Title
     machine_name: title
   category:
-    label: Category
     value: Category
+    label: Category
     machine_name: category
   manufacturers:
-    label: Manufacturers
     value: Manufacturers
+    label: Manufacturers
     machine_name: manufacturers
   country:
-    label: Country
     value: Country
+    label: Country
     machine_name: country
   body:
-    label: Body
     value: Body
+    label: Body
     machine_name: body
   shema:
-    label: Shema
     value: Shema
+    label: Shema
     machine_name: shema
   attributes:
-    label: Attributes
     value: Attributes
+    label: Attributes
     machine_name: attributes
 mappings:
   -
     target: field_code
     map:
       value: sku
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: stores
     map:
@@ -113,9 +113,9 @@ mappings:
     map:
       url: ''
       guid: sku
+    settings: {  }
     unique:
       guid: '1'
-    settings: {  }
   -
     target: variations
     map:
@@ -127,9 +127,9 @@ mappings:
     target: title
     map:
       value: title
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_catalog
     map:
@@ -169,9 +169,9 @@ mappings:
     target: field_package
     map:
       value: shema
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_photo
     map:

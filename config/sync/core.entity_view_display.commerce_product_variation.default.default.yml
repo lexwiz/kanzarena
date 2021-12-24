@@ -18,50 +18,48 @@ bundle: default
 mode: default
 content:
   field_barcode:
-    weight: 5
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_code_stock:
-    weight: 6
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_stock:
-    weight: 3
+    type: number_unformatted
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: number_unformatted
+    weight: 3
     region: content
   field_vendor_code:
-    weight: 2
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   list_price:
-    label: above
     type: commerce_price_default
-    weight: 0
-    region: content
+    label: above
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
-  price:
-    label: hidden
-    type: price_difference_formatter
-    weight: 1
+    weight: 0
     region: content
+  price:
+    type: price_difference_formatter
+    label: hidden
     settings:
       currency_display: symbol
       adjustment_types:
@@ -72,13 +70,15 @@ content:
       display_elements:
         discount_percentage: discount_percentage
     third_party_settings: {  }
+    weight: 1
+    region: content
   qty_increments:
     type: number_unformatted
-    region: content
-    weight: 7
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 7
+    region: content
 hidden:
   feeds_item: true
   langcode: true

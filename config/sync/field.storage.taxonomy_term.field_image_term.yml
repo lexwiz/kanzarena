@@ -15,6 +15,9 @@ field_name: field_image_term
 entity_type: taxonomy_term
 type: image
 settings:
+  target_type: file
+  display_field: false
+  display_default: false
   uri_scheme: public
   default_image:
     uuid: fdb7943e-66cc-42d3-adba-690f68bb9e4f
@@ -22,9 +25,6 @@ settings:
     title: ''
     width: 582
     height: 582
-  target_type: file
-  display_field: false
-  display_default: false
 module: image
 locked: false
 cardinality: 1

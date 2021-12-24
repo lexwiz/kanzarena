@@ -12,9 +12,9 @@ bundle: main
 mode: catalog_menu
 content:
   children:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   langcode: true

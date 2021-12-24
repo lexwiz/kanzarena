@@ -17,8 +17,8 @@ plugin: 'system_menu_block:catalog-menu'
 settings:
   id: 'system_menu_block:catalog-menu'
   label: 'Catalog Menu'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 5
   expand_all_items: true

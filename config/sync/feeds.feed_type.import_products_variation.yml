@@ -18,24 +18,24 @@ third_party_settings:
         num_char: 13
         ellipses: false
         wordsafe: false
+        uuid: b5d05096-5ab4-4f29-81c4-6f7729481b2b
         plugin: truncate_text
         source: barcode
         weight: 0
         label: Truncate
-        uuid: b5d05096-5ab4-4f29-81c4-6f7729481b2b
       7cf71464-0836-4a5b-b2c7-697fc643af0c:
         find: ','
         replace: .
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 7cf71464-0836-4a5b-b2c7-697fc643af0c
         plugin: find_replace
         source: price
         weight: 0
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 7cf71464-0836-4a5b-b2c7-697fc643af0c
-id: import_products_variation
 label: 'Import Products variation'
+id: import_products_variation
 description: ''
 help: ''
 import_period: -1
@@ -52,87 +52,87 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:commerce_product_variation'
 processor_configuration:
+  values:
+    type: default
   langcode: ru
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: false
-  skip_hash_check: false
-  values:
-    type: default
 custom_sources:
   sku:
-    label: SKU
     value: SKU
+    label: SKU
     machine_name: sku
   title:
-    label: Title
     value: Title
+    label: Title
     machine_name: title
   barcode:
-    label: Barcode
     value: Barcode
+    label: Barcode
     machine_name: barcode
   code:
-    label: Code
     value: Code
+    label: Code
     machine_name: code
   sku_m:
-    label: 'SKU M'
     value: 'SKU M'
+    label: 'SKU M'
     machine_name: sku_m
   min_qt:
-    label: 'Min Qt'
     value: 'Min Qt'
+    label: 'Min Qt'
     machine_name: min_qt
   price:
-    label: Price
     value: Price
+    label: Price
     machine_name: price
 mappings:
   -
     target: sku
     map:
       value: sku
+    settings: {  }
     unique:
       value: '1'
-    settings: {  }
   -
     target: title
     map:
       value: title
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_barcode
     map:
       value: barcode
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_code_stock
     map:
       value: code
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_vendor_code
     map:
       value: sku_m
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: qty_increments
     map:
       value: min_qt
-    unique: {  }
     settings: {  }
+    unique: {  }
   -
     target: price
     map:

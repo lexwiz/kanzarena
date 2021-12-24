@@ -8,13 +8,13 @@ dependencies:
     - field.field.profile.customer.field_requisites
     - field.field.profile.customer.field_telefon
     - profile.type.customer
-  enforced:
-    module:
-      - commerce_order
   module:
     - address
     - options
     - telephone
+  enforced:
+    module:
+      - commerce_order
 _core:
   default_config_hash: zA0MBGUGdWqnBBoC762uDcH92qRZHC8KllbkpOjNUcs
 id: profile.customer.default
@@ -24,32 +24,32 @@ mode: default
 content:
   address:
     type: address_default
-    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_partner:
-    weight: 2
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 2
     region: content
   field_requisites:
-    weight: 3
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 3
     region: content
   field_telefon:
-    weight: 1
+    type: telephone_link
     label: above
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

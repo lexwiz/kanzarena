@@ -19,18 +19,18 @@ plugin: 'facet_block:catalog'
 settings:
   id: 'facet_block:catalog'
   label: Каталог
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: catalog
 visibility:
   request_path:
     id: request_path
-    pages: '/taxonomy/term/*'
     negate: false
+    pages: '/taxonomy/term/*'
   'entity_bundle:taxonomy_term':
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      brand: brand
     negate: false
     context_mapping:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      brand: brand

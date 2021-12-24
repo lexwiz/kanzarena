@@ -18,11 +18,11 @@ plugin: 'facet_block:country'
 settings:
   id: 'facet_block:country'
   label: Страна
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: strana
 visibility:
   request_path:
     id: request_path
-    pages: '/taxonomy/term/*'
     negate: false
+    pages: '/taxonomy/term/*'

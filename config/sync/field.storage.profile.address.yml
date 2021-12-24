@@ -2,13 +2,13 @@ uuid: 2032556e-92dc-407a-88b5-68ebf2826f73
 langcode: ru
 status: true
 dependencies:
-  enforced:
-    module:
-      - commerce_order
   module:
     - address
     - field_permissions
     - profile
+  enforced:
+    module:
+      - commerce_order
 third_party_settings:
   field_permissions:
     permission_type: public

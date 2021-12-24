@@ -14,13 +14,13 @@ third_party_settings:
       2c6a32fd-b240-4f84-b7d5-7d8248abc315:
         separator: ','
         limit: null
+        uuid: 2c6a32fd-b240-4f84-b7d5-7d8248abc315
         plugin: explode
         source: image
         weight: 0
         label: Explode
-        uuid: 2c6a32fd-b240-4f84-b7d5-7d8248abc315
-id: import_photo
 label: 'Import Photo'
+id: import_photo
 description: ''
 help: ''
 import_period: -1
@@ -37,28 +37,28 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:media'
 processor_configuration:
+  values:
+    bundle: image
   langcode: ru
   update_existing: 2
   update_non_existent: 'entity:unpublish_action:media'
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: true
-  skip_hash_check: false
-  values:
-    bundle: image
 custom_sources:
   image:
-    label: Image
     value: Image
+    label: Image
     machine_name: image
   title:
-    label: Title
     value: Title
+    label: Title
     machine_name: title
   sku:
-    label: SKU
     value: SKU
+    label: SKU
     machine_name: sku
 mappings:
   -
@@ -76,7 +76,7 @@ mappings:
     target: name
     map:
       value: sku
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

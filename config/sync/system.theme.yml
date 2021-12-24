@@ -1,5 +1,5 @@
-admin: seven
-default: b4theme
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
 langcode: ru
+admin: seven
+default: b4theme

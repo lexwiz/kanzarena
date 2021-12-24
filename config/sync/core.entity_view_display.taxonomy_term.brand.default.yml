@@ -14,13 +14,13 @@ bundle: brand
 mode: default
 content:
   field_image_term:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: medium
       image_link: content
+      image_style: medium
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
 hidden:
   description: true

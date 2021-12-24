@@ -10,12 +10,12 @@ dependencies:
     - field.field.commerce_product_variation.default.field_code_stock
     - field.field.commerce_product_variation.default.field_stock
     - field.field.commerce_product_variation.default.field_vendor_code
+  module:
+    - commerce_price
   enforced:
     module:
       - commerce_cart
       - commerce_product
-  module:
-    - commerce_price
 _core:
   default_config_hash: 6GpSQzJM6086KplhyiaTF3ezvQ_ecs8bIcW4GQMzrJU
 id: commerce_product_variation.default.cart
@@ -24,22 +24,22 @@ bundle: default
 mode: cart
 content:
   list_price:
-    label: above
     type: commerce_price_default
-    weight: 0
-    region: content
+    label: above
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 0
+    region: content
   product_id:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: add_to_cart
       link: false
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   feeds_item: true

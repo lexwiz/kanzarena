@@ -17,8 +17,8 @@ plugin: 'block_content:f050f802-0163-4e94-ad13-00e488051a79'
 settings:
   id: 'block_content:f050f802-0163-4e94-ad13-00e488051a79'
   label: Metrika
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

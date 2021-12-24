@@ -19,36 +19,36 @@ bundle: default
 mode: default
 content:
   field_barcode:
+    type: string_textfield
     weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_code_stock:
+    type: string_textfield
     weight: 8
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_stock:
+    type: number
     weight: 9
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_vendor_code:
+    type: string_textfield
     weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   langcode:
     type: language_select
     weight: 3
@@ -65,9 +65,9 @@ content:
   price:
     type: commerce_price_default
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   qty_increments:
     type: number
     weight: 5
@@ -78,18 +78,18 @@ content:
   sku:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     weight: 4
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   feeds_item: true

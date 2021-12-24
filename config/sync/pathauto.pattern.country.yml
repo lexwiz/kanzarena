@@ -12,12 +12,12 @@ pattern: 'country/[term:name]'
 selection_criteria:
   8dfbe6a7-d397-490a-a43f-d10d42683b97:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      country: country
     negate: false
+    uuid: 8dfbe6a7-d397-490a-a43f-d10d42683b97
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 8dfbe6a7-d397-490a-a43f-d10d42683b97
+    bundles:
+      country: country
 selection_logic: and
 weight: -5
 relationships: {  }

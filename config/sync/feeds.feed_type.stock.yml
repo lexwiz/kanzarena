@@ -7,8 +7,8 @@ dependencies:
     - field.field.commerce_product_variation.default.field_stock
   module:
     - commerce_product
-id: stock
 label: Stock
+id: stock
 description: ''
 help: ''
 import_period: -1
@@ -25,37 +25,37 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:commerce_product_variation'
 processor_configuration:
+  values:
+    type: default
   langcode: ru
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: default
 custom_sources:
   artikul:
-    label: Артикул
     value: Артикул
+    label: Артикул
     machine_name: artikul
   sklad:
-    label: Склад
     value: Склад
+    label: Склад
     machine_name: sklad
 mappings:
   -
     target: sku
     map:
       value: artikul
+    settings: {  }
     unique:
       value: '1'
-    settings: {  }
   -
     target: field_stock
     map:
       value: sklad
-    unique: {  }
     settings:
       language: null
+    unique: {  }

@@ -18,11 +18,11 @@ plugin: 'facet_block:price'
 settings:
   id: 'facet_block:price'
   label: Цена
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: price
 visibility:
   request_path:
     id: request_path
-    pages: '/taxonomy/term/*'
     negate: false
+    pages: '/taxonomy/term/*'

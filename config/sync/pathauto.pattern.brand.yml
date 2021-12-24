@@ -12,12 +12,12 @@ pattern: 'brand/[term:name]'
 selection_criteria:
   080cefd1-c90a-423c-8061-dc1c5a866f71:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      brand: brand
     negate: false
+    uuid: 080cefd1-c90a-423c-8061-dc1c5a866f71
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 080cefd1-c90a-423c-8061-dc1c5a866f71
+    bundles:
+      brand: brand
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -15,12 +15,12 @@ mode: default
 content:
   field_media_term:
     type: media_thumbnail
-    weight: 0
     label: above
     settings:
-      image_style: media_library
       image_link: content
+      image_style: media_library
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   description: true

@@ -26,11 +26,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   view_mode:
+    type: string_textfield
     weight: 21
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden: {  }

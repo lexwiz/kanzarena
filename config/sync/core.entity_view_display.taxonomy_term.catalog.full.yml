@@ -16,12 +16,12 @@ mode: full
 content:
   field_media_term:
     type: media_thumbnail
-    weight: 0
     label: hidden
     settings:
-      image_style: thumbnail
       image_link: content
+      image_style: thumbnail
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   description: true

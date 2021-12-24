@@ -8,51 +8,51 @@ dependencies:
     - commerce_promotion
 _core:
   default_config_hash: W37E6amSN5ZwF0sP-cmLtXFkJXrwBk0M7fiqWgXXclI
-id: default
 label: Default
+id: default
 plugin: multistep_default
 configuration:
   display_checkout_progress: true
   display_checkout_progress_breadcrumb_links: true
   panes:
     login:
-      allow_guest_checkout: true
-      allow_registration: true
       step: login
       weight: 0
+      allow_guest_checkout: true
+      allow_registration: true
     order_summary:
-      view: commerce_checkout_order_summary
       step: order_information
       weight: 1
+      view: commerce_checkout_order_summary
     contact_information:
-      double_entry: true
       step: order_information
       weight: 2
+      double_entry: true
     payment_information:
       step: order_information
       weight: 3
     coupon_redemption:
-      allow_multiple: false
       step: _disabled
       weight: 8
+      allow_multiple: false
     review:
       step: review
       weight: 4
     payment_process:
-      capture: true
       step: payment
       weight: 5
+      capture: true
     completion_message:
+      step: complete
+      weight: 6
       message:
         value: "Номер вашего заказа [commerce_order:order_number].\r\nВы можете просмотреть свой заказ на странице своей учетной записи при входе в систему."
         format: plain_text
-      step: complete
-      weight: 6
     completion_register:
       step: complete
       weight: 7
     'order_fields:checkout':
-      wrapper_element: container
-      display_label: 'Поля заказа'
       step: _disabled
       weight: 9
+      wrapper_element: container
+      display_label: 'Поля заказа'

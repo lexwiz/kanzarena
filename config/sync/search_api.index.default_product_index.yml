@@ -2,9 +2,6 @@ uuid: b555d047-ee4a-4725-88bf-53643fc87403
 langcode: ru
 status: true
 dependencies:
-  module:
-    - commerce_product
-    - search_api
   config:
     - field.storage.commerce_product_variation.field_barcode
     - field.storage.commerce_product.field_brand
@@ -15,6 +12,9 @@ dependencies:
     - field.storage.commerce_product_variation.field_stock
     - field.storage.commerce_product_variation.field_vendor_code
     - search_api.server.default_server
+  module:
+    - commerce_product
+    - search_api
 id: default_product_index
 name: 'Default product index'
 description: ''
@@ -131,21 +131,24 @@ processor_settings:
   aggregated_field: {  }
   entity_status: {  }
   hierarchy:
-    fields:
-      field_catalog: taxonomy_term-parent
     weights:
       preprocess_index: -50
+    fields:
+      field_catalog: taxonomy_term-parent
   highlight:
-    highlight: always
-    highlight_partial: false
+    weights:
+      postprocess_query: 0
+    prefix: '<strong class = "text-danger">'
+    suffix: '</strong>'
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
-    prefix: '<strong class = "text-danger">'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
+    highlight: always
+    highlight_partial: false
   html_filter:
+    weights:
+      preprocess_index: -46
+      preprocess_query: -46
     all_fields: false
     fields:
       - field_barcode
@@ -161,23 +164,10 @@ processor_settings:
       h2: 3
       h3: 2
       strong: 2
-    weights:
-      preprocess_index: -46
-      preprocess_query: -46
   ignorecase:
-    all_fields: false
-    fields:
-      - field_barcode
-      - field_code
-      - field_code_stock
-      - field_vendor_code
-      - title
     weights:
       preprocess_index: -48
       preprocess_query: -48
-  language_with_fallback: {  }
-  rendered_item: {  }
-  tokenizer:
     all_fields: false
     fields:
       - field_barcode
@@ -185,18 +175,28 @@ processor_settings:
       - field_code_stock
       - field_vendor_code
       - title
-    ignored: ._-
-    spaces: ''
-    overlap_cjk: 1
-    minimum_word_size: '3'
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
     weights:
       preprocess_index: -49
       preprocess_query: -49
+    all_fields: false
+    fields:
+      - field_barcode
+      - field_code
+      - field_code_stock
+      - field_vendor_code
+      - title
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
 tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
   track_changes_in_references: true
 server: default_server

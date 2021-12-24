@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: 58nI4vVTGv677fB42ySkQN9iTenfZvvW-xJlXODHdV4
+langcode: ru
 minimum_lifetime: 86400
 xsl: 1
 prefetch_aliases: 1
@@ -12,6 +15,3 @@ clean_url: 0
 disable_cron_regeneration: false
 i18n_selection_mode: simple
 metatag_exclude_noindex: true
-_core:
-  default_config_hash: 58nI4vVTGv677fB42ySkQN9iTenfZvvW-xJlXODHdV4
-langcode: ru

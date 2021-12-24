@@ -7,13 +7,13 @@ label: 'Cash on Delivery'
 weight: null
 plugin: manual
 configuration:
-  instructions:
-    value: 'Оплата производится курьеру после доставки товара на ваш адрес.'
-    format: plain_text
   display_label: 'Оплата наличными.'
   mode: n/a
   payment_method_types:
     - credit_card
   collect_billing_information: true
+  instructions:
+    value: 'Оплата производится курьеру после доставки товара на ваш адрес.'
+    format: plain_text
 conditions: {  }
 conditionOperator: AND

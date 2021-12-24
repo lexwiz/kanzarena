@@ -1,11 +1,14 @@
+_core:
+  default_config_hash: rnNxnXMi72RPRPGLvuGLUXirl-f-OJtK4sv1xY84Xd0
+langcode: ru
 hash_expiration: 86400
 newsletter:
+  issue_tokens: true
   format: plain
   priority: 0
   receipt: true
   from_address: lexsaenko@yandex.ru
   from_name: КанцАрена
-  issue_tokens: true
 subscriber:
   sync_fields: true
 subscription:
@@ -25,6 +28,3 @@ mail:
   spool_progress_expiration: 3600
   spool_expire: 0
   debug: false
-_core:
-  default_config_hash: rnNxnXMi72RPRPGLvuGLUXirl-f-OJtK4sv1xY84Xd0
-langcode: ru

@@ -9,31 +9,34 @@ dependencies:
     - search_api
 id: catalog
 name: Catalog
-url_alias: catalog
 weight: 0
 min_count: 1
-show_only_one_result: false
-field_identifier: field_catalog
+url_alias: catalog
 facet_source_id: 'search_api:views_page__taxonomy_term_product_index__page_1'
+field_identifier: field_catalog
+query_operator: or
+hard_limit: 100
+exclude: false
+use_hierarchy: true
+keep_hierarchy_parents_active: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: false
 widget:
   type: links
   config:
     show_numbers: true
     soft_limit: 20
-    soft_limit_settings:
-      show_less_label: Скрыть
-      show_more_label: Показать
     show_reset_link: false
     reset_text: 'Показать все'
     hide_reset_when_no_selection: false
-query_operator: or
-use_hierarchy: true
-keep_hierarchy_parents_active: false
-expand_hierarchy: false
-enable_parent_when_child_gets_disabled: false
-hard_limit: 100
-exclude: false
+    soft_limit_settings:
+      show_less_label: Скрыть
+      show_more_label: Показать
+empty_behavior:
+  behavior: none
 only_visible_when_facet_source_is_visible: true
+show_only_one_result: false
+show_title: false
 processor_configs:
   count_widget_order:
     processor_id: count_widget_order
@@ -58,6 +61,3 @@ processor_configs:
       pre_query: 50
       build: 15
     settings: {  }
-empty_behavior:
-  behavior: none
-show_title: false

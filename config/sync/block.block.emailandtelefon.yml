@@ -17,8 +17,8 @@ plugin: 'block_content:cc6fe08d-7bc7-483c-b4b0-37e96ee935e5'
 settings:
   id: 'block_content:cc6fe08d-7bc7-483c-b4b0-37e96ee935e5'
   label: 'E-mail and Telefon'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

@@ -16,13 +16,13 @@ mode: full
 content:
   field_image_term:
     type: image
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: medium
       image_link: content
+      image_style: medium
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   description: true
   langcode: true

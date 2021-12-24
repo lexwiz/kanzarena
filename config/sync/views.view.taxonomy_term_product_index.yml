@@ -20,117 +20,23 @@ base_table: search_api_index_default_product_index
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Применить
-          reset_button: true
-          reset_button_label: Сбросить
-          exposed_sorts_label: 'Сортировать:'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
-          text_input_required_format: basic_html
-          bef:
-            general:
-              autosubmit: true
-              autosubmit_exclude_textfield: true
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              secondary_open: false
-            sort:
-              plugin_id: default
-              advanced:
-                combine: true
-                combine_rewrite: "Цена Asc|По цене (от мин к макс)\r\nЦена Desc|По цене (от макс к мин)\r\nСоздано Asc|По новизне (старые сначала)\r\nСоздано Desc|По новизне (новые сначала) \r\nTitle Asc|По названию (от А до Я)\r\nTitle Desc|По названию (от Я до А)"
-                reset: false
-                reset_label: ''
-                collapsible: false
-                collapsible_label: 'Настройка сортировки'
-                is_secondary: false
-            pager:
-              plugin_id: default
-              advanced:
-                is_secondary: false
-            filter:
-              field_stock:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-      pager:
-        type: full
-        options:
-          items_per_page: 15
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹
-            next: ›
-            first: ««
-            last: »»
-          expose:
-            items_per_page: true
-            items_per_page_label: 'Показать по:'
-            items_per_page_options: '15, 30, 60, 120'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: views_bootstrap_grid
-        options:
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-          col_xs: col-12
-          col_sm: col-sm-12
-          col_md: col-md-4
-          col_lg: col-lg-4
-          col_xl: col-xl-4
-      row:
-        type: search_api
-        options:
-          view_modes:
-            'entity:commerce_product':
-              default: teaser
+      title: 'Taxonomy term product index'
       fields:
         created:
+          id: created
           table: search_api_index_default_product_index
           field: created
-          id: created
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -195,72 +101,79 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-      filters:
-        field_stock:
-          id: field_stock
-          table: search_api_index_default_product_index
-          field: field_stock
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 15
+          total_pages: null
+          id: 0
+          tags:
+            next: ›
+            previous: ‹
+            first: ««
+            last: »»
           expose:
-            operator_id: field_stock_op
-            label: 'Вариации » Product variation » Stock'
-            description: null
-            use_operator: false
-            operator: field_stock_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_stock
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: null
-            min_placeholder: null
-            max_placeholder: null
-          is_grouped: true
-          group_info:
-            label: 'В наличии'
-            description: ''
-            identifier: field_stock
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Да
-                operator: '>'
-                value:
-                  value: '0'
-                  min: ''
-                  max: ''
-              2:
-                title: Нет
-                operator: '<='
-                value:
-                  value: '0'
-                  min: ''
-                  max: ''
-              3:
-                title: ''
-                operator: '='
-                value:
-                  value: ''
-                  min: ''
-                  max: ''
-          plugin_id: search_api_numeric
+            items_per_page: true
+            items_per_page_label: 'Показать по:'
+            items_per_page_options: '15, 30, 60, 120'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Применить
+          reset_button: true
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать:'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Выберите любой фильтр и нажмите Применить для просмотра результата'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: true
+                combine_rewrite: "Цена Asc|По цене (от мин к макс)\r\nЦена Desc|По цене (от макс к мин)\r\nСоздано Asc|По новизне (старые сначала)\r\nСоздано Desc|По новизне (новые сначала) \r\nTitle Asc|По названию (от А до Я)\r\nTitle Desc|По названию (от Я до А)"
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Настройка сортировки'
+                is_secondary: false
+            pager:
+              plugin_id: default
+              advanced:
+                is_secondary: false
+            filter:
+              field_stock:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         number:
           id: number
@@ -269,11 +182,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: ASC
-          exposed: true
           expose:
             label: Цена
-          plugin_id: search_api
+            field_identifier: number
+          exposed: true
         created:
           id: created
           table: search_api_index_default_product_index
@@ -281,11 +195,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: DESC
-          exposed: true
           expose:
             label: Создано
-          plugin_id: search_api
+            field_identifier: created
+          exposed: true
         title:
           id: title
           table: search_api_index_default_product_index
@@ -293,37 +208,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: ASC
-          exposed: true
           expose:
             label: Title
-          plugin_id: search_api
-      title: 'Taxonomy term product index'
-      header:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'child_categories:block_1'
-          inherit_arguments: true
-          plugin_id: view
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          content: 'Отображается с @start по @end из @total'
-          plugin_id: result
-      footer: {  }
-      empty: {  }
-      relationships: {  }
+            field_identifier: title
+          exposed: true
       arguments:
         search_api_all_terms:
           id: search_api_all_terms
@@ -332,6 +222,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_all_terms
           default_action: default
           exception:
             value: all
@@ -367,9 +258,121 @@ display:
             multiple: 0
           break_phrase: false
           not: 0
-          plugin_id: search_api_all_terms
-      display_extenders: {  }
+      filters:
+        field_stock:
+          id: field_stock
+          table: search_api_index_default_product_index
+          field: field_stock
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_stock_op
+            label: 'Вариации » Product variation » Stock'
+            description: null
+            use_operator: false
+            operator: field_stock_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_stock
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'В наличии'
+            description: ''
+            identifier: field_stock
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Да
+                operator: '>'
+                value:
+                  min: ''
+                  max: ''
+                  value: '0'
+              2:
+                title: Нет
+                operator: '<='
+                value:
+                  min: ''
+                  max: ''
+                  value: '0'
+              3:
+                title: ''
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: ''
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:commerce_product':
+              default: teaser
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      relationships: {  }
       use_ajax: false
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: view
+          empty: false
+          view_to_insert: 'child_categories:block_1'
+          inherit_arguments: true
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Отображается с @start по @end из @total'
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -382,18 +385,18 @@ display:
       tags:
         - 'config:search_api.index.default_product_index'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      path: taxonomy/term/%
       cache:
         type: none
       defaults:
         cache: false
+      display_extenders:
+        metatag_display_extender: {  }
+      path: taxonomy/term/%
     cache_metadata:
       max-age: -1
       contexts:

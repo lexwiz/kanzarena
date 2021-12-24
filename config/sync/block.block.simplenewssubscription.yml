@@ -15,12 +15,12 @@ plugin: simplenews_subscription_block
 settings:
   id: simplenews_subscription_block
   label: 'Simplenews subscription'
-  provider: simplenews
   label_display: '0'
-  show_manage: true
+  provider: simplenews
   newsletters: {  }
   default_newsletters:
     default: default
   message: 'Будьте в курсе - подпишитесь на нашу рассылку.'
+  show_manage: true
   unique_id: d8594691-dd0f-433b-8223-399ef4fcc890
 visibility: {  }
