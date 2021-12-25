@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44815397a3eda5f8f6bdf83496bbb0aa",
+    "content-hash": "522d9868d9d3148705d9761f4c7268df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6051,11 +6051,17 @@
         },
         {
             "name": "drupal/swiftmailer",
-            "version": "dev-2.x",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/swiftmailer.git",
-                "reference": "8dd88509d6da0adba532269aae0caad929f6a574"
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/swiftmailer-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "54269f7ceb6364e4fb953cf67b52b555d748d09c"
             },
             "require": {
                 "drupal/core": "^8.9.11 || ^9.0.10",
@@ -6068,15 +6074,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.1+1-dev",
-                    "datestamp": "1639067975",
+                    "version": "8.x-2.2",
+                    "datestamp": "1639141915",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -12059,7 +12062,6 @@
         "drupal/flag": 10,
         "drupal/simplenews": 15,
         "drupal/spamspan": 10,
-        "drupal/swiftmailer": 20,
         "drupal/twig_tweak": 5,
         "drupal/viewfield": 10
     },
