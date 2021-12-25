@@ -110,13 +110,14 @@ function b4theme_preprocess_breadcrumb(array &$vars) {
       $parents = $storage->loadParents($term->id());
       if (!empty($parents)) {
         foreach ($parents as $index => $parent) {
-//          array_push($breadcrumb, $parent->toLink());
+
           $parents_next = $storage->loadParents($parent->id());
           if (!empty($parents_next)) {
             foreach ($parents_next as $index_next => $parent_next) {
-              array_push($breadcrumb, $parent_next->toLink(), $parent->toLink());
+              array_push($breadcrumb, $parent_next->toLink());
             }
           }
+          array_push($breadcrumb, $parent->toLink());
         }
       }
       array_push($breadcrumb, $term->toLink());
