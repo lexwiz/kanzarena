@@ -10,6 +10,7 @@ module:
   arena: 0
   arena_stock: 0
   art_yandex_market: 0
+  auditfiles: 0
   automated_cron: 0
   ban: 0
   better_exposed_filters: 0
