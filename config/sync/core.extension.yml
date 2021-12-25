@@ -59,7 +59,6 @@ module:
   flag: 0
   flood_control: 0
   fz152: 0
-  google_analytics: 0
   help: 0
   history: 0
   image: 0
@@ -79,7 +78,6 @@ module:
   menu_ui: 0
   metatag: 0
   metatag_verification: 0
-  metatag_views: 0
   node: 0
   options: 0
   page_cache: 0

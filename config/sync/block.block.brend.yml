@@ -5,9 +5,9 @@ dependencies:
   config:
     - facets.facet.brand
   module:
-    - ctools
     - facets
     - system
+    - taxonomy
   theme:
     - b4theme
 id: brend

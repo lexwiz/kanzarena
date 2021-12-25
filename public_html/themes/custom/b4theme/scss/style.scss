@@ -525,7 +525,7 @@ h2.block-title, .block-facets h2 {
   min-height: 45px;
 }
 
-.facets-widget-links, .facets-widget-checkbox, .facets-widget-range_slider {
+.facets-widget-links, .facets-widget-checkbox {
   ul {
     margin-bottom: 0;
     padding: 0 1em;
@@ -533,6 +533,32 @@ h2.block-title, .block-facets h2 {
       list-style: none;
     }
   }
+}
+
+.facets-widget-range_slider {
+  ul {
+    margin-bottom: 0;
+    padding: 0 2rem;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.noUi-horizontal {
+  height: 12px;
+  margin-bottom: 1rem;
+  .noUi-handle {
+    height: 22px;
+  }
+  .noUi-handle::after, .noUi-handle::before {
+    height: 10px;
+  }
+}
+
+
+.noUi-connect {
+  background: $success;
 }
 
 .facets-widget-checkbox {

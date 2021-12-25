@@ -9508,11 +9508,28 @@ h2.block-title, .block-facets h2 {
   font-weight: bold;
   min-height: 45px; }
 
-.facets-widget-links ul, .facets-widget-checkbox ul, .facets-widget-range_slider ul {
+.facets-widget-links ul, .facets-widget-checkbox ul {
   margin-bottom: 0;
   padding: 0 1em; }
-  .facets-widget-links ul li, .facets-widget-checkbox ul li, .facets-widget-range_slider ul li {
+  .facets-widget-links ul li, .facets-widget-checkbox ul li {
     list-style: none; }
+
+.facets-widget-range_slider ul {
+  margin-bottom: 0;
+  padding: 0 2rem; }
+  .facets-widget-range_slider ul li {
+    list-style: none; }
+
+.noUi-horizontal {
+  height: 12px;
+  margin-bottom: 1rem; }
+  .noUi-horizontal .noUi-handle {
+    height: 22px; }
+  .noUi-horizontal .noUi-handle::after, .noUi-horizontal .noUi-handle::before {
+    height: 10px; }
+
+.noUi-connect {
+  background: #93c54b; }
 
 .facets-widget-checkbox ul li.facet-item input.facets-checkbox {
   vertical-align: middle;
