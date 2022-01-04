@@ -30,8 +30,8 @@ widget:
     reset_text: 'Показать все'
     hide_reset_when_no_selection: false
     soft_limit_settings:
-      show_less_label: 'Show less'
-      show_more_label: 'Show more'
+      show_less_label: Скрыть
+      show_more_label: Показать
 empty_behavior:
   behavior: none
 only_visible_when_facet_source_is_visible: true

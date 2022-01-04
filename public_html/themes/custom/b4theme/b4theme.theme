@@ -69,9 +69,43 @@ function b4theme_preprocess_field(&$variables, $hook) {
  * Implements hook_form_BASE_FORM_ID_alter() for commerce_order_item_add_to_cart_form.
  */
 function b4theme_form_commerce_order_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+
   // Add custom class to form.
   $form['#attributes']['class'][] = 'add-to-cart-form form-inline justify-content-center';
+  $cart_product_ids = b4theme_get_products_in_cart();
+  if ($cart_product_ids != 0) {
+  foreach ($cart_product_ids as $product_id) {
+    if ($form_id == 'commerce_order_item_add_to_cart_form_commerce_product_'.$product_id) {
+      // Product is already in cart
+      // Change "Add to Cart" button text
+      $form['#attributes']['class'][] = 'in-cart';
+      $form['actions']['submit']['#value'] = t('Added to cart'); // your custom text and maybe a quantity of that product that is already in cart...
+    }
+  }
+  }
 }
+
+function b4theme_get_products_in_cart() {
+  $store = \Drupal\commerce_store\Entity\Store::load(1);
+  $order_type = 'default';
+  $cart_provider = \Drupal::service('commerce_cart.cart_provider');
+  $cart = $cart_provider->getCart($order_type, $store);
+  if ($cart) {
+    $all_items = $cart-> getItems();
+    $cart_items = array();
+
+    foreach ($all_items as $item) {
+      $cart_items[] = $item ->getPurchasedEntityId();
+    }
+//    var_dump($cart->getItems()[1]->getPurchasedEntity());
+    return $cart_items;
+  }
+  else {
+    return 0;
+  }
+}
+
 function b4theme_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
   //dpm($form_state);

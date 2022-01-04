@@ -27,6 +27,15 @@
     }
   };
 
+  Drupal.behaviors.in_cart = {
+    attach: function(context, settings) {
+
+      // Custom code here
+      $('form.in-cart input.form-submit').removeClass("btn-primary").addClass("btn-warning");
+
+    }
+  };
+
 })(jQuery, Drupal);
 
 

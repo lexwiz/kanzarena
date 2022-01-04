@@ -48,6 +48,19 @@ class ArtYandexMarketForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    $store = \Drupal\commerce_store\Entity\Store::load(1);
+    $order_type = 'default';
+    $cart_provider = \Drupal::service('commerce_cart.cart_provider');
+    $cart = $cart_provider->getCart($order_type, $store);
+
+//    foreach ($cart-> getItems() as $item) {
+//      foreach($item->get('purchased_entity')->getValue() as $purchased_entity){
+//        print_r($purchased_entity);
+//      }
+//    }
+    var_dump($cart->getItems()[0]->getPurchasedEntityId());
+//    var_dump(get_class_methods($cart->getItems()[0]));
+
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['run'] = [
       '#type' => 'submit',
