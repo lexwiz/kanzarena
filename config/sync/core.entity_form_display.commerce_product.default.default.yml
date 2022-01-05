@@ -10,6 +10,7 @@ dependencies:
     - field.field.commerce_product.default.field_catalog
     - field.field.commerce_product.default.field_code
     - field.field.commerce_product.default.field_country
+    - field.field.commerce_product.default.field_markup
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
@@ -79,6 +80,13 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_markup:
+    type: number
+    weight: 18
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_package:

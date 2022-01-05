@@ -1,0 +1,24 @@
+uuid: 736b1854-091f-49e4-bed2-d6c8ea48612d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: private
+id: commerce_product.field_markup
+field_name: field_markup
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -10,6 +10,7 @@ dependencies:
     - field.field.commerce_product.default.field_catalog
     - field.field.commerce_product.default.field_code
     - field.field.commerce_product.default.field_country
+    - field.field.commerce_product.default.field_markup
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
@@ -49,6 +50,7 @@ processor_configuration:
   values:
     type: default
   langcode: ru
+  insert_new: 1
   update_existing: 2
   update_non_existent: 'entity:unpublish_action:commerce_product'
   skip_hash_check: false
@@ -93,6 +95,10 @@ custom_sources:
     value: Attributes
     label: Attributes
     machine_name: attributes
+  markup:
+    value: Markup
+    label: Markup
+    machine_name: markup
 mappings:
   -
     target: field_code
@@ -123,6 +129,7 @@ mappings:
     settings:
       reference_by: sku
       autocreate: 0
+      feeds_item: false
   -
     target: title
     map:
@@ -137,7 +144,6 @@ mappings:
     settings:
       language: ''
       reference_by: name
-      feeds_item: guid
       autocreate: '1'
   -
     target: field_brand
@@ -146,7 +152,6 @@ mappings:
     settings:
       language: ''
       reference_by: name
-      feeds_item: guid
       autocreate: '1'
   -
     target: field_country
@@ -155,7 +160,6 @@ mappings:
     settings:
       language: ''
       reference_by: name
-      feeds_item: guid
       autocreate: '1'
   -
     target: body
@@ -188,3 +192,10 @@ mappings:
     settings:
       language: ''
       format: full_html
+  -
+    target: field_markup
+    map:
+      value: markup
+    settings:
+      language: ''
+    unique: {  }

@@ -10,6 +10,7 @@ dependencies:
     - field.field.commerce_product.default.field_catalog
     - field.field.commerce_product.default.field_code
     - field.field.commerce_product.default.field_country
+    - field.field.commerce_product.default.field_markup
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
@@ -30,7 +31,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_brand:
     type: entity_reference_label
@@ -38,7 +39,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_catalog:
     type: entity_reference_label
@@ -46,7 +47,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_code:
     type: number_integer
@@ -55,7 +56,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_country:
     type: entity_reference_label
@@ -63,7 +64,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 8
+    region: content
+  field_markup:
+    type: number_unformatted
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_package:
     type: string
@@ -71,7 +79,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_photo:
     type: entity_reference_entity_view
@@ -80,14 +88,14 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_property:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_tags:
     type: entity_reference_label
@@ -95,27 +103,17 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
-    region: content
-  field_yml:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 11
+    weight: 5
     region: content
   flag_compare:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   flag_favorite:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 12
     region: content
   title:
     type: string
@@ -123,7 +121,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -5
+    weight: 0
     region: content
   variations:
     type: commerce_add_to_cart
@@ -131,11 +129,12 @@ content:
     settings:
       combine: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   created: true
   feeds_item: true
+  field_yml: true
   langcode: true
   search_api_excerpt: true
   stores: true
