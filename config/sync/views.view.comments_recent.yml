@@ -132,7 +132,7 @@ display:
           type: timestamp_ago
           settings:
             future_format: '@interval hence'
-            past_format: '@interval ago'
+            past_format: '@interval назад'
             granularity: 2
       pager:
         type: some
