@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://Kanzarena 2022 НГ (340 x 70 px).png'
+  path: 'public://Kanzarena 2022 (340 x 70 px).png'
 favicon:
   use_default: 0
   path: 'public://Icon 2021.png'

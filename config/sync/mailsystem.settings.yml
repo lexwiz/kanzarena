@@ -3,8 +3,8 @@ _core:
 langcode: ru
 theme: current
 defaults:
-  sender: swiftmailer
-  formatter: swiftmailer
+  sender: test_mail_collector
+  formatter: test_mail_collector
 modules:
   swiftmailer:
     none:
