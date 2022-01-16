@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70dc03dedda15ceb5722b86f1e4ba1ce",
+    "content-hash": "38d0d7e72ddffaef38ffbb30882e22f6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2546,6 +2546,131 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/captcha",
                 "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
+            "name": "drupal/cmlapi",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cmlapi.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cmlapi-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "5aba93318c25614b7907db991db4c71707db3177"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1639137266",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "APolitsin",
+                    "homepage": "https://www.drupal.org/user/400653"
+                },
+                {
+                    "name": "Asko",
+                    "homepage": "https://www.drupal.org/user/3667543"
+                },
+                {
+                    "name": "Kseniya Myarkovskaya",
+                    "homepage": "https://www.drupal.org/user/3590754"
+                },
+                {
+                    "name": "masdzen",
+                    "homepage": "https://www.drupal.org/user/1511844"
+                },
+                {
+                    "name": "politsin",
+                    "homepage": "https://www.drupal.org/user/1820324"
+                },
+                {
+                    "name": "yaroslav.kostenyuk",
+                    "homepage": "https://www.drupal.org/user/3558262"
+                }
+            ],
+            "description": "Commerce ML API",
+            "homepage": "https://www.drupal.org/project/cmlapi",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cmlapi"
+            }
+        },
+        {
+            "name": "drupal/cmlexchange",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cmlexchange.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cmlexchange-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "00503402aa73216b1b691ba9a7b0048ac97c009d"
+            },
+            "require": {
+                "drupal/cmlapi": "*",
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1639137771",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "APolitsin",
+                    "homepage": "https://www.drupal.org/user/400653"
+                },
+                {
+                    "name": "Asko",
+                    "homepage": "https://www.drupal.org/user/3667543"
+                },
+                {
+                    "name": "Kseniya Myarkovskaya",
+                    "homepage": "https://www.drupal.org/user/3590754"
+                },
+                {
+                    "name": "masdzen",
+                    "homepage": "https://www.drupal.org/user/1511844"
+                },
+                {
+                    "name": "politsin",
+                    "homepage": "https://www.drupal.org/user/1820324"
+                }
+            ],
+            "description": "Commerce ML Exchange",
+            "homepage": "https://www.drupal.org/project/cmlexchange",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cmlexchange"
             }
         },
         {

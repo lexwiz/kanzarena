@@ -21,6 +21,8 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor: 0
+  cmlapi: 0
+  cmlexchange: 0
   color: 0
   colorbox: 0
   comment: 0
