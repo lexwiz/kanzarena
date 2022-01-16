@@ -14,7 +14,7 @@ subscriber:
 subscription:
   skip_verification: false
   tidy_unconfirmed: 7
-  confirm_combined_subject: 'Подтверждение для сайта [site:name]'
+  confirm_combined_subject: 'Confirmation for [site:name]'
   confirm_combined_body: "Мы получили запрос на следующие изменения в подписке на рассылку [simplenews-subscriber:mail] с сайта [site:url]:\r\n\r\n[changes-list]\r\n\r\nДля подтверждения запроса нажмите ссылку ниже.\r\n\r\n[simplenews-subscriber:combined-url]"
   confirm_combined_body_unchanged: "Мы получили запрос на следующие изменения в подписке на рассылку [simplenews-subscriber:mail] с сайта [site:url]:\r\n\r\n[changes-list]\r\n\r\nНикакого подтверждения не требуется, поскольку запрошенные изменения ничего не меняют в настройках подписки."
   confirm_subscribe_page: ''
