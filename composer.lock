@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38d0d7e72ddffaef38ffbb30882e22f6",
+    "content-hash": "306f74938021d4b428c1c756c27a040e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2671,6 +2671,71 @@
             "homepage": "https://www.drupal.org/project/cmlexchange",
             "support": {
                 "source": "https://git.drupalcode.org/project/cmlexchange"
+            }
+        },
+        {
+            "name": "drupal/cmlmigrations",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cmlmigrations.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cmlmigrations-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "e6c10304f2e5a3cf96c7fd9277760d8c7b7edf6d"
+            },
+            "require": {
+                "drupal/cmlapi": "*",
+                "drupal/commerce_product": "*",
+                "drupal/core": "^8 || ^9",
+                "drupal/migrate_plus": "*",
+                "drupal/migrate_tools": "*",
+                "drupal/yaml_editor": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1640869232",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "APolitsin",
+                    "homepage": "https://www.drupal.org/user/400653"
+                },
+                {
+                    "name": "Asko",
+                    "homepage": "https://www.drupal.org/user/3667543"
+                },
+                {
+                    "name": "Kseniya Myarkovskaya",
+                    "homepage": "https://www.drupal.org/user/3590754"
+                },
+                {
+                    "name": "masdzen",
+                    "homepage": "https://www.drupal.org/user/1511844"
+                },
+                {
+                    "name": "politsin",
+                    "homepage": "https://www.drupal.org/user/1820324"
+                }
+            ],
+            "description": "cml migrations",
+            "homepage": "https://www.drupal.org/project/cmlmigrations",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cmlmigrations"
             }
         },
         {
@@ -5600,6 +5665,146 @@
             }
         },
         {
+            "name": "drupal/migrate_plus",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_plus.git",
+                "reference": "8.x-5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-5.2.zip",
+                "reference": "8.x-5.2",
+                "shasum": "03ae34c362ccfacc4ae95b58469b25522e0ffb68"
+            },
+            "require": {
+                "drupal/core": "^9.1"
+            },
+            "require-dev": {
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*",
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "ext-soap": "*",
+                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.2",
+                    "datestamp": "1640379296",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Enhancements to core migration support.",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_plus",
+                "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "slack": "#migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_tools.git",
+                "reference": "8.x-5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-5.1.zip",
+                "reference": "8.x-5.1",
+                "shasum": "2c1a9d35d318a0e1de30a99fbf64bedd4e65cee1"
+            },
+            "require": {
+                "drupal/core": "^9.1",
+                "drupal/migrate_plus": "^5",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "drupal/migrate_source_csv": "^3.0",
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "drush/drush": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.1",
+                    "datestamp": "1640378500",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "http://drupal.org/project/migrate_tools",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_tools",
+                "issues": "https://www.drupal.org/project/issues/migrate_tools",
+                "slack": "#migrate"
+            }
+        },
+        {
             "name": "drupal/pathauto",
             "version": "1.8.0",
             "source": {
@@ -7400,6 +7605,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/xmlsitemap",
                 "issues": "http://drupal.org/project/issues/xmlsitemap"
+            }
+        },
+        {
+            "name": "drupal/yaml_editor",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/yaml_editor.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/yaml_editor-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "eb01f577316529808e73360e17b1798c6d5b297d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1592902686",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "yannickoo",
+                    "homepage": "https://www.drupal.org/user/531118"
+                }
+            ],
+            "description": "Adds an editor for YAML configuration textareas.",
+            "homepage": "https://www.drupal.org/project/yaml_editor",
+            "support": {
+                "source": "https://git.drupalcode.org/project/yaml_editor"
             }
         },
         {

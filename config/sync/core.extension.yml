@@ -21,8 +21,6 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor: 0
-  cmlapi: 0
-  cmlexchange: 0
   color: 0
   colorbox: 0
   comment: 0
@@ -75,6 +73,7 @@ module:
   layout_discovery: 0
   link: 0
   locale: 0
+  mailsystem: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -102,8 +101,7 @@ module:
   state_machine: 0
   statistics: 0
   super_login: 0
-  symfony_mailer: 0
-  symfony_mailer_bc: 0
+  swiftmailer: 0
   system: 0
   tamper: 0
   taxonomy: 0
