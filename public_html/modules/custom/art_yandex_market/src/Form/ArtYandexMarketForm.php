@@ -48,17 +48,17 @@ class ArtYandexMarketForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $store = \Drupal\commerce_store\Entity\Store::load(1);
-    $order_type = 'default';
-    $cart_provider = \Drupal::service('commerce_cart.cart_provider');
-    $cart = $cart_provider->getCart($order_type, $store);
+//    $store = \Drupal\commerce_store\Entity\Store::load(1);
+//    $order_type = 'default';
+//    $cart_provider = \Drupal::service('commerce_cart.cart_provider');
+//    $cart = $cart_provider->getCart($order_type, $store);
 
 //    foreach ($cart-> getItems() as $item) {
 //      foreach($item->get('purchased_entity')->getValue() as $purchased_entity){
 //        print_r($purchased_entity);
 //      }
 //    }
-    var_dump($cart->getItems()[0]->getPurchasedEntityId());
+//    var_dump($cart->getItems()[0]->getPurchasedEntityId());
 //    var_dump(get_class_methods($cart->getItems()[0]));
 
     $form['actions'] = ['#type' => 'actions'];
@@ -91,7 +91,7 @@ class ArtYandexMarketForm extends FormBase {
 
     $config = $this->config('art_yandex_market.settings');
 
-    $shop_info = new Shop("Art", "IP Saenko" );
+    $shop_info = new Shop("KanzArena", "IP Saenko" );
     $shop_info->setPlatform('Drupal');
 
 
@@ -129,7 +129,8 @@ class ArtYandexMarketForm extends FormBase {
 
     $offers = new Offers();
 
-    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_catalog'=>$terms]);
+//    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_catalog'=>$terms]);
+    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_yml'=>1]);
 //    var_dump($products);
 
     foreach ($products as $key => $product) {
@@ -181,7 +182,7 @@ class ArtYandexMarketForm extends FormBase {
     $offer_simple
       //      ->setBid(80)
       ->setVendor($this->getTermName($product->get('field_brand')->target_id))
-      ->setVendorCode($variation_date['sku_m'])
+      ->setVendorCode($variation_date['field_vendor_code'])
       //      ->setOldPrice(9900)
       ->setPicture($this->getMediaImage($product->get('field_photo')->target_id))
       ->setStore(FALSE)
@@ -244,11 +245,11 @@ class ArtYandexMarketForm extends FormBase {
       $result['barcode'] = $this->t("No name");
     }
 
-    if ($product_variation->get('field_sku_m')->value) {
-      $result['sku_m'] = $product_variation->get('field_sku_m')->value;
+    if ($product_variation->get('field_vendor_code')->value) {
+      $result['field_vendor_code'] = $product_variation->get('field_vendor_code')->value;
     }
     else {
-      $result['sku_m'] = $this->t("No name");
+      $result['field_vendor_code'] = $this->t("No name");
     }
 
     return $result;

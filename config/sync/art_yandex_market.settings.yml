@@ -1,6 +1,10 @@
-catalog_terms: {  }
-types: default
-stock: 0
+catalog_terms:
+  2: '2'
+  55: '55'
+  377: '377'
+types:
+  - '0'
+stock: '0'
 _core:
   default_config_hash: 9exaIkhcq1CoKMtOVLMucSjGCJJOyIBNqQc-cwv_dic
 langcode: ru

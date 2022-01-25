@@ -12,6 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
 
 use Drupal\commerce_product\Entity\ProductType;
 
+use Drupal\taxonomy\Entity\Term;
 
 
 class ArtYandexMarketSettingsForm extends ConfigFormBase {
@@ -37,25 +38,30 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
 
     $config = $this->config('art_yandex_market.settings');
 
+    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_yml'=>1]);
 
-//    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['vid' => 'catalog']);
-    $vid = 'catalog';
-    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    $detail_terms = [];
 
-//    var_dump($terms);
-
-//    foreach ($terms as $term) {
-//      $term_data[] = array(
-//        'id' => $term->tid,
-//        'name' => $term->name
-//      );
-//    }
-//    var_dump($term_data);
+    foreach ($products as $product) {
+      $tid = $product->get('field_catalog')->target_id;
+      $detail_terms[$tid][] = $product->label();
+    }
 
     $options = [];
-    foreach ($terms as $term) {
-      if ($term->depth == 1 || $term->depth == 2) {
-        $options[$term->tid] = $term->name;
+
+    foreach ($detail_terms as $key_details => $detail_term) {
+      $options[$key_details] = $this->getTermName($key_details);
+      $form[$key_details] = [
+        '#type' => 'details',                                        // тип элемента формы
+        '#title' => t($this->getTermName($key_details)) . ' (' . count($detail_term) . ')',                    // заголовок fieldset
+
+      ];
+      foreach ($detail_term as $key_product => $product_name) {
+        $form[$key_details][$key_product] = [
+          '#type' => 'html_tag',
+          '#tag' => 'p',
+          '#value' => $product_name,
+        ];
       }
     }
 
@@ -68,17 +74,17 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-//    $form['types'] = [
-//      '#type' => 'checkboxes',
-//      '#title' => t('Select product types for export'),
-//      '#options' => $this->getProductTypes(),
-//      '#default_value' => $config->get('types'),
-//      '#required' => TRUE,
-//    ];
+    $form['types'] = [
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Select product types for export'),
+      '#options' => $this->getProductTypes(),
+      '#default_value' => $config->get('types'),
+      '#required' => TRUE,
+    ];
 
     $form['stock'] = [
       '#type' => 'select',
-      '#title' => t('Stock settings'),
+      '#title' => $this->t('Stock settings'),
       '#description' => t('Yandex.Market has "delivery" field. Select if it is enabled'),
       '#options' => ['0' => t("Any"), '1' => t("In stock"), '2' => t("Out of stock")],
       '#default_value' => $config->get('stock'),
@@ -107,17 +113,28 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       ->set('catalog_terms', $values['catalog_terms'])
       ->set('types', $values['types'])
       ->set('stock', $values['stock'])
-//      ->set('phone_number', $values['phone_number'])
       ->save();
   }
 
-//  /**
-//   * Get all product types
-//   * @return array
-//   */
-//  public function getProductTypes() {
-//    $product_types = ProductType::loadMultiple();
-//    return array_keys($product_types);
-//  }
+  /**
+   * Get all product types
+   * @return array
+   */
+  public function getProductTypes() {
+    $product_types = ProductType::loadMultiple();
+    return array_keys($product_types);
+  }
+
+  public function getTermName ($tid) {
+    if (is_null($tid)){
+      $term_name = $this->t("No name");
+    }
+    else {
+      $term_name = Term::load($tid)->getName();
+    }
+
+    return $term_name;
+
+  }
 
 }
