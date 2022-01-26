@@ -194,7 +194,9 @@ class ArtYandexMarketForm extends FormBase {
 //      ->setSalesNotes('Необходимо предоплата.')
       ->setManufacturerWarranty(TRUE)
       ->setCountryOfOrigin($this->getTermName($product->get('field_country')->target_id))
-      ->setBarcode($variation_date['barcode']);
+      ->setBarcode($variation_date['barcode'])
+      ->setCount ($variation_date['field_stock']);
+
 
     $offers->addOffer($offer_simple);
 
@@ -250,6 +252,13 @@ class ArtYandexMarketForm extends FormBase {
     }
     else {
       $result['field_vendor_code'] = $this->t("No name");
+    }
+
+    if (empty($product_variation->get('field_stock')->value)) {
+      $result['field_stock'] = 0;
+    }
+    else {
+      $result['field_stock'] = (int)$product_variation->get('field_stock')->value;
     }
 
     return $result;
