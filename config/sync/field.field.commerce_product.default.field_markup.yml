@@ -1,10 +1,11 @@
-uuid: a874169e-17f8-4ee6-b42e-44c21c50be41
+uuid: 499bab43-e09b-4103-89db-d7f7c5d1d9fa
 langcode: ru
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.storage.commerce_product.field_markup
+    - taxonomy.vocabulary.markup
 id: commerce_product.default.field_markup
 field_name: field_markup
 entity_type: commerce_product
@@ -13,13 +14,16 @@ label: Markup
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    value: 80
+default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      markup: markup
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

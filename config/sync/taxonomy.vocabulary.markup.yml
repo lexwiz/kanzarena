@@ -1,0 +1,14 @@
+uuid: 68c22404-dc25-4a57-915e-20d78aca8270
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Наценка
+vid: markup
+description: ''
+weight: 0

@@ -83,10 +83,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_markup:
-    type: number
+    type: entity_reference_autocomplete
     weight: 18
     region: content
     settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_package:

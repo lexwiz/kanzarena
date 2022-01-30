@@ -195,7 +195,8 @@ mappings:
   -
     target: field_markup
     map:
-      value: markup
+      target_id: markup
     settings:
-      language: ''
-    unique: {  }
+      language: ru
+      reference_by: name
+      autocreate: '1'

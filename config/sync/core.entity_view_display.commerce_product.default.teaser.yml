@@ -38,11 +38,12 @@ content:
     weight: 3
     region: content
   field_markup:
-    type: number_unformatted
+    type: entity_reference_label
     label: hidden
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   field_photo:
     type: media_thumbnail
@@ -64,12 +65,12 @@ content:
   flag_compare:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   flag_favorite:
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   title:
     type: string
