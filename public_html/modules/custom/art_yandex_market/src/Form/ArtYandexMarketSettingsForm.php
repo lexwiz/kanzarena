@@ -47,10 +47,10 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       $detail_terms[$tid][] = $product->label();
     }
 
-    $options = [];
+//    $options = [];
 
     foreach ($detail_terms as $key_details => $detail_term) {
-      $options[$key_details] = $this->getTermName($key_details);
+//      $options[$key_details] = $this->getTermName($key_details);
       $form[$key_details] = [
         '#type' => 'details',                                        // тип элемента формы
         '#title' => t($this->getTermName($key_details)) . ' (' . count($detail_term) . ')',                    // заголовок fieldset
@@ -65,14 +65,14 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       }
     }
 
-    $form['catalog_terms'] = [
-      '#type' => 'checkboxes',
-      '#title' => $this->t('Catalog terms'),
-      '#options' => $options,
-      '#default_value' => $config->get('catalog_terms'),
-//      '#multiple' => TRUE,
-      '#required' => TRUE,
-    ];
+//    $form['catalog_terms'] = [
+//      '#type' => 'checkboxes',
+//      '#title' => $this->t('Catalog terms'),
+//      '#options' => $options,
+//      '#default_value' => $config->get('catalog_terms'),
+////      '#multiple' => TRUE,
+//      '#required' => TRUE,
+//    ];
 
     $form['types'] = [
       '#type' => 'checkboxes',
@@ -110,7 +110,7 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
     $values = $form_state->getValues();
 
     $this->config('art_yandex_market.settings')
-      ->set('catalog_terms', $values['catalog_terms'])
+//      ->set('catalog_terms', $values['catalog_terms'])
       ->set('types', $values['types'])
       ->set('stock', $values['stock'])
       ->save();

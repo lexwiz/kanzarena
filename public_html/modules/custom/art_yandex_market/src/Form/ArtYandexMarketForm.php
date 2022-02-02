@@ -94,6 +94,8 @@ class ArtYandexMarketForm extends FormBase {
     $shop_info = new Shop("KanzArena", "IP Saenko" );
     $shop_info->setPlatform('Drupal');
 
+    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_yml'=>1]);
+
 
     // Add currencies first.
     $currencies = new Currencies();
@@ -109,9 +111,16 @@ class ArtYandexMarketForm extends FormBase {
     $terms = $this->getTerms($terms);
     //    print_r($terms);
 
-    foreach ($terms as $term) {
+    $term_all = [];
+
+    foreach ($products as $product) {
+      $term = $product->get('field_catalog')->target_id;
       $term_name = Term::load($term)->getName();
-      $categories->addCategory(new Category($term, $term_name));
+      if (!in_array($term, $term_all)) {
+        $term_all[] = $term;
+        $categories->addCategory(new Category($term, $term_name));
+//      $this->createOffersList($offers, $product);
+      }
     }
     $shop_info->setCategories($categories);
 
@@ -130,12 +139,11 @@ class ArtYandexMarketForm extends FormBase {
     $offers = new Offers();
 
 //    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_catalog'=>$terms]);
-    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_yml'=>1]);
+//    $products = \Drupal::entityTypeManager()->getStorage('commerce_product')->loadByProperties(['field_yml'=>1]);
 //    var_dump($products);
 
     foreach ($products as $key => $product) {
       $this->createOffersList($offers, $product);
-
     }
 
     $shop_info->setOffers($offers);
@@ -238,7 +246,7 @@ class ArtYandexMarketForm extends FormBase {
   public function getCommercePrice ($pid) {
     $result = [];
     $product_variation = ProductVariation::load($pid);
-    $result['price_number'] = round($product_variation->get('price')->number,2);
+    $result['price_number'] = round($product_variation->get('price')->number,0,PHP_ROUND_HALF_DOWN);
     //$price_currency = $product_variation->get('price')-
     if ($product_variation->get('field_barcode')->value) {
       $result['barcode'] = (int)$product_variation->get('field_barcode')->value;

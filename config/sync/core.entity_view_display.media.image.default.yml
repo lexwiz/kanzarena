@@ -6,10 +6,10 @@ dependencies:
     - field.field.media.image.feeds_item
     - field.field.media.image.field_media_image
     - image.style.large
-    - image.style.thumbnail
+    - image.style.media_library
     - media.type.image
   module:
-    - colorbox
+    - photoswipe
 _core:
   default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
 id: media.image.default
@@ -18,16 +18,16 @@ bundle: image
 mode: default
 content:
   field_media_image:
-    type: colorbox
+    type: photoswipe_field_formatter
     label: visually_hidden
     settings:
-      colorbox_node_style: thumbnail
-      colorbox_node_style_first: large
-      colorbox_image_style: ''
-      colorbox_gallery: post
-      colorbox_gallery_custom: ''
-      colorbox_caption: auto
-      colorbox_caption_custom: ''
+      photoswipe_node_style_first: large
+      photoswipe_node_style: media_library
+      photoswipe_image_style: ''
+      photoswipe_caption: title
+      photoswipe_caption_custom: ''
+      photoswipe_view_mode: default
+      photoswipe_reference_image_field: ''
     third_party_settings: {  }
     weight: 1
     region: content

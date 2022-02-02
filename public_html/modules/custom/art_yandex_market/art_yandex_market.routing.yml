@@ -9,11 +9,13 @@ art_yandex_market.export:
   path: '/admin/config/art_yandex_market_export'
   defaults:
     _form: '\Drupal\art_yandex_market\Form\ArtYandexMarketForm'
+    _title: 'Create Yml export for Yandex.market'
   requirements:
     _permission: 'administer site configuration'
 art_yandex_market.admin_settings:
   path: '/admin/config/art_yandex_market'
   defaults:
     _form: '\Drupal\art_yandex_market\Form\ArtYandexMarketSettingsForm'
+    _title: 'Yandex.market YML settings'
   requirements:
     _permission: 'administer site configuration'
