@@ -11,12 +11,14 @@ dependencies:
     - field.field.commerce_product.default.field_code
     - field.field.commerce_product.default.field_country
     - field.field.commerce_product.default.field_markup
+    - field.field.commerce_product.default.field_opinion
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
     - field.field.commerce_product.default.field_tags
     - field.field.commerce_product.default.field_yml
   module:
+    - comment
     - commerce
     - commerce_product
     - media_library
@@ -91,6 +93,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_opinion:
+    type: comment_default
+    weight: 19
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_package:
     type: string_textfield

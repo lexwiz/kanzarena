@@ -1,0 +1,20 @@
+uuid: 601093d5-8846-41b5-93e7-209c84c526bc
+langcode: ru
+status: true
+dependencies:
+  module:
+    - comment
+    - commerce_product
+id: commerce_product.field_opinion
+field_name: field_opinion
+entity_type: commerce_product
+type: comment
+settings:
+  comment_type: opinion
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

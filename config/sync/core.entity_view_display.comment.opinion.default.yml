@@ -1,0 +1,29 @@
+uuid: 08557801-1863-42cd-977f-046d3ed7662c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - comment.type.opinion
+    - field.field.comment.opinion.comment_body
+  module:
+    - text
+id: comment.opinion.default
+targetEntityType: comment
+bundle: opinion
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

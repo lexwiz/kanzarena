@@ -12,6 +12,7 @@ dependencies:
     - field.field.commerce_product.default.field_code
     - field.field.commerce_product.default.field_country
     - field.field.commerce_product.default.field_markup
+    - field.field.commerce_product.default.field_opinion
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
@@ -91,6 +92,7 @@ hidden:
   feeds_item: true
   field_code: true
   field_markup: true
+  field_opinion: true
   field_photo: true
   field_property: true
   langcode: true

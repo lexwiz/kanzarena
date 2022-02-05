@@ -1,0 +1,8 @@
+uuid: ab5ec2d2-4c13-44ad-9e19-471aea727594
+langcode: ru
+status: true
+dependencies: {  }
+id: opinion
+label: Отзыв
+target_entity_type_id: commerce_product
+description: 'Отзыв на товар'

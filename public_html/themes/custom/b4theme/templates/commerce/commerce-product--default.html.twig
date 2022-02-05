@@ -121,6 +121,9 @@
       <li class="nav-item" role="presentation">
         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Доставка</a>
       </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-opinion-tab" data-toggle="pill" href="#pills-opinion" role="tab" aria-controls="pills-opinion" aria-selected="false">Отзывы</a>
+      </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">{{- product.body -}}</div>
@@ -140,6 +143,7 @@
         <p class="rtejustify">При сумме заказа менее 5000 руб. стоимость доставки в города Крыма составляет <u><strong>500 р.</strong></u> (макс. масса 200 кг.)</p>
         <p class="rtejustify">Доставка заказов массой более 200 кг в города Крыма <strong>рассчитывается в индивидуальном порядке.</strong></p>
       </div>
+      <div class="tab-pane fade" id="pills-opinion" role="tabpanel" aria-labelledby="pills-opinion-tab">{{- product.field_opinion -}}</div>
     </div>
 
     <div class="col-sm-12">

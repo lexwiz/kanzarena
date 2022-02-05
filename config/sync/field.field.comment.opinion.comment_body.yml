@@ -1,0 +1,21 @@
+uuid: 8b298c7d-53f7-46b9-9050-5df98ad615a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - comment.type.opinion
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.opinion.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: opinion
+label: Отзыв
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
