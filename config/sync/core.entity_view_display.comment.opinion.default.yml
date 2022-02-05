@@ -4,20 +4,18 @@ status: true
 dependencies:
   config:
     - comment.type.opinion
-    - field.field.comment.opinion.comment_body
-  module:
-    - text
+    - field.field.comment.opinion.field_opinion_body
 id: comment.opinion.default
 targetEntityType: comment
 bundle: opinion
 mode: default
 content:
-  comment_body:
-    type: text_default
+  field_opinion_body:
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 101
     region: content
   links:
     settings: {  }
