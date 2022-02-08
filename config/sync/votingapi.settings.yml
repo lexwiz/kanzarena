@@ -2,6 +2,6 @@ _core:
   default_config_hash: BYvJsG1SSiV-EJ126-uVg6xyftCQBTEemr027l-GpjE
 langcode: ru
 anonymous_window: 86400
-user_window: 300
+user_window: 3600
 calculation_schedule: immediate
-delete_everywhere: false
+delete_everywhere: true

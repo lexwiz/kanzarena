@@ -81,6 +81,7 @@
         "drupal/views_bulk_operations": "^4.0",
         "drupal/views_flipped_table": "^1.4",
         "drupal/vocabulary_condition": "^1.0",
+        "drupal/votingapi_widgets": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0",
         "drupal/yandex_yml": "^1.1",
         "drush/drush": "^10.5",
