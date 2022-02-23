@@ -244,8 +244,8 @@ display:
           tags:
             next: 'Next ›'
             previous: '‹ Previous'
-            first: '«« '
-            last: »»
+            first: '« First'
+            last: 'Last »'
       exposed_form:
         type: basic
         options:

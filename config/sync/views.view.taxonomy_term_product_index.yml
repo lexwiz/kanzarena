@@ -395,7 +395,9 @@ display:
       defaults:
         cache: false
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: 0
       path: taxonomy/term/%
     cache_metadata:
       max-age: -1

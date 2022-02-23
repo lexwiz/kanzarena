@@ -102,7 +102,7 @@ display:
           entity_type: commerce_order_item
           entity_field: unit_price
           plugin_id: field
-          label: Цена
+          label: Price
           exclude: false
           alter:
             alter_text: false
@@ -167,7 +167,7 @@ display:
           admin_label: ''
           entity_type: commerce_order_item
           plugin_id: commerce_order_item_edit_quantity
-          label: Количество
+          label: Quantity
           exclude: false
           alter:
             alter_text: false

@@ -35,6 +35,7 @@
         "drupal/commerce": "^2.21",
         "drupal/commerce_checkout_order_fields": "^1.1",
         "drupal/commerce_feeds": "^1.0@alpha",
+        "drupal/commerce_pricelist": "^2.4",
         "drupal/commerce_quantity_increments": "^3.0",
         "drupal/commerce_simple_stock": "^1.1",
         "drupal/core": "^9.3",
