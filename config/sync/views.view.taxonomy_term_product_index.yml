@@ -6,6 +6,8 @@ dependencies:
     - search_api.index.default_product_index
     - taxonomy.vocabulary.brand
     - taxonomy.vocabulary.catalog
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.tags
     - views.view.child_categories
   module:
     - better_exposed_filters
@@ -238,6 +240,8 @@ display:
             vids:
               brand: brand
               catalog: catalog
+              country: country
+              tags: tags
             anyall: +
           default_argument_skip_url: false
           summary_options: {  }
@@ -253,6 +257,8 @@ display:
             bundles:
               brand: brand
               catalog: catalog
+              country: country
+              tags: tags
             access: true
             operation: view
             multiple: 0
