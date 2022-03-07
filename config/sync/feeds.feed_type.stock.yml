@@ -7,8 +7,8 @@ dependencies:
     - field.field.commerce_product_variation.default.field_stock
   module:
     - commerce_product
-label: Stock
 id: stock
+label: Stock
 description: ''
 help: ''
 import_period: -1
@@ -35,15 +35,18 @@ processor_configuration:
   expire: -1
   owner_feed_author: false
   owner_id: 1
+  insert_new: 1
 custom_sources:
   artikul:
     value: Артикул
     label: Артикул
     machine_name: artikul
+    type: csv
   sklad:
     value: Склад
     label: Склад
     machine_name: sklad
+    type: csv
 mappings:
   -
     target: sku

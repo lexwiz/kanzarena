@@ -19,8 +19,8 @@ third_party_settings:
         source: image
         weight: 0
         label: Explode
-label: 'Import Photo'
 id: import_photo
+label: 'Import Photo'
 description: ''
 help: ''
 import_period: -1
@@ -47,19 +47,23 @@ processor_configuration:
   expire: -1
   owner_feed_author: false
   owner_id: 1
+  insert_new: 1
 custom_sources:
   image:
     value: Image
     label: Image
     machine_name: image
+    type: csv
   title:
     value: Title
     label: Title
     machine_name: title
+    type: csv
   sku:
     value: SKU
     label: SKU
     machine_name: sku
+    type: csv
 mappings:
   -
     target: field_media_image

@@ -29,8 +29,8 @@ third_party_settings:
         source: category
         weight: 0
         label: Explode
-label: 'Import Products Display'
 id: import_products_display
+label: 'Import Products Display'
 description: ''
 help: ''
 import_period: -1
@@ -63,42 +63,52 @@ custom_sources:
     value: SKU
     label: SKU
     machine_name: sku
+    type: csv
   store:
     value: Store
     label: Store
     machine_name: store
+    type: csv
   title:
     value: Title
     label: Title
     machine_name: title
+    type: csv
   category:
     value: Category
     label: Category
     machine_name: category
+    type: csv
   manufacturers:
     value: Manufacturers
     label: Manufacturers
     machine_name: manufacturers
+    type: csv
   country:
     value: Country
     label: Country
     machine_name: country
+    type: csv
   body:
     value: Body
     label: Body
     machine_name: body
+    type: csv
   shema:
     value: Shema
     label: Shema
     machine_name: shema
+    type: csv
   attributes:
     value: Attributes
     label: Attributes
     machine_name: attributes
+    type: csv
   markup:
     value: Markup
     label: Markup
     machine_name: markup
+    type: csv
 mappings:
   -
     target: field_code
