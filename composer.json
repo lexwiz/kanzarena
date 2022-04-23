@@ -98,10 +98,10 @@
     },
     "extra": {
         "patches": {
-            "drupal/facets": {
-                "3153622: JQuery UI plugins removed from Drupal 9 but required by Facets Range Widget": "https://www.drupal.org/files/issues/2022-01-24/issue-3153622-37-nouislider-ajax.patch"
+            "drupal/commerce": {
+                "3274438: Trying to access array offset on value of type null in": "https://www.drupal.org/files/issues/2022-04-11/3274438.patch"
             }
-        },
+            },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "public_html/"

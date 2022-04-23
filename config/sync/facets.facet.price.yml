@@ -19,6 +19,9 @@ hard_limit: 0
 exclude: false
 use_hierarchy: false
 keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
@@ -26,12 +29,12 @@ widget:
   config:
     show_numbers: false
     prefix: ''
-    suffix: ' р.'
+    suffix: ''
     min_type: search_result
     min_value: !!float 0
     max_type: search_result
     max_value: !!float 10
-    step: !!float 10
+    step: !!float 1
 empty_behavior:
   behavior: none
 only_visible_when_facet_source_is_visible: true
@@ -56,6 +59,11 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   range_slider:
     processor_id: range_slider
     weights:
@@ -69,6 +77,3 @@ processor_configs:
       pre_query: 50
       build: 15
     settings: {  }
-hierarchy:
-  type: taxonomy
-  config: {  }
