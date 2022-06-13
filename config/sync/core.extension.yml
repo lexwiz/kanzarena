@@ -32,6 +32,7 @@ module:
   commerce_number_pattern: 0
   commerce_order: 0
   commerce_payment: 0
+  commerce_payment_example: 0
   commerce_price: 0
   commerce_product: 0
   commerce_promotion: 0
@@ -126,6 +127,7 @@ module:
   vocabulary_condition: 0
   votingapi: 0
   xmlsitemap_custom: 0
+  yandex_checkout: 0
   yandex_yml: 0
   pathauto: 1
   xmlsitemap: 1

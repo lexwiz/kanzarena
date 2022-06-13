@@ -84,6 +84,7 @@
         "drupal/vocabulary_condition": "^1.0",
         "drupal/votingapi_widgets": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0",
+        "drupal/yandex_checkout": "^1.0@alpha",
         "drupal/yandex_yml": "^1.1",
         "drush/drush": "^10.5",
         "npm-asset/nouislider": "^15"
