@@ -21,7 +21,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "~1.0",
-        "drupal/address_display": "1.x-dev@dev",
+        "drupal/address_display": "^1.0@beta",
         "drupal/admin_toolbar": "^3.0",
         "drupal/antibot": "^1.4",
         "drupal/auditfiles": "^2.11",
@@ -77,7 +77,7 @@
         "drupal/taxonomy_term_depth": "^2.5",
         "drupal/twig_tweak": "^3.0@RC",
         "drupal/viewfield": "^3.0@beta",
-        "drupal/views_bootstrap": "^4.3",
+        "drupal/views_bootstrap": "^5.4",
         "drupal/views_bulk_edit": "^2.6",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/views_flipped_table": "^1.4",
